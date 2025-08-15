@@ -1,0 +1,28 @@
+{
+  "gallery": [
+    {
+      "images": "/images/gallery/austin.jpeg",
+      "description": "Shot from redlight drone at a field in Austin, Texas."
+    },
+    {
+      "images": "/images/gallery/city.jpeg",
+      "description": "Drone light taking shot at the center of the city."
+    },
+    {
+      "images": "/images/gallery/croatia.jpeg",
+      "description": "Croatia shot from mini drone."
+    },
+    {
+      "images": "/images/gallery/gambir.jpeg",
+      "description": "Shot from phantom drone at Gambir, Indonesia."
+    },
+    {
+      "images": "/images/gallery/pilot.jpeg",
+      "description": "A pilot controlling smoky drone."
+    },
+    {
+      "images": "/images/gallery/snow.jpeg",
+      "description": "Smoky drone taking shot at winter."
+    }
+  ]
+}
