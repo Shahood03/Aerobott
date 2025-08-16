@@ -184,25 +184,26 @@ const useNavigationLinks = () => {
     }
   ];
 
+
   // Products submenu items for mobile
   const productsSubItems = [
     {
       name: 'FLYT-I - Training Drone',
-      image: '/images/products/p5.png',
+      image: '/images/products/p10.png',
       description: 'Professional training drone for pilot certification',
-      href: '/images/products/p5.png',
+      href: '/products/flyt-i',
       isExternal: false
     },
     {
       name: 'Survey Master Pro - Survey Drone', 
-      image: '/images/products/survey-master.jpg',
+      image: '/images/products/p2.png',
       description: 'Advanced surveying and mapping solutions',
       href: '/products/survey-master-pro',
       isExternal: false
     },
     {
       name: 'Aero Agri - Agriculture Drone',
-      image: '/images/products/aero-agri.jpg', 
+      image: '/images/agri/a7.jpg', 
       description: 'Smart farming and crop monitoring technology',
       href: '/products/aero-agri',
       isExternal: false
@@ -376,11 +377,11 @@ const MobileMenu = ({
 
   return (
     <div
-      className={`md:hidden transition-all duration-500 ease-in-out overflow-hidden bg-gray-500/30 backdrop-blur-md border-t border-gray-300/20 ${
+      className={`md:hidden transition-all duration-500 ease-in-out mt-8 overflow-hidden bg-gray-500/30 backdrop-blur-md border-t border-gray-300/20 ${
         isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
       }`}
     >
-      <div className="container mx-auto px-6 py-4 space-y-4">
+      <div className="container mx-auto px-6  py-4 space-y-4">
         {/* Navigation items with Products and Defence inserted */}
         {mainNavLinks.map((item, index) => {
           const isActive = isLinkActive(item);
@@ -693,7 +694,7 @@ const Navbar = () => {
   return (
     <nav
       ref={navbarRef}
-      className="fixed top-0 left-0 right-0 z-50 bg-gray-500/30 backdrop-blur-md border border-gray-300/20 shadow-[0px_0px_20px_4px_rgba(92,92,92,0.3)] py-2"
+      className="fixed top-0  left-0 right-0 z-50 bg-gray-500/30 backdrop-blur-md border border-gray-300/20 shadow-[0px_0px_20px_4px_rgba(92,92,92,0.3)] py-2"
     >
       <div className="w-full px-16">
         <div className="flex items-center justify-between">

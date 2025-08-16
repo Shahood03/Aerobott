@@ -10,7 +10,7 @@ const AboutUsSection = () => {
   return (
     <section 
       id="about" 
-      className="relative flex flex-col items-center justify-center w-full  bg-[#04070d] overflow-hidden py-12 px-16 z-2"
+      className="relative flex flex-col items-center justify-center w-full  bg-black overflow-hidden py-12 px-16 z-2"
     >
       {/* Background gradient at top */}
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-white/7 to-transparent z-1"></div>
@@ -103,7 +103,7 @@ const AboutUsSection = () => {
 // About Visual Card Component
 const AboutVisualCard = ({ imageUrl, altText }) => {
   return (
-    <div className="group relative w-full h-full bg-[#04070d] border border-white/7 rounded-2xl overflow-hidden shadow-inner hover:shadow-lg transition-all duration-300 will-change-transform">
+    <div className="group relative w-full h-full bg-black border border-white/7 rounded-2xl overflow-hidden shadow-inner hover:shadow-lg transition-all duration-300 will-change-transform">
       {/* Full Background Image */}
       <div className="absolute inset-0">
         <img 

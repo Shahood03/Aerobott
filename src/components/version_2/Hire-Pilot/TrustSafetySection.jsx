@@ -341,7 +341,7 @@ const TrustSafetySection = () => {
   };
 
   return (
-    <section className="bg-[#04070d] min-h-screen p-12 flex items-center justify-center relative overflow-hidden">
+    <section className="bg-black min-h-screen p-12 flex items-center justify-center relative overflow-hidden">
       <div className="max-w-7xl mx-auto w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           

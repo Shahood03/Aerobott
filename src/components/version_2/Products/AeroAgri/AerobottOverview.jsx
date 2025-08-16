@@ -110,52 +110,43 @@ const AgriDroneOverview = () => {
       
       <section 
         id="agri-drone-section"
-        className="relative bg-[#000000] py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden font-raleway"
+        className="relative bg-[#000000] py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24 px-4 sm:px-6 md:px-8 lg:px-12 overflow-hidden font-raleway"
       >
         <div className="max-w-7xl mx-auto">
           {/* Section heading with animation */}
           <div 
-            className={`mb-12 sm:mb-16 text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+            className={`mb-8 sm:mb-12 md:mb-16 text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
           >
             <div className="inline-block px-3 sm:px-4 py-1 sm:py-2 bg-gradient-to-r from-green-500 via-yellow-400 to-green-600 rounded-full text-xs sm:text-sm font-raleway font-medium text-gray-900 mb-4">
               AGRICULTURAL INNOVATION
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-raleway font-medium text-white mb-4 px-2">
-              Smart Agricultural <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-400 font-raleway font-normal">Drone Technology</span>
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-raleway font-medium text-white mb-4 px-2 leading-tight">
+              Smart Agricultural <span className="block sm:inline bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-400 font-raleway font-normal">Drone Technology</span>
             </h2>
-            <p className="max-w-3xl mx-auto text-gray-300 text-base sm:text-lg lg:text-xl font-raleway leading-relaxed px-4">
+            <p className="max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-3xl mx-auto text-gray-300 text-sm sm:text-base md:text-lg lg:text-xl font-raleway leading-relaxed px-4">
               Advanced precision agriculture solution featuring intelligent spray systems, terrain-aware flight control, and seamless integration with agricultural data platforms for modern farming operations.
             </p>
           </div>
 
           {/* Drone illustration with map */}
           <div 
-            className={`relative flex justify-center mb-12 sm:mb-16 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
+            className={`relative flex justify-center mb-8 sm:mb-12 md:mb-16 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
           >
-            <div className="relative w-full max-w-2xl">
+            <div className="relative w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
               {/* Drone illustration */}
               <div className="relative z-10">
                 <img 
                   src="/images/agri/a5.png" 
                   alt="Agricultural Drone" 
-                  className="w-full h-auto rounded-xl shadow-2xl"
+                  className="w-full h-auto rounded-lg sm:rounded-xl shadow-2xl"
                   onError={(e) => {
                     e.target.style.display = 'none';
                     e.target.nextSibling.style.display = 'flex';
                   }}
                 />
-                <div className="w-full h-48 sm:h-56 md:h-64 bg-gradient-to-br from-green-800 to-green-900 rounded-xl hidden items-center justify-center border border-green-700">
+                <div className="w-full h-48 sm:h-56 md:h-64 bg-gradient-to-br from-green-800 to-green-900 rounded-lg sm:rounded-xl hidden items-center justify-center border border-green-700">
                   <div className="text-center text-green-400">
-                    <img 
-                      src="/images/icon.jpg" 
-                      alt="Agricultural Drone Placeholder" 
-                      className="h-12 sm:h-16 w-12 sm:w-16 mx-auto mb-2 opacity-50"
-                      onError={(e) => {
-                        e.target.style.display = 'none';
-                        e.target.nextSibling.style.display = 'flex';
-                      }}
-                    />
-                    <div className="h-12 sm:h-16 w-12 sm:w-16 mx-auto mb-2 bg-green-600 rounded-lg hidden items-center justify-center">
+                    <div className="h-12 sm:h-16 w-12 sm:w-16 mx-auto mb-2 bg-green-600 rounded-lg flex items-center justify-center">
                       <span className="text-xl sm:text-2xl">🚁</span>
                     </div>
                     <p className="text-sm font-raleway">Agricultural Drone</p>
@@ -168,15 +159,15 @@ const AgriDroneOverview = () => {
           {/* Feature tabs */}
           <div className={`transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             {/* Tab buttons - Mobile optimized */}
-            <div className="mb-8 sm:mb-10">
+            <div className="mb-6 sm:mb-8 md:mb-10">
               {/* Mobile: Horizontal scroll */}
-              <div className="block sm:hidden">
+              <div className="block md:hidden">
                 <div className="flex overflow-x-auto gap-2 pb-2 scrollbar-hide">
                   {features.map(feature => (
                     <button
                       key={feature.id}
                       onClick={() => setActiveTab(feature.id)}
-                      className={`flex-shrink-0 px-4 py-2 text-sm font-raleway font-medium rounded-lg transition-all duration-300 whitespace-nowrap ${
+                      className={`flex-shrink-0 px-3 py-2 text-xs sm:text-sm font-raleway font-medium rounded-lg transition-all duration-300 whitespace-nowrap ${
                         activeTab === feature.id 
                           ? 'bg-green-600 text-white shadow-lg shadow-green-500/20'
                           : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
@@ -189,12 +180,12 @@ const AgriDroneOverview = () => {
               </div>
               
               {/* Tablet and Desktop: Grid layout */}
-              <div className="hidden sm:grid sm:grid-cols-2 md:grid-cols-3 lg:flex lg:flex-wrap justify-center gap-2">
+              <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 xl:flex xl:flex-wrap justify-center gap-2 lg:gap-3">
                 {features.map(feature => (
                   <button
                     key={feature.id}
                     onClick={() => setActiveTab(feature.id)}
-                    className={`px-3 sm:px-4 lg:px-5 py-2 sm:py-3 text-sm lg:text-base font-raleway font-medium rounded-lg transition-all duration-300 ${
+                    className={`px-3 md:px-4 lg:px-5 py-2 md:py-3 text-sm lg:text-base font-raleway font-medium rounded-lg transition-all duration-300 ${
                       activeTab === feature.id 
                         ? 'bg-green-600 text-white shadow-lg shadow-green-500/20'
                         : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
@@ -207,7 +198,7 @@ const AgriDroneOverview = () => {
             </div>
             
             {/* Tab content */}
-            <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-4 sm:p-6 md:p-8 lg:p-10 border border-gray-800">
+            <div className="bg-gray-900/50 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 lg:p-8 xl:p-10 border border-gray-800">
               {features.map(feature => (
                 <div
                   key={feature.id}
@@ -217,40 +208,40 @@ const AgriDroneOverview = () => {
                       : 'opacity-0 hidden'
                   }`}
                 >
-                  <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 items-center">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 items-start">
                     {/* Content */}
-                 <div className="order-2 lg:order-1">
-  <div className="flex items-center mb-4 sm:mb-6">
-    <div className="mr-3 sm:mr-4 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-lg flex items-center justify-center border border-gray-600 flex-shrink-0 overflow-hidden">
-      <img 
-        src="/images/element/icon1.png" 
-        alt="Feature Icon" 
-        className="w-full h-full object-cover"
-      />
-    </div>
-    <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-raleway font-medium text-white">
-      {feature.title}
-    </h3>
-  </div>
-  <p className="text-gray-300 mb-4 sm:mb-6 text-sm xs:text-base sm:text-lg md:text-xl font-raleway leading-relaxed">
-    {feature.description}
-  </p>
-  
-  {/* Stats - Responsive grid */}
-  <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
-    {feature.stats.map((stat, index) => (
-      <div key={index} className="bg-gray-800/50 rounded-lg p-3 sm:p-4 border border-gray-700">
-        <p className="text-gray-400 text-xs sm:text-sm font-raleway mb-1">{stat.label}</p>
-        <p className="text-lg xs:text-xl sm:text-2xl font-raleway font-medium text-white">
-          {stat.value}
-        </p>
-      </div>
-    ))}
-  </div>
-</div>
+                    <div className="order-2 lg:order-1">
+                      <div className="flex items-start sm:items-center mb-3 sm:mb-4 lg:mb-6">
+                        <div className="mr-2 sm:mr-3 lg:mr-4 w-8 sm:w-10 md:w-12 lg:w-14 xl:w-16 h-8 sm:h-10 md:h-12 lg:h-14 xl:h-16 rounded-lg flex items-center justify-center border border-gray-600 flex-shrink-0 overflow-hidden">
+                          <img 
+                            src="/images/element/icon1.png" 
+                            alt="Feature Icon" 
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-raleway font-medium text-white leading-tight">
+                          {feature.title}
+                        </h3>
+                      </div>
+                      <p className="text-gray-300 mb-3 sm:mb-4 lg:mb-6 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-raleway leading-relaxed">
+                        {feature.description}
+                      </p>
+                      
+                      {/* Stats - Responsive grid */}
+                      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-2 sm:gap-3 lg:gap-4">
+                        {feature.stats.map((stat, index) => (
+                          <div key={index} className="bg-gray-800/50 rounded-lg p-2 sm:p-3 lg:p-4 border border-gray-700">
+                            <p className="text-gray-400 text-xs font-raleway mb-1">{stat.label}</p>
+                            <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-raleway font-medium text-white leading-tight">
+                              {stat.value}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
                     
                     {/* Feature illustration */}
-                    <div className="order-1 lg:order-2 bg-gradient-to-br from-gray-800/30 to-green-900/30 rounded-xl p-4 sm:p-6 border border-gray-700">
+                    <div className="order-1 lg:order-2 bg-gradient-to-br from-gray-800/30 to-green-900/30 rounded-lg sm:rounded-xl p-3 sm:p-4 lg:p-6 border border-gray-700">
                       <img 
                         src={feature.featureImage} 
                         alt={feature.title} 
@@ -260,18 +251,9 @@ const AgriDroneOverview = () => {
                           e.target.nextSibling.style.display = 'flex';
                         }}
                       />
-                      <div className="w-full h-40 sm:h-48 md:h-56 bg-gradient-to-br from-green-700 to-green-800 rounded-lg hidden items-center justify-center">
+                      <div className="w-full h-32 sm:h-40 md:h-48 lg:h-56 bg-gradient-to-br from-green-700 to-green-800 rounded-lg hidden items-center justify-center">
                         <div className="text-center text-green-400">
-                          <img 
-                            src="/images/feature-placeholder.png" 
-                            alt="Feature Placeholder" 
-                            className="h-8 sm:h-12 w-8 sm:w-12 mx-auto mb-2 opacity-50"
-                            onError={(e) => {
-                              e.target.style.display = 'none';
-                              e.target.nextSibling.style.display = 'flex';
-                            }}
-                          />
-                          <div className="h-8 sm:h-12 w-8 sm:w-12 mx-auto mb-2 bg-green-600 rounded-lg hidden items-center justify-center">
+                          <div className="h-8 sm:h-12 w-8 sm:w-12 mx-auto mb-2 bg-green-600 rounded-lg flex items-center justify-center">
                             <span className="text-lg sm:text-xl">🌾</span>
                           </div>
                           <p className="text-xs sm:text-sm font-raleway px-2">{feature.title} Image</p>
@@ -286,8 +268,8 @@ const AgriDroneOverview = () => {
         </div>
         
         {/* Decorative elements - Responsive sizes */}
-        <div className="absolute top-0 left-0 w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 bg-green-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-40 h-40 sm:w-60 sm:h-60 md:w-80 md:h-80 bg-blue-600/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 left-0 w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 bg-green-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-40 sm:w-60 md:w-80 h-40 sm:h-60 md:h-80 bg-blue-600/10 rounded-full blur-3xl"></div>
         
         <style jsx>{`
           @keyframes dash {

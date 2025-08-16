@@ -17,7 +17,7 @@ export default function Banner() {
         muted
         playsInline
       >
-        <source src="/images/element/v1.mp4" type="video/mp4" />
+        <source src="/images/element/v3.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 

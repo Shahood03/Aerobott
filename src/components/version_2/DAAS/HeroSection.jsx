@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function AerobottLanding() {
   return (
-    <div className="min-h-screen bg-black relative overflow-hidden">
+    <div className="min-h-screen bg-black pt-8 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{

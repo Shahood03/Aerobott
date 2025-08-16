@@ -41,7 +41,7 @@ const TrainSmarterSection = () => {
         {/* Steps Grid - All in one row */}
         <div className="flex flex-wrap justify-center gap-6 max-w-7xl mx-auto">
           {steps.map((step, index) => (
-            <div key={index} className="w-58 h-58 rounded-2xl overflow-hidden relative bg-[#04070d] border border-white/7 flex-shrink-0">
+            <div key={index} className="w-58 h-58 rounded-2xl overflow-hidden relative bg-black border border-white/7 flex-shrink-0">
               {/* Background blur effects */}
               <div className="w-full h-6 left-0 top-0 absolute bg-zinc-300 rounded-bl-[10px] rounded-br-[10px] blur-[100px] opacity-30" />
               <div className="w-full h-32 left-0 top-16 absolute bg-indigo-500/20 blur-[60px] opacity-20" />

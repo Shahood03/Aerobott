@@ -19,7 +19,7 @@ const SECTION_HEIGHT = 1200;
 
 export default function ContactUsHero() {
   return (
-    <div className="bg-[#04070d] text-[#d5dbe6]">
+    <div className="bg-black text-[#d5dbe6]">
       {/* Import Raleway font */}
       <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
       
@@ -39,7 +39,7 @@ export default function ContactUsHero() {
 
 const Nav = () => {
   return (
-    <nav className="fixed left-0 right-0 top-0 z-50 flex items-center justify-between bg-[#04070d]/80 px-6 py-4 backdrop-blur-sm border-b border-white/10">
+    <nav className="fixed left-0 right-0 top-0 z-50 flex items-center justify-between bg-black/80 px-6 py-4 backdrop-blur-sm border-b border-white/10">
       <div className="flex items-center">
         <CgProfile className="text-3xl text-blue-400" />
         <span className="ml-2 font-semibold text-[#d5dbe6]" style={{ fontFamily: 'Raleway, sans-serif' }}>Company</span>

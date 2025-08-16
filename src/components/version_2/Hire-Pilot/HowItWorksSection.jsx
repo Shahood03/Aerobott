@@ -30,7 +30,7 @@ const steps = [
 ];
 
   return (
-    <section className="bg-[#04070d] text-white px-16 flex flex-col items-center justify-center relative overflow-hidden">
+    <section className="bg-black text-white px-16 flex flex-col items-center justify-center relative overflow-hidden">
       {/* Background blur effects */}
       
 
@@ -51,7 +51,7 @@ const steps = [
         {/* Steps Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {steps.map((step, index) => (
-            <div key={index} className="w-96 h-[500px] rounded-[20px] overflow-hidden relative bg-[#04070d] border border-white/7">
+            <div key={index} className="w-96 h-[500px] rounded-[20px] overflow-hidden relative bg-black border border-white/7">
               {/* Background blur effects */}
               <div className="w-96 h-8 left-[-7px] top-0 absolute bg-zinc-300 rounded-bl-[10px] rounded-br-[10px] blur-[197px]" />
               <div className="w-96 h-8 left-[-7px] top-0 absolute bg-zinc-300 rounded-bl-[10px] rounded-br-[10px] blur-[197px]" />

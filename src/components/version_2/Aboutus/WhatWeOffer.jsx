@@ -28,65 +28,53 @@ const services = [
   }
 ];
 
-
-
   return (
-    <section className="bg-[#04070d] text-white px-16 pt-16 flex flex-col items-center justify-center relative overflow-hidden">
-      {/* Background blur effects */}
-     
-
+    <section className="bg-black text-white px-4 sm:px-6 md:px-8 lg:px-16 pt-8 sm:pt-12 lg:pt-16 flex flex-col items-center justify-center relative overflow-hidden">
       <div className="w-full h-full flex flex-col justify-center relative z-10">
         
         {/* Section Header - Updated to match DroneServicesSection */}
-        <div className="flex flex-col items-center justify-center gap-2.5 w-full max-w-3xl mx-auto mb-11">
+        <div className="flex flex-col items-center justify-center gap-2.5 w-full max-w-3xl mx-auto mb-8 sm:mb-11">
           
           {/* Main Heading - Updated styling */}
           <div className="w-full">
-            <h2 className="text-center text-[#d5dbe6] text-4xl md:text-5xl font-raleway font-medium leading-tight">
+            <h2 className="text-center text-[#d5dbe6] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-raleway font-medium leading-tight">
               What We{' '}
               <span className="font-raleway font-normal text-[#d5dbe6]">Offer</span>
             </h2>
           </div>
-          
-          {/* Optional subtitle - uncomment if needed */}
-          {/* <div className="w-full">
-            <p className="text-center text-[#d5dbe6]/60 text-base font-raleway leading-relaxed">
-              Comprehensive solutions for all your needs
-            </p>
-          </div> */}
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto w-full">
           {services.map((service, index) => (
-            <div key={index} className="w-96 h-[500px] rounded-[20px] overflow-hidden relative bg-[#04070d] border border-white/7">
+            <div key={index} className="w-full max-w-sm mx-auto h-[450px] sm:h-[500px] rounded-[20px] overflow-hidden relative bg-[#04070d] border border-white/7">
               {/* Background blur effects */}
-              <div className="w-96 h-8 left-[-7px] top-0 absolute bg-zinc-300 rounded-bl-[10px] rounded-br-[10px] blur-[197px]" />
-              <div className="w-96 h-8 left-[-7px] top-0 absolute bg-zinc-300 rounded-bl-[10px] rounded-br-[10px] blur-[197px]" />
-              <div className="w-96 h-[1440px] left-[1440px] top-[519px] absolute origin-top-left rotate-90 bg-indigo-500 blur-[117.50px]" />
+              <div className="w-full h-8 left-[-7px] top-0 absolute bg-zinc-300 rounded-bl-[10px] rounded-br-[10px] blur-[197px]" />
+              <div className="w-full h-8 left-[-7px] top-0 absolute bg-zinc-300 rounded-bl-[10px] rounded-br-[10px] blur-[197px]" />
+              <div className="w-full h-[400px] sm:h-[500px] left-[100%] top-[200px] sm:top-[250px] absolute origin-top-left rotate-90 bg-indigo-500 blur-[60px] sm:blur-[80px] lg:blur-[117.50px]" />
               
               {/* Icon Container */}
-              <div className="left-[43px] top-[41px] absolute inline-flex flex-col justify-center items-center">
+              <div className="left-[32px] sm:left-[43px] top-[32px] sm:top-[41px] absolute inline-flex flex-col justify-center items-center">
                 <img
                   src={service.iconSrc}
                   alt={service.title}
-                  className="w-20 h-20 object-contain"
+                  className="w-16 sm:w-20 h-16 sm:h-20 object-contain"
                 />
               </div>
               
               {/* Service Title - Updated to match DroneServicesSection card titles */}
-              <div className="absolute left-[44px] top-[120px] w-80">
-                <h3 className="text-[#d5dbe6] text-xl font-raleway font-medium leading-tight mb-2">
+              <div className="absolute left-[32px] sm:left-[44px] top-[100px] sm:top-[120px] right-4 sm:right-6">
+                <h3 className="text-[#d5dbe6] text-lg sm:text-xl font-raleway font-medium leading-tight mb-2">
                   {service.title}
                 </h3>
               </div>
               
               {/* Service Description - Updated styling */}
-         <div className="w-80 left-[44px] top-[180px] absolute">
-  <p className="text-[#d5dbe6]/90 text-base font-raleway leading-relaxed text-justify">
-    {service.description}
-  </p>
-</div>
+              <div className="absolute left-[32px] sm:left-[44px] top-[160px] sm:top-[180px] right-4 sm:right-6">
+                <p className="text-[#d5dbe6]/90 text-sm sm:text-base font-raleway leading-relaxed text-justify">
+                  {service.description}
+                </p>
+              </div>
 
             </div>
           ))}

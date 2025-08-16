@@ -23,7 +23,7 @@ const NewsSection = () => {
       publication: "Tech Innovation Today",
       date: "March 2025",
       excerpt: "Breaking new ground in autonomous flight systems with cutting-edge artificial intelligence integration.",
-      imageUrl: "/images/news/ai-drone-launch.jpg"
+      imageUrl: "/images/news/n1.png"
     },
     {
       id: 2,
@@ -31,7 +31,7 @@ const NewsSection = () => {
       publication: "Defense Weekly",
       date: "February 2025",
       excerpt: "Strategic partnership marks significant milestone in indigenous drone manufacturing for national security.",
-      imageUrl: "/images/news/defense-contract.jpg"
+      imageUrl: "/images/news/n2.jpg"
     },
     {
       id: 3,
@@ -39,7 +39,7 @@ const NewsSection = () => {
       publication: "AgriTech Magazine",
       date: "January 2025",
       excerpt: "Transforming traditional farming with intelligent drone technology and precision agriculture capabilities.",
-      imageUrl: "/images/news/agri-revolution.jpg"
+      imageUrl: "/images/news/n3.jpg"
     },
     {
       id: 4,
@@ -47,7 +47,7 @@ const NewsSection = () => {
       publication: "Aviation Today",
       date: "December 2024",
       excerpt: "Recognition for outstanding contribution to drone technology and aerospace innovation in India.",
-      imageUrl: "/images/news/innovation-award.jpg"
+      imageUrl: "/images/news/n4.jpg"
     },
     {
       id: 5,
@@ -55,7 +55,7 @@ const NewsSection = () => {
       publication: "Energy Tech Weekly",
       date: "November 2024",
       excerpt: "New lithium-ion advancement extends flight time by 40% for commercial drone operations.",
-      imageUrl: "/images/news/battery-tech.jpg"
+      imageUrl: "/images/news/n5.png"
     },
     {
       id: 6,
@@ -63,7 +63,7 @@ const NewsSection = () => {
       publication: "Research Today",
       date: "October 2024",
       excerpt: "Collaboration aims to accelerate innovation in drone technology and aerospace engineering education.",
-      imageUrl: "/images/news/university-partnership.jpg"
+      imageUrl: "/images/news/n6.png"
     }
   ];
 
@@ -73,7 +73,7 @@ const NewsSection = () => {
   return (
     <section 
       id="news" 
-      className="relative flex flex-col items-center justify-center w-full  bg-[#04070d] overflow-hidden px-16 pt-12 z-2"
+      className="relative flex flex-col items-center justify-center w-full bg-black overflow-hidden px-4 sm:px-6 md:px-8 lg:px-16 pt-8 sm:pt-12 z-2"
     >
       {/* Background gradient at bottom */}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-white/7 to-transparent z-1"></div>
@@ -81,44 +81,43 @@ const NewsSection = () => {
       {/* Background glow effect */}
       <div className="absolute bottom-[-249px] left-1/2 transform -translate-x-1/2 w-[793px] h-[499px] bg-gradient-radial from-white/10 to-transparent opacity-10 rounded-lg pointer-events-none z-1"></div>
       
-      <div className="flex flex-col items-center justify-center gap-3 w-full  relative z-1">
+      <div className="flex flex-col items-center justify-center gap-3 w-full relative z-1">
         
         {/* Header Section with Animation */}
         <div className={`flex flex-col items-center justify-center gap-2.5 w-full max-w-3xl transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           
           {/* Main Heading */}
           <div className="w-full">
-            <h2 className="text-center text-[#d5dbe6] text-4xl md:text-5xl font-raleway font-medium leading-tight">
+            <h2 className="text-center text-[#d5dbe6] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-raleway font-medium leading-tight">
               We Are In{' '}
               <span className="font-raleway font-normal text-[#d5dbe6] relative">
                 News
-        
               </span>
             </h2>
           </div>
           
           {/* Subtitle */}
           <div className="w-full">
-            <p className="text-center text-[#d5dbe6]/60 text-base font-raleway leading-relaxed">
+            <p className="text-center text-[#d5dbe6]/60 text-sm sm:text-base font-raleway leading-relaxed px-2">
               Latest coverage and recognition of our innovations
             </p>
           </div>
         </div>
 
         {/* Scrolling News Container */}
-        <div className="w-full flex-1 flex items-start pt-8 pb-8 relative overflow-hidden">
+        <div className="w-full flex-1 flex items-start pt-6 sm:pt-8 pb-6 sm:pb-8 relative overflow-hidden">
           {/* Left Fade Gradient */}
-          <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#04070d] to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute left-0 top-0 bottom-0 w-8 sm:w-16 lg:w-20 bg-gradient-to-r from-[#04070d] to-transparent z-10 pointer-events-none"></div>
           
           {/* Right Fade Gradient */}
-          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#04070d] to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-8 sm:w-16 lg:w-20 bg-gradient-to-l from-[#04070d] to-transparent z-10 pointer-events-none"></div>
           
           {/* Scrolling Container */}
-          <div className="flex gap-6 animate-scroll">
+          <div className="flex gap-4 sm:gap-6 animate-scroll">
             {duplicatedNews.map((item, index) => (
               <div 
                 key={`${item.id}-${index}`}
-                className="flex-shrink-0 w-80 h-96"
+                className="flex-shrink-0 w-72 sm:w-80 h-80 sm:h-96"
               >
                 <ScrollingNewsCard {...item} />
               </div>
@@ -145,6 +144,12 @@ const NewsSection = () => {
         .animate-scroll:hover {
           animation-play-state: paused;
         }
+        
+        @media (prefers-reduced-motion: reduce) {
+          .animate-scroll {
+            animation: none;
+          }
+        }
       `}</style>
     </section>
   );
@@ -153,7 +158,7 @@ const NewsSection = () => {
 // Scrolling News Card Component
 const ScrollingNewsCard = ({ title, publication, date, excerpt, imageUrl }) => {
   return (
-    <div className="group relative w-full h-full bg-[#04070d] border border-white/7 rounded-2xl overflow-hidden shadow-inner hover:shadow-lg transition-all duration-500 will-change-transform hover:scale-105 hover:border-white/20">
+    <div className="group relative w-full h-full bg-black border border-white/7 rounded-2xl overflow-hidden shadow-inner hover:shadow-lg transition-all duration-500 will-change-transform hover:scale-105 hover:border-white/20">
       {/* Full Background Image */}
       <div className="absolute inset-0">
         <img 
@@ -167,27 +172,27 @@ const ScrollingNewsCard = ({ title, publication, date, excerpt, imageUrl }) => {
       <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black/80 group-hover:from-black/40 group-hover:via-black/60 group-hover:to-black/85 transition-all duration-500"></div>
 
       {/* Content Container */}
-      <div className="absolute inset-0 flex flex-col justify-between p-6">
+      <div className="absolute inset-0 flex flex-col justify-between p-4 sm:p-6">
         
         {/* Top Section */}
-        <div className="flex justify-between items-start">
-          <span className="px-3 py-1 bg-white/10 backdrop-blur-md text-white/80 text-xs font-raleway font-medium rounded-full border border-white/20 group-hover:bg-white/20 group-hover:text-white transition-all duration-300">
+        <div className="flex justify-between items-start gap-2">
+          <span className="px-2 sm:px-3 py-1 bg-white/10 backdrop-blur-md text-white/80 text-xs font-raleway font-medium rounded-full border border-white/20 group-hover:bg-white/20 group-hover:text-white transition-all duration-300 flex-shrink-0">
             {publication}
           </span>
-          <span className="text-white/60 text-xs font-raleway">{date}</span>
+          <span className="text-white/60 text-xs font-raleway flex-shrink-0">{date}</span>
         </div>
 
         {/* Bottom Content */}
         <div className="transform group-hover:-translate-y-2 transition-transform duration-500">
-          <h3 className="text-white text-lg font-raleway font-medium leading-tight mb-3 group-hover:text-white/95 transition-colors duration-300 line-clamp-2">
+          <h3 className="text-white text-base sm:text-lg font-raleway font-medium leading-tight mb-2 sm:mb-3 group-hover:text-white/95 transition-colors duration-300 line-clamp-2">
             {title}
           </h3>
-          <p className="text-white/80 text-sm font-raleway leading-relaxed group-hover:text-white/90 transition-colors duration-300 line-clamp-3">
+          <p className="text-white/80 text-xs sm:text-sm font-raleway leading-relaxed group-hover:text-white/90 transition-colors duration-300 line-clamp-3 mb-3 sm:mb-0">
             {excerpt}
           </p>
           
           {/* Read More Indicator */}
-          <div className="mt-4 flex items-center gap-2 text-white/60 group-hover:text-white/80 transition-colors duration-300">
+          <div className="mt-3 sm:mt-4 flex items-center gap-2 text-white/60 group-hover:text-white/80 transition-colors duration-300">
             <span className="text-xs font-raleway">Read More</span>
             <svg 
               className="w-3 h-3 transform group-hover:translate-x-1 transition-transform duration-300" 

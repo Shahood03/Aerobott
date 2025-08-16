@@ -1,48 +1,48 @@
-import React from 'react';
-import { Linkedin, Twitter, Mail, Globe, Users, Shield, Brain, Settings, MapPin, Award } from 'lucide-react';
+// import React from 'react';
+// import { Linkedin, Twitter, Mail, Globe, Users, Shield, Brain, Settings, MapPin, Award } from 'lucide-react';
 
-const ManagementTeamSection = () => {
+// const ManagementTeamSection = () => {
 
-  const teamData = {
-    leadership: {
-      title: "Leadership Team",
-      icon: Users,
-      members: [
-        {
-          name: "Sanjay Vaidh",
-          position: "Founder",
-          description: "Visionary leader driving Aerobott's mission in Defence, UAV, AI, and emerging technologies. Leading the transformation of India's aerospace and defense capabilities through cutting-edge drone technology and strategic partnerships.",
-          image: "/images/team/t2.jpg",
-          socialLinks: [
-            { icon: Linkedin, url: "#" },
-            { icon: Twitter, url: "#" },
-            { icon: Mail, url: "#" }
-          ]
-        },
-        {
-          name: "Arpana Mishra",
-          position: "Co-Founder & Chief Operating Officer (COO)",
-          description: "Oversees operations, strategic partnerships, and long-term growth. Arpana is the visionary Co-Founder and Director driving the strategic growth and innovation at the heart of our organization, empowering teams and shaping the future of drone technology in India.",
-          image: "/images/team/t4.jpg",
-          socialLinks: [
-            { icon: Linkedin, url: "#" },
-            { icon: Globe, url: "#" },
-            { icon: Mail, url: "#" }
-          ]
-        },
-        {
-          name: "Deepak Vaidh",
-          position: "Co-Founder",
-          description: "Co-Founder playing a pivotal role in shaping the vision and direction of the organization. With a forward-thinking mindset and passion for innovation, he contributes significantly to strategic growth, partnerships, and advancement of drone technology solutions.",
-          image: "/images/team/t3.jpg",
-          socialLinks: [
-            { icon: Linkedin, url: "#" },
-            { icon: Twitter, url: "#" },
-            { icon: Mail, url: "#" }
-          ]
-        }
-      ]
-    },
+//   const teamData = {
+//     leadership: {
+//       title: "Leadership Team",
+//       icon: Users,
+//       members: [
+//         {
+//           name: "Sanjay Vaidh",
+//           position: "Founder",
+//           description: "Visionary leader driving Aerobott's mission in Defence, UAV, AI, and emerging technologies. Leading the transformation of India's aerospace and defense capabilities through cutting-edge drone technology and strategic partnerships.",
+//           image: "/images/team/t2.jpg",
+//           socialLinks: [
+//             { icon: Linkedin, url: "#" },
+//             { icon: Twitter, url: "#" },
+//             { icon: Mail, url: "#" }
+//           ]
+//         },
+//         {
+//           name: "Arpana Mishra",
+//           position: "Co-Founder & Chief Operating Officer (COO)",
+//           description: "Oversees operations, strategic partnerships, and long-term growth. Arpana is the visionary Co-Founder and Director driving the strategic growth and innovation at the heart of our organization, empowering teams and shaping the future of drone technology in India.",
+//           image: "/images/team/t4.jpg",
+//           socialLinks: [
+//             { icon: Linkedin, url: "#" },
+//             { icon: Globe, url: "#" },
+//             { icon: Mail, url: "#" }
+//           ]
+//         },
+//         {
+//           name: "Deepak Vaidh",
+//           position: "Co-Founder",
+//           description: "Co-Founder playing a pivotal role in shaping the vision and direction of the organization. With a forward-thinking mindset and passion for innovation, he contributes significantly to strategic growth, partnerships, and advancement of drone technology solutions.",
+//           image: "/images/team/t3.jpg",
+//           socialLinks: [
+//             { icon: Linkedin, url: "#" },
+//             { icon: Twitter, url: "#" },
+//             { icon: Mail, url: "#" }
+//           ]
+//         }
+//       ]
+//     },
     // advisory: {
     //   title: "Advisory Board",
     //   icon: Award,
@@ -206,54 +206,105 @@ const ManagementTeamSection = () => {
     //     }
     //   ]
     // }
+  // };
+
+  // Only include sections that exist in teamData
+  import React from 'react';
+import { Linkedin, Twitter, Mail, Globe, Users, Shield, Brain, Settings, MapPin, Award } from 'lucide-react';
+
+const ManagementTeamSection = () => {
+
+  const teamData = {
+    leadership: {
+      title: "Leadership Team",
+      icon: Users,
+      members: [
+        {
+          name: "Sanjay Vaidh",
+          position: "Founder",
+          description: "Visionary leader driving Aerobott's mission in Defence, UAV, AI, and emerging technologies. Leading the transformation of India's aerospace and defense capabilities through cutting-edge drone technology and strategic partnerships.",
+          image: "/images/team/t2.png",
+          socialLinks: [
+            { icon: Linkedin, url: "#" },
+            { icon: Twitter, url: "#" },
+            { icon: Mail, url: "#" }
+          ]
+        },
+        {
+          name: "Arpana Mishra",
+          position: "Co-Founder & Chief Operating Officer (COO)",
+          description: "Oversees operations, strategic partnerships, and long-term growth. Arpana is the visionary Co-Founder and Director driving the strategic growth and innovation at the heart of our organization, empowering teams and shaping the future of drone technology in India.",
+          image: "/images/team/t4.jpg",
+          socialLinks: [
+            { icon: Linkedin, url: "#" },
+            { icon: Globe, url: "#" },
+            { icon: Mail, url: "#" }
+          ]
+        },
+        {
+          name: "Deepak Vaidh",
+          position: "Co-Founder",
+          description: "Co-Founder playing a pivotal role in shaping the vision and direction of the organization. With a forward-thinking mindset and passion for innovation, he contributes significantly to strategic growth, partnerships, and advancement of drone technology solutions.",
+          image: "/images/team/t3.png",
+          socialLinks: [
+            { icon: Linkedin, url: "#" },
+            { icon: Twitter, url: "#" },
+            { icon: Mail, url: "#" }
+          ]
+        }
+      ]
+    }
   };
 
   // Only include sections that exist in teamData
   const sectionOrder = ['leadership'];
 
   return (
-    <section className="bg-black text-white min-h-screen py-16 px-4 overflow-x-hidden">
+    <section className="bg-black text-white min-h-screen py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8 overflow-x-hidden">
       {/* Import Raleway font */}
       <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
       
-      {/* Background blur effects */}
-      <div className="absolute w-96 h-80 left-0 top-80 bg-blue-600 rounded-full blur-[150px] opacity-20" />
-      <div className="absolute w-96 h-80 right-0 top-60 bg-purple-600 rounded-full blur-[150px] opacity-15" />
-      <div className="absolute w-80 h-80 left-1/2 transform -translate-x-1/2 bottom-20 bg-indigo-600 rounded-full blur-[120px] opacity-10" />
+      {/* Background blur effects - responsive */}
+      <div className="absolute w-48 sm:w-72 lg:w-96 h-40 sm:h-60 lg:h-80 left-0 top-40 sm:top-60 lg:top-80 bg-blue-600 rounded-full blur-[75px] sm:blur-[120px] lg:blur-[150px] opacity-20" />
+      <div className="absolute w-48 sm:w-72 lg:w-96 h-40 sm:h-60 lg:h-80 right-0 top-30 sm:top-45 lg:top-60 bg-purple-600 rounded-full blur-[75px] sm:blur-[120px] lg:blur-[150px] opacity-15" />
+      <div className="absolute w-40 sm:w-60 lg:w-80 h-40 sm:h-60 lg:h-80 left-1/2 transform -translate-x-1/2 bottom-10 sm:bottom-15 lg:bottom-20 bg-indigo-600 rounded-full blur-[60px] sm:blur-[90px] lg:blur-[120px] opacity-10" />
       
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-[#d5dbe6] text-4xl md:text-5xl lg:text-6xl font-medium leading-tight mb-4" style={{ fontFamily: 'Raleway, sans-serif' }}>
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+          <h1 className="text-[#d5dbe6] text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-tight mb-3 sm:mb-4" style={{ fontFamily: 'Raleway, sans-serif' }}>
             Aerobott Team Structure
           </h1>
-          <p className="text-[#d5dbe6]/60 text-base md:text-lg leading-relaxed max-w-3xl mx-auto" style={{ fontFamily: 'Raleway, sans-serif' }}>
+          <p className="text-[#d5dbe6]/60 text-sm sm:text-base md:text-lg leading-relaxed max-w-3xl mx-auto px-4" style={{ fontFamily: 'Raleway, sans-serif' }}>
             Meet our exceptional team of visionaries, experts, and innovators driving the future of drone technology and defense solutions across India
           </p>
         </div>
 
-        {/* Team Sections - Only Leadership (uncommented sections) */}
+        {/* Team Sections - Only Leadership */}
         {sectionOrder.map((section) => (
-          <div key={section} className="mb-20">
-            <div className="text-center mb-12">
-              <div className="flex items-center justify-center gap-3 mb-4">
-                {React.createElement(teamData[section].icon, { size: 32, className: "text-blue-400" })}
-                <h2 className="text-[#d5dbe6] text-3xl md:text-4xl font-medium" style={{ fontFamily: 'Raleway, sans-serif' }}>
+          <div key={section} className="mb-12 sm:mb-16 lg:mb-20">
+            <div className="text-center mb-8 sm:mb-10 lg:mb-12">
+              <div className="flex items-center justify-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+                {React.createElement(teamData[section].icon, { 
+                  size: window.innerWidth < 640 ? 24 : 32, 
+                  className: "text-blue-400" 
+                })}
+                <h2 className="text-[#d5dbe6] text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium" style={{ fontFamily: 'Raleway, sans-serif' }}>
                   {teamData[section].title}
                 </h2>
               </div>
-              <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
+              <div className="w-16 sm:w-20 lg:w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
             </div>
 
             {/* Team Cards Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
               {teamData[section].members.map((member, index) => (
                 <div
                   key={index}
-                  className="bg-gradient-to-br from-zinc-900/80 to-zinc-800/60 backdrop-blur-md rounded-2xl overflow-hidden shadow-2xl hover:scale-[1.02] transform transition duration-500 cursor-pointer border border-zinc-700/30 max-w-sm mx-auto"
+                  className="bg-gradient-to-br from-zinc-900/80 to-zinc-800/60 backdrop-blur-md rounded-2xl overflow-hidden shadow-2xl hover:scale-[1.02] transform transition duration-500 cursor-pointer border border-zinc-700/30 max-w-sm mx-auto w-full"
                 >
                   {/* Profile Image */}
-                  <div className="relative w-full h-96 overflow-hidden">
+                  <div className="relative w-full h-64 sm:h-80 lg:h-96 overflow-hidden">
                     <img
                       src={member.image}
                       alt={member.name}
@@ -263,10 +314,10 @@ const ManagementTeamSection = () => {
                   </div>
 
                   {/* Card Content */}
-                  <div className="p-6 space-y-4">
+                  <div className="p-4 sm:p-6 space-y-3 sm:space-y-4">
                     {/* Name */}
                     <h3 
-                      className="text-white text-xl font-medium leading-snug text-center" 
+                      className="text-white text-lg sm:text-xl font-medium leading-snug text-center" 
                       style={{ fontFamily: 'Raleway, sans-serif' }}
                     >
                       {member.name}
@@ -274,7 +325,7 @@ const ManagementTeamSection = () => {
 
                     {/* Position */}
                     <h4 
-                      className="text-blue-300 text-base font-semibold leading-normal text-center" 
+                      className="text-blue-300 text-sm sm:text-base font-semibold leading-normal text-center" 
                       style={{ fontFamily: 'Raleway, sans-serif' }}
                     >
                       {member.position}
@@ -282,25 +333,25 @@ const ManagementTeamSection = () => {
 
                     {/* Description */}
                     <p 
-                      className="text-white/80 text-sm font-normal leading-relaxed text-justify min-h-[100px]" 
+                      className="text-white/80 text-xs sm:text-sm font-normal leading-relaxed text-justify min-h-[80px] sm:min-h-[100px]" 
                       style={{ fontFamily: 'Raleway, sans-serif' }}
                     >
                       {member.description}
                     </p>
 
                     {/* Social Media Icons */}
-                    <div className="flex justify-center space-x-4 pt-4">
+                    <div className="flex justify-center space-x-3 sm:space-x-4 pt-3 sm:pt-4">
                       {member.socialLinks.map((social, socialIndex) => {
                         const IconComponent = social.icon;
                         return (
                           <a
                             key={socialIndex}
                             href={social.url}
-                            className="w-10 h-10 bg-gradient-to-br from-blue-500/20 to-purple-500/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/10 hover:border-white/30 hover:bg-white/10 hover:scale-110 transition-all duration-300 group"
+                            className="w-8 sm:w-10 h-8 sm:h-10 bg-gradient-to-br from-blue-500/20 to-purple-500/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/10 hover:border-white/30 hover:bg-white/10 hover:scale-110 transition-all duration-300 group"
                           >
                             <IconComponent 
-                              size={18} 
-                              className="text-white/70 group-hover:text-white transition-colors duration-300" 
+                              size={16} 
+                              className="sm:w-[18px] sm:h-[18px] text-white/70 group-hover:text-white transition-colors duration-300" 
                             />
                           </a>
                         );

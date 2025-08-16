@@ -73,7 +73,7 @@ const ClientsLovePilotsSection = () => {
   return (
     <section 
       id="news" 
-      className="relative flex flex-col items-center justify-center w-full  bg-[#04070d] overflow-hidden px-16 pt-12 z-2"
+      className="relative flex flex-col items-center justify-center w-full  bg-black overflow-hidden px-16 pt-12 z-2"
     >
       {/* Background gradient at bottom */}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-white/7 to-transparent z-1"></div>
@@ -153,7 +153,7 @@ const ClientsLovePilotsSection = () => {
 // Scrolling News Card Component
 const ScrollingNewsCard = ({ title, publication, date, excerpt, imageUrl }) => {
   return (
-    <div className="group relative w-full h-full bg-[#04070d] border border-white/7 rounded-2xl overflow-hidden shadow-inner hover:shadow-lg transition-all duration-500 will-change-transform hover:scale-105 hover:border-white/20">
+    <div className="group relative w-full h-full bg-black border border-white/7 rounded-2xl overflow-hidden shadow-inner hover:shadow-lg transition-all duration-500 will-change-transform hover:scale-105 hover:border-white/20">
       {/* Full Background Image */}
       <div className="absolute inset-0">
         <img 

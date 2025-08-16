@@ -3,49 +3,49 @@ import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin, Youtube } 
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white pt-16 pb-8 px-8">
+    <footer className="bg-black text-white pt-8 sm:pt-12 lg:pt-16 pb-6 sm:pb-8 px-4 sm:px-6 md:px-8">
       <div className="w-full max-w-none mx-auto">
         {/* Footer Top Section */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-10 lg:mb-12">
           {/* Company Info */}
-          <div className="col-span-1">
+          <div className="col-span-1 sm:col-span-2 lg:col-span-1">
             <img 
               src="/images/logo/logo.png" 
               alt="Aerobott Logo" 
-              className="h-10 brightness-0 invert mb-6" 
+              className="h-8 sm:h-10 brightness-0 invert mb-4 sm:mb-6" 
             />
-            <p className="text-gray-400 mb-6 font-raleway font-normal leading-relaxed">
+            <p className="text-gray-400 mb-4 sm:mb-6 font-raleway font-normal leading-relaxed text-sm sm:text-base">
               Leading the drone industry with innovative technology for aerial imaging, 
               defense systems, and drone-as-a-service solutions.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex space-x-3 sm:space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">
-                <Facebook size={20} />
+                <Facebook size={18} className="sm:w-5 sm:h-5" />
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">
-                <Twitter size={20} />
+                <Twitter size={18} className="sm:w-5 sm:h-5" />
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">
-                <Instagram size={20} />
+                <Instagram size={18} className="sm:w-5 sm:h-5" />
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">
-                <Linkedin size={20} />
+                <Linkedin size={18} className="sm:w-5 sm:h-5" />
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">
-                <Youtube size={20} />
+                <Youtube size={18} className="sm:w-5 sm:h-5" />
               </a>
             </div>
           </div>
           
           {/* Quick Links */}
           <div className="col-span-1">
-            <h3 className="text-lg font-raleway font-semibold mb-6">Quick Links</h3>
-            <ul className="space-y-3">
+            <h3 className="text-base sm:text-lg font-raleway font-semibold mb-4 sm:mb-6">Quick Links</h3>
+            <ul className="space-y-2 sm:space-y-3">
               {['Home', 'Drone Tech', 'Defence', 'DAAS', 'Contact Us'].map((item) => (
                 <li key={item}>
                   <a 
                     href={`#${item.toLowerCase().replace(' ', '-')}`}
-                    className="text-gray-400 hover:text-white transition-colors duration-300 font-raleway font-normal"
+                    className="text-gray-400 hover:text-white transition-colors duration-300 font-raleway font-normal text-sm sm:text-base"
                   >
                     {item}
                   </a>
@@ -56,13 +56,13 @@ const Footer = () => {
           
           {/* Products */}
           <div className="col-span-1">
-            <h3 className="text-lg font-raleway font-semibold mb-6">Products</h3>
-            <ul className="space-y-3">
+            <h3 className="text-base sm:text-lg font-raleway font-semibold mb-4 sm:mb-6">Products</h3>
+            <ul className="space-y-2 sm:space-y-3">
               {['Consumer Drones', 'Enterprise Drones', 'Defense Systems', 'Accessories', 'Software Solutions'].map((item) => (
                 <li key={item}>
                   <a 
                     href="#" 
-                    className="text-gray-400 hover:text-white transition-colors duration-300 font-raleway font-normal"
+                    className="text-gray-400 hover:text-white transition-colors duration-300 font-raleway font-normal text-sm sm:text-base"
                   >
                     {item}
                   </a>
@@ -72,45 +72,44 @@ const Footer = () => {
           </div>
           
           {/* Contact Information */}
-          <div className="col-span-1">
-            <h3 className="text-lg font-raleway font-semibold mb-6">Contact Us</h3>
-            <ul className="space-y-4">
+          <div className="col-span-1 sm:col-span-2 lg:col-span-1">
+            <h3 className="text-base sm:text-lg font-raleway font-semibold mb-4 sm:mb-6">Contact Us</h3>
+            <ul className="space-y-3 sm:space-y-4">
               <li className="flex items-start">
-                <MapPin size={20} className="text-gray-400 mr-3 mt-1 flex-shrink-0" />
-                <span className="text-gray-400 font-raleway font-normal leading-relaxed">
+                <MapPin size={18} className="text-gray-400 mr-2 sm:mr-3 mt-1 flex-shrink-0 sm:w-5 sm:h-5" />
+                <span className="text-gray-400 font-raleway font-normal leading-relaxed text-sm sm:text-base">
                 Hotel Sahara Star, North Tower Ground Floor, Chhatrapati Shivaji International, 70-C, Nehru Rd, Navpada, Airport Area, Vile Parle, Mumbai, Maharashtra 400099
                 </span>
               </li>
               <li className="flex items-center">
-                <Phone size={20} className="text-gray-400 mr-3 flex-shrink-0" />
-                <a href="tel+919004711184" className="text-gray-400 hover:text-white transition-colors duration-300 font-raleway font-normal">
+                <Phone size={18} className="text-gray-400 mr-2 sm:mr-3 flex-shrink-0 sm:w-5 sm:h-5" />
+                <a href="tel+919004711184" className="text-gray-400 hover:text-white transition-colors duration-300 font-raleway font-normal text-sm sm:text-base">
                 +91 9004711184 
                 </a>
               </li>
               <li className="flex items-center">
-                <Mail size={20} className="text-gray-400 mr-3 flex-shrink-0" />
-                <a href="mailto:info@aerobott.com" className="text-gray-400 hover:text-white transition-colors duration-300 font-raleway font-normal">
+                <Mail size={18} className="text-gray-400 mr-2 sm:mr-3 flex-shrink-0 sm:w-5 sm:h-5" />
+                <a href="mailto:info@aerobott.com" className="text-gray-400 hover:text-white transition-colors duration-300 font-raleway font-normal text-sm sm:text-base">
                 info@aerobott.com
                 </a>
               </li>
             </ul>
           </div>
         </div>
-     
         
         {/* Footer Bottom */}
-        <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between">
-          <p className="text-gray-400 text-sm mb-4 md:mb-0 font-raleway font-normal">
+        <div className="border-t border-gray-800 pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-gray-400 text-xs sm:text-sm font-raleway font-normal text-center sm:text-left">
             &copy; {new Date().getFullYear()} AEROBOTT. All rights reserved.
           </p>
-          <div className="flex space-x-6">
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors duration-300 font-raleway font-normal">
+          <div className="flex flex-wrap justify-center sm:justify-end space-x-4 sm:space-x-6">
+            <a href="#" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300 font-raleway font-normal">
               Privacy Policy
             </a>
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors duration-300 font-raleway font-normal">
+            <a href="#" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300 font-raleway font-normal">
               Terms of Service
             </a>
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors duration-300 font-raleway font-normal">
+            <a href="#" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300 font-raleway font-normal">
               Cookie Policy
             </a>
           </div>
