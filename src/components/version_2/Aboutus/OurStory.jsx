@@ -25,7 +25,7 @@ const AerobottStorySection = () => {
             {/* Description paragraphs */}
             <div className="space-y-4 sm:space-y-6">
               <p className="text-zinc-400 text-base sm:text-lg leading-relaxed text-justify" style={{ fontFamily: 'Raleway, sans-serif' }}>
-                Founded in 2018 by a team of aerospace engineers and technology visionaries, Aerobott emerged from a simple yet powerful idea: to democratize aerial intelligence and make advanced drone technology accessible to everyone. What started as a passion project in a small garage has evolved into a leading force in the drone industry.
+        Aerobott emerged from a simple yet powerful idea: to democratize aerial intelligence and make advanced drone technology accessible to everyone. What started as a passion project in a small garage has evolved into a leading force in the drone industry.
               </p>
               
               <p className="text-zinc-400 text-base sm:text-lg leading-relaxed text-justify" style={{ fontFamily: 'Raleway, sans-serif' }}>

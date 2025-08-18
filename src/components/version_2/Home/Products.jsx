@@ -1,6 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const ProductsSection = () => {
+  const navigate = useNavigate();
+
+  const handleProductNavigation = (productPath) => {
+    navigate(productPath);
+  };
+
   return (
     <section 
       id="products" 
@@ -42,6 +49,7 @@ const ProductsSection = () => {
             altText="FLYT-1 autonomous drone with AI navigation"
             badge="AI-Powered"
             customHeight="h-[300px] sm:h-[400px] md:h-[450px] lg:h-[550px]"
+            onKnowMore={() => handleProductNavigation('/products/flyt-i')}
           />
 
           <ProductCard
@@ -51,6 +59,7 @@ const ProductsSection = () => {
             altText="Survey Master Pro professional mapping drone"
             badge="Professional"
             customHeight="h-[300px] sm:h-[400px] md:h-[450px] lg:h-[550px]"
+            onKnowMore={() => handleProductNavigation('/products/survey-master-pro')}
           />
 
           <ProductCard
@@ -60,6 +69,7 @@ const ProductsSection = () => {
             altText="Aero Agri agricultural drone for precision farming"
             badge="Agriculture"
             customHeight="h-[300px] sm:h-[400px] md:h-[450px] lg:h-[550px]"
+            onKnowMore={() => handleProductNavigation('/products/aero-agri')}
           />
         </div>
 
@@ -68,7 +78,7 @@ const ProductsSection = () => {
   );
 };
 
-// Product Card Component with customizable dimensions
+// Product Card Component with customizable dimensions and Know More button
 const ProductCard = ({ 
   title, 
   description, 
@@ -76,7 +86,8 @@ const ProductCard = ({
   altText, 
   badge, 
   customHeight = "h-80", // Default height
-  customWidth = "w-full" // Default width
+  customWidth = "w-full", // Default width
+  onKnowMore
 }) => {
   return (
     <div className={`group relative ${customWidth} ${customHeight} bg-black border border-white/7 rounded-2xl overflow-hidden shadow-inner hover:shadow-lg transition-all duration-300 will-change-transform`}>
@@ -100,14 +111,28 @@ const ProductCard = ({
       </div>
 
       {/* Text Content positioned at bottom */}
-      <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center gap-1.5 p-4 sm:p-6 lg:p-7 text-center bg-gradient-to-t from-black/80 via-black/60 to-transparent">
+      <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center gap-3 p-4 sm:p-6 lg:p-7 text-center bg-gradient-to-t from-black/90 via-black/70 to-transparent">
         <div className="relative z-10">
           <h3 className="text-white text-lg sm:text-xl font-raleway font-medium leading-tight mb-1.5 sm:mb-2">
             {title}
           </h3>
-          <p className="text-white/90 text-sm sm:text-base font-raleway leading-relaxed text-center">
+          <p className="text-white/90 text-sm sm:text-base font-raleway leading-relaxed text-center mb-3 sm:mb-4">
             {description}
           </p>
+          
+          {/* Know More Button - styled similar to Explore AI Solutions */}
+          <div className="relative inline-block">
+            <button 
+              onClick={onKnowMore}
+              className="relative px-4 sm:px-6 py-2 sm:py-3 bg-indigo-600 rounded-xl shadow-[0px_0px_28.6px_0px_rgba(58,72,224,0.5)] border border-blue-300/30 text-white text-xs sm:text-sm font-medium overflow-hidden group/btn hover:bg-indigo-700 transition-all duration-300 font-raleway"
+            >
+              {/* Button glow effects */}
+              <div className="absolute w-16 sm:w-24 h-6 sm:h-8 left-2 sm:left-3 top-4 sm:top-6 bg-blue-300/20 rounded-full blur-md" />
+              <div className="absolute inset-0 bg-gradient-radial from-black/20 to-transparent opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300" />
+              
+              <span className="relative z-10">Know More</span>
+            </button>
+          </div>
         </div>
       </div>
 

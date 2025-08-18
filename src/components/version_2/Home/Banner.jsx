@@ -160,24 +160,6 @@ const Banner = () => {
              style={{ animationDelay: '600ms' }}>
             {slides[currentSlide].subtitle}
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mt-6 sm:mt-8 animate-fadeIn px-4"
-               style={{ animationDelay: '750ms' }}>
-            <button 
-              className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white px-6 py-3 sm:px-6 sm:py-2 rounded-full transition-all duration-300 flex items-center justify-center gap-1 border border-white/30 hover:scale-105 text-sm sm:text-base min-h-[44px] touch-manipulation font-medium"
-              onClick={() => handleRedirect(`${slides[currentSlide].url}/learn`)}
-              style={{ fontFamily: '"Raleway", sans-serif' }}
-            >
-              Learn More <ChevronRight size={16} />
-            </button>
-            <button 
-              className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-6 py-3 sm:px-6 sm:py-2 rounded-full transition-all duration-300 flex items-center justify-center gap-1 border border-white/30 hover:scale-105 text-sm sm:text-base min-h-[44px] touch-manipulation font-medium"
-              onClick={() => handleRedirect(slides[currentSlide].url)}
-              style={{ fontFamily: '"Raleway", sans-serif' }}
-            >
-              Buy Now <ChevronRight size={16} />
-            </button>
-          </div>
         </div>
       </div>
       
@@ -200,43 +182,83 @@ const Banner = () => {
         <ChevronRight size={20} className="sm:w-6 sm:h-6 transition-transform duration-300 transform group-hover:translate-x-[2px]" />
       </button>
       
-      {/* Enhanced product indicator with animations - Made responsive */}
-      <div className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 sm:gap-3 z-10 animate-fadeIn px-4"
-           style={{ animationDelay: '900ms' }}>
-        {/* Manual slide selection indicators */}
-        <div className="flex gap-2 sm:gap-3">
-          {slides.map((slide, index) => (
-            <button 
-              key={slide.id} 
-              className={`h-1.5 rounded-full transition-all duration-300 cursor-pointer hover:bg-white focus:outline-none min-h-[24px] min-w-[24px] flex items-center justify-center touch-manipulation ${
-                currentSlide === index 
-                  ? 'w-6 sm:w-8 bg-white shadow-glow' 
-                  : 'w-3 sm:w-4 bg-white/40 hover:bg-white/60'
-              }`}
-              onClick={() => {
-                if (!isAnimating) {
-                  setIsAnimating(true);
-                  setCurrentSlide(index);
-                  setTimeout(() => setIsAnimating(false), animationDuration);
-                }
-              }}
-              aria-label={`Go to slide ${index + 1}: ${slide.title}`}
-              style={{
-                boxShadow: currentSlide === index ? '0 0 10px rgba(255, 255, 255, 0.7)' : 'none'
-              }}
-            />
-          ))}
-        </div>
-        {slides[currentSlide].product && (
-          <div 
-            className="text-white/90 text-xs sm:text-sm font-medium mt-1 hover:text-white cursor-pointer flex items-center transition-all duration-300 hover:scale-105 backdrop-blur-sm bg-white/10 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full min-h-[32px] touch-manipulation"
-            onClick={() => handleRedirect(slides[currentSlide].url)}
-            style={{ fontFamily: '"Raleway", sans-serif' }}
-          >
-            <span>{slides[currentSlide].product}</span>
-            <ChevronRight size={12} className="sm:w-3.5 sm:h-3.5 ml-1 transition-transform duration-300 transform group-hover:translate-x-[2px]" />
+      {/* DESKTOP INDICATORS - Hidden on mobile */}
+      <div className="desktop-indicators hidden sm:block">
+        <div className="absolute bottom-8 md:bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 z-10 animate-fadeIn"
+             style={{ animationDelay: '900ms' }}>
+          {/* Manual slide selection indicators */}
+          <div className="flex gap-3">
+            {slides.map((slide, index) => (
+              <button 
+                key={slide.id} 
+                className={`h-1.5 rounded-full transition-all duration-300 cursor-pointer hover:bg-white focus:outline-none min-h-[24px] min-w-[24px] flex items-center justify-center touch-manipulation ${
+                  currentSlide === index 
+                    ? 'w-8 bg-white shadow-glow' 
+                    : 'w-4 bg-white/40 hover:bg-white/60'
+                }`}
+                onClick={() => {
+                  if (!isAnimating) {
+                    setIsAnimating(true);
+                    setCurrentSlide(index);
+                    setTimeout(() => setIsAnimating(false), animationDuration);
+                  }
+                }}
+                aria-label={`Go to slide ${index + 1}: ${slide.title}`}
+                style={{
+                  boxShadow: currentSlide === index ? '0 0 10px rgba(255, 255, 255, 0.7)' : 'none'
+                }}
+              />
+            ))}
           </div>
-        )}
+          {slides[currentSlide].product && (
+            <div 
+              className="text-white/90 text-sm font-medium hover:text-white cursor-pointer flex items-center transition-all duration-300 hover:scale-105 backdrop-blur-sm bg-white/10 px-4 py-2 rounded-full min-h-[36px] touch-manipulation"
+              onClick={() => handleRedirect(slides[currentSlide].url)}
+              style={{ fontFamily: '"Raleway", sans-serif' }}
+            >
+              <span>{slides[currentSlide].product}</span>
+              <ChevronRight size={14} className="ml-1 transition-transform duration-300 transform group-hover:translate-x-[2px]" />
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* MOBILE INDICATORS - Hidden on desktop */}
+      <div className="mobile-indicators block sm:hidden">
+        <div className="fixed bottom-4 left-0 right-0 flex flex-col items-center justify-center gap-2 z-30 px-4"
+             style={{ animationDelay: '900ms' }}>
+          {/* Manual slide selection indicators */}
+          <div className="flex items-center justify-center gap-2">
+            {slides.map((slide, index) => (
+              <button 
+                key={slide.id} 
+                className={`mobile-dot h-1 rounded-full transition-all duration-300 cursor-pointer hover:bg-white focus:outline-none min-h-[36px] min-w-[36px] flex items-center justify-center touch-manipulation ${
+                  currentSlide === index 
+                    ? 'w-3 bg-white mobile-dot-active' 
+                    : 'w-1.5 bg-white/40 hover:bg-white/60 mobile-dot-inactive'
+                }`}
+                onClick={() => {
+                  if (!isAnimating) {
+                    setIsAnimating(true);
+                    setCurrentSlide(index);
+                    setTimeout(() => setIsAnimating(false), animationDuration);
+                  }
+                }}
+                aria-label={`Go to slide ${index + 1}: ${slide.title}`}
+              />
+            ))}
+          </div>
+          {slides[currentSlide].product && (
+            <div 
+              className="mobile-product-label text-white/90 text-xs font-medium hover:text-white cursor-pointer flex items-center transition-all duration-300 hover:scale-105 backdrop-blur-sm bg-white/10 px-3 py-1.5 rounded-full min-h-[32px] touch-manipulation mx-auto"
+              onClick={() => handleRedirect(slides[currentSlide].url)}
+              style={{ fontFamily: '"Raleway", sans-serif' }}
+            >
+              <span>{slides[currentSlide].product}</span>
+              <ChevronRight size={12} className="ml-1 transition-transform duration-300 transform group-hover:translate-x-[2px]" />
+            </div>
+          )}
+        </div>
       </div>
 
       {/* Add keyframe animations to the stylesheet */}
@@ -263,13 +285,105 @@ const Banner = () => {
           font-family: 'Raleway', sans-serif;
         }
         
-        /* Ensure proper touch targets on mobile */
-        @media (max-width: 640px) {
-          .min-h-44 {
-            min-height: 44px;
+        /* ===== DESKTOP SPECIFIC STYLES ===== */
+        @media (min-width: 640px) {
+          .desktop-indicators {
+            display: block !important;
           }
-          .min-w-44 {
-            min-width: 44px;
+          .mobile-indicators {
+            display: none !important;
+          }
+        }
+        
+        /* ===== MOBILE SPECIFIC STYLES ===== */
+        @media (max-width: 639px) {
+          .desktop-indicators {
+            display: none !important;
+          }
+          .mobile-indicators {
+            display: block !important;
+          }
+          
+          /* Mobile dot styles */
+          .mobile-dot {
+            height: 4px !important;
+            border-radius: 9999px !important;
+            transition: all 300ms ease !important;
+            cursor: pointer !important;
+            min-height: 36px !important;
+            min-width: 36px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            touch-action: manipulation !important;
+          }
+          
+          .mobile-dot-active {
+            width: 12px !important;
+            background-color: white !important;
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.6) !important;
+          }
+          
+          .mobile-dot-inactive {
+            width: 6px !important;
+            background-color: rgba(255, 255, 255, 0.4) !important;
+          }
+          
+          .mobile-dot-inactive:hover {
+            background-color: rgba(255, 255, 255, 0.6) !important;
+          }
+          
+          /* Mobile product label styles */
+          .mobile-product-label {
+            color: rgba(255, 255, 255, 0.9) !important;
+            font-size: 0.75rem !important;
+            font-weight: 500 !important;
+            cursor: pointer !important;
+            display: flex !important;
+            align-items: center !important;
+            transition: all 300ms ease !important;
+            backdrop-filter: blur(4px) !important;
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            padding: 0.375rem 0.75rem !important;
+            border-radius: 9999px !important;
+            min-height: 32px !important;
+            touch-action: manipulation !important;
+            margin: 0 auto !important;
+          }
+          
+          .mobile-product-label:hover {
+            color: white !important;
+            transform: scale(1.05) !important;
+          }
+          
+          /* Mobile container positioning */
+          .mobile-indicators > div {
+            position: fixed !important;
+            bottom: 1rem !important;
+            left: 0 !important;
+            right: 0 !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 0.5rem !important;
+            z-index: 30 !important;
+            padding: 0 1rem !important;
+          }
+          
+          /* Mobile dots container */
+          .mobile-indicators .flex {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 0.5rem !important;
+          }
+        }
+        
+        /* Extra small screens */
+        @media (max-width: 375px) {
+          .mobile-indicators > div {
+            padding: 0 0.5rem !important;
           }
         }
       `}</style>

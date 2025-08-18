@@ -225,8 +225,8 @@ const ManagementTeamSection = () => {
           description: "Visionary leader driving Aerobott's mission in Defence, UAV, AI, and emerging technologies. Leading the transformation of India's aerospace and defense capabilities through cutting-edge drone technology and strategic partnerships.",
           image: "/images/team/t2.png",
           socialLinks: [
-            { icon: Linkedin, url: "#" },
-            { icon: Twitter, url: "#" },
+            { icon: Linkedin, url: "https://www.linkedin.com/in/sanjay-vaidh-118a0a43?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " },
+            // { icon: Twitter, url: "#" },
             { icon: Mail, url: "#" }
           ]
         },
@@ -236,9 +236,9 @@ const ManagementTeamSection = () => {
           description: "Oversees operations, strategic partnerships, and long-term growth. Arpana is the visionary Co-Founder and Director driving the strategic growth and innovation at the heart of our organization, empowering teams and shaping the future of drone technology in India.",
           image: "/images/team/t4.jpg",
           socialLinks: [
-            { icon: Linkedin, url: "#" },
-            { icon: Globe, url: "#" },
-            { icon: Mail, url: "#" }
+            { icon: Linkedin, url: "https://www.linkedin.com/in/arpana-mishra-162a6543?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " },
+            // { icon: Globe, url: "#" },
+            { icon: Mail, url: "ceo@aerobott.com" }
           ]
         },
         {
@@ -247,8 +247,8 @@ const ManagementTeamSection = () => {
           description: "Co-Founder playing a pivotal role in shaping the vision and direction of the organization. With a forward-thinking mindset and passion for innovation, he contributes significantly to strategic growth, partnerships, and advancement of drone technology solutions.",
           image: "/images/team/t3.png",
           socialLinks: [
-            { icon: Linkedin, url: "#" },
-            { icon: Twitter, url: "#" },
+            { icon: Linkedin, url: "https://www.linkedin.com/in/deepak-vaidh-a26b00274" },
+            // { icon: Twitter, url: "#" },
             { icon: Mail, url: "#" }
           ]
         }
@@ -260,7 +260,7 @@ const ManagementTeamSection = () => {
   const sectionOrder = ['leadership'];
 
   return (
-    <section className="bg-black text-white min-h-screen py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8 overflow-x-hidden">
+    <section className="bg-black text-white min-h-screen pt-12 px-4 sm:px-6 lg:px-8 overflow-x-hidden">
       {/* Import Raleway font */}
       <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
       

@@ -16,13 +16,29 @@ import CourseDetailsPage from "./components/version_2/Training/CourseDetailsPage
 import Contactus from "./components/vesion_1/contactus/Contactus";
 import PartnerWithUs from "./components/version_2/PartnerWithUs/PartnerWithUs";
 
+// ScrollToTop component to handle scroll restoration
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
 
+  useEffect(() => {
+    // Scroll to top when route changes
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant" // Use "smooth" if you want smooth scrolling
+    });
+  }, [pathname]);
 
+  return null;
+}
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route element={<Layout />}>
           {/* Existing defined routes */}
@@ -46,37 +62,28 @@ function App() {
           <Route path="/about-us" element={<Aboutus />} />
           <Route path="/daas" element={<DaasMain/>} />
           <Route path="/contact-us" element={<Contactus/>} />
-          
+                   
           <Route path="/page-under-development" element={<UnderDevelopmentPage />} /> */}
-
+          
           {/* Routes that should show UnderDevelopmentPage */}
-         
-         {/* *****************************  Version *************************************** */}
-
+                  
+          {/* *****************************  Version *************************************** */}
           <Route path="/" element={<HomeMain />} />
           <Route path="/drone-as-service" element={<Daas />} />
-          <Route path="/about-us" element={<AboutUsMain />} />
-     
+          <Route path="/about-us" element={<AboutUsMain />} />       
           <Route path="/hire-pilot" element={<HirePilot />} />
           <Route path="/products" element={<ProductMain />} />
-            <Route path="/products/flyt-i" element={<FlytMain />} />
-             <Route path="/products/aero-agri" element={<AeroAgriMain />} />
-             <Route path="/products/survey-master-pro" element={<SurveyMain />} />
+          <Route path="/products/flyt-i" element={<FlytMain />} />
+          <Route path="/products/aero-agri" element={<AeroAgriMain />} />
+          <Route path="/products/survey-master-pro" element={<SurveyMain />} />
           <Route path="/training" element={<TrainingMain />} />
           <Route path="/training/course/:courseId" element={<CourseDetailsPage />} />
-          <Route path="/partner-with-us" element={<PartnerWithUs />} />
-
-          
-
-         <Route path="/contact-us" element={<Contactus/>} />
-          
-
-
-          
-   
+          <Route path="/partner-with-us" element={<PartnerWithUs />} />           
+          <Route path="/contact-us" element={<Contactus/>} />                                     
         </Route>
       </Routes>
     </Router>
   );
 }
+
 export default App;

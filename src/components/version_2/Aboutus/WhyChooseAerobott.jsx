@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const WhyChooseAerobottSection = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
   const features = [
     {
       title: "Globally Recognized Excellence",
@@ -29,8 +31,16 @@ const WhyChooseAerobottSection = () => {
     }
   ];
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prevIndex) => (prevIndex + 1) % features.length);
+    }, 2500); // Change every 2.5 seconds
+
+    return () => clearInterval(interval);
+  }, [features.length]);
+
   return (
-    <section className="bg-black text-white py-8 sm:py-12 lg:py-16 px-4 sm:px-6 md:px-8 lg:px-16 flex flex-col items-center justify-center relative overflow-hidden">
+    <section className="bg-black text-white  sm:py-12 lg:py-16 px-4 sm:px-6 md:px-8 lg:px-16 flex flex-col items-center justify-center relative overflow-hidden">
       {/* Import Raleway font */}
       <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
       
@@ -54,7 +64,9 @@ const WhyChooseAerobottSection = () => {
           {/* Left Side - Feature Cards */}
           <div className="w-full flex flex-col justify-start items-center gap-4 sm:gap-5">
             {features.map((feature, index) => (
-              <div key={index} className={`w-full max-w-[620px] min-h-24 sm:min-h-32 pl-4 sm:pl-5 pr-2 sm:pr-2.5 py-3 sm:py-4 ${feature.bgColor} rounded-2xl flex justify-center items-center gap-4 sm:gap-6`}>
+              <div key={index} className={`w-full max-w-[620px] min-h-24 sm:min-h-32 pl-4 sm:pl-5 pr-2 sm:pr-2.5 py-3 sm:py-4 ${
+                index === activeIndex ? 'bg-indigo-200' : 'bg-white'
+              } rounded-2xl flex justify-center items-center gap-4 sm:gap-6 transition-colors duration-700 ease-in-out`}>
                 <div className="flex-1 flex justify-start items-start gap-3 sm:gap-6">
                   {/* Icon Container */}
                   <div className="w-8 sm:w-10 h-8 sm:h-10 relative flex-shrink-0">

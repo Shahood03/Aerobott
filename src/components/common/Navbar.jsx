@@ -375,6 +375,9 @@ const MobileMenu = ({
     return false;
   };
 
+  // Check if products should be highlighted in mobile menu
+  const isProductsActive = activeSection === 'products' || currentPath.startsWith('/products/');
+
   return (
     <div
       className={`md:hidden transition-all duration-500 ease-in-out mt-8 overflow-hidden bg-gray-500/30 backdrop-blur-md border-t border-gray-300/20 ${
@@ -404,7 +407,7 @@ const MobileMenu = ({
                 </a>
                 
                 {/* Products Dropdown - Right after About Us */}
-                <div className={`${activeSection === 'products' || currentPath.startsWith('/products/') ? 'border-l-2 border-blue-300 pl-3' : ''}`}>
+                <div className={`${isProductsActive ? 'border-l-2 border-blue-300 pl-3' : ''}`}>
                   <MobileDropdown 
                     title="Products"
                     items={productsSubItems}
@@ -469,7 +472,7 @@ const MobileMenu = ({
   );
 };
 
-// Enhanced Products Dropdown with active state
+// Enhanced Products Dropdown with active state - FIXED VERSION
 const EnhancedProductsDropdown = ({ scrolled, isOpen, toggleDropdown, isActive }) => {
   const products = [
     {
@@ -590,7 +593,7 @@ const AnimationStyles = () => {
   );
 };
 
-// Main Navbar component - updated with active section highlighting
+// Main Navbar component - FIXED VERSION
 const Navbar = () => {
   const navbarRef = useRef(null);
   const droneDropdownRef = useRef(null);
@@ -614,8 +617,8 @@ const Navbar = () => {
     return false;
   };
 
-  // Check if products dropdown should be highlighted
-  const isProductsActive = activeSection === 'products' || currentPath.startsWith('/products/');
+  // FIXED: Check if products dropdown should be highlighted - only when actually on products pages
+  const isProductsActive = currentPath.startsWith('/products/');
 
   // Handle window resize for responsiveness
   useEffect(() => {
