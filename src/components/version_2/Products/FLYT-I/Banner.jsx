@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import DemoRequestPopup from '../DemoRequestPopup';
 
 const Banner = () => {
   const [scrollY, setScrollY] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
+  const [isDemoPopupOpen, setIsDemoPopupOpen] = useState(false);
   
   // Handle scroll effect and mobile detection
   useEffect(() => {
@@ -31,6 +33,14 @@ const Banner = () => {
     if (window.innerWidth < 768) return 10;
     if (window.innerWidth < 1024) return 15;
     return 20;
+  };
+
+  const handleDemoRequest = () => {
+    setIsDemoPopupOpen(true);
+  };
+
+  const closeDemoPopup = () => {
+    setIsDemoPopupOpen(false);
   };
 
   return (
@@ -106,6 +116,7 @@ const Banner = () => {
             </button>
             
             <button 
+              onClick={handleDemoRequest}
               className="group relative w-full sm:w-auto px-6 sm:px-8 md:px-10 lg:px-12 py-3 sm:py-4 md:py-5 bg-transparent border border-blue-600 rounded-lg sm:rounded-xl overflow-hidden transition-all duration-300 hover:bg-blue-600/20 hover:scale-105 hover:shadow-[0px_0px_15px_0px_rgba(59,130,246,0.5)] md:hover:shadow-[0px_0px_25px_0px_rgba(59,130,246,0.5)] active:scale-95"
               style={{
                 outline: '1px solid rgba(147, 197, 253, 0.3)',
@@ -122,6 +133,12 @@ const Banner = () => {
           </div>
         </div>
       </div>
+
+      {/* Demo Request Popup */}
+      <DemoRequestPopup 
+        isOpen={isDemoPopupOpen} 
+        onClose={closeDemoPopup} 
+      />
       
       {/* Enhanced CSS for animations and responsive design */}
       <style jsx>{`

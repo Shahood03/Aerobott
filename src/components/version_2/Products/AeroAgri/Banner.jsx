@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import DemoRequestPopup from '../DemoRequestPopup';
 
 const Banner = () => {
   const [scrollY, setScrollY] = useState(0);
+  const [isDemoPopupOpen, setIsDemoPopupOpen] = useState(false);
   
   // Handle scroll effect
   useEffect(() => {
@@ -12,6 +14,14 @@ const Banner = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const openDemoPopup = () => {
+    setIsDemoPopupOpen(true);
+  };
+
+  const closeDemoPopup = () => {
+    setIsDemoPopupOpen(false);
+  };
 
   return (
     <>
@@ -87,6 +97,7 @@ const Banner = () => {
               </button>
               
               <button 
+                onClick={openDemoPopup}
                 className="group relative w-full sm:w-auto px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 bg-transparent border border-blue-600 rounded-lg sm:rounded-xl overflow-hidden transition-all duration-300 hover:bg-blue-600/20 hover:scale-105 hover:shadow-[0px_0px_25px_0px_rgba(59,130,246,0.5)] active:scale-95"
                 style={{
                   outline: '1px solid rgba(147, 197, 253, 0.3)',
@@ -133,6 +144,12 @@ const Banner = () => {
           }
         `}</style>
       </div>
+      
+      {/* Demo Request Popup */}
+      <DemoRequestPopup 
+        isOpen={isDemoPopupOpen} 
+        onClose={closeDemoPopup} 
+      />
     </>
   );
 };

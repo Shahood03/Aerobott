@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import DemoRequestPopup from '../DemoRequestPopup';
 
 const Banner = () => {
   const [scrollY, setScrollY] = useState(0);
+  const [isDemoPopupOpen, setIsDemoPopupOpen] = useState(false);
   
   // Handle scroll effect
   useEffect(() => {
@@ -12,6 +14,14 @@ const Banner = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleDemoRequest = () => {
+    setIsDemoPopupOpen(true);
+  };
+
+  const closeDemoPopup = () => {
+    setIsDemoPopupOpen(false);
+  };
 
   return (
     <div className="relative w-full h-screen overflow-hidden bg-black">
@@ -78,6 +88,7 @@ const Banner = () => {
             </button>
             
             <button 
+              onClick={handleDemoRequest}
               className="group relative w-full xs:w-full sm:w-auto px-6 xs:px-8 sm:px-10 md:px-12 py-3 xs:py-4 sm:py-5 bg-transparent border border-blue-600 rounded-lg sm:rounded-xl overflow-hidden transition-all duration-300 hover:bg-blue-600/20 hover:scale-105 hover:shadow-[0px_0px_15px_0px_rgba(59,130,246,0.5)] sm:hover:shadow-[0px_0px_25px_0px_rgba(59,130,246,0.5)]"
               style={{
                 outline: '1px solid rgba(147, 197, 253, 0.3)',
@@ -94,6 +105,12 @@ const Banner = () => {
           </div>
         </div>
       </div>
+
+      {/* Demo Request Popup */}
+      <DemoRequestPopup 
+        isOpen={isDemoPopupOpen} 
+        onClose={closeDemoPopup} 
+      />
       
       {/* Enhanced CSS for animations and responsive design */}
       <style jsx>{`

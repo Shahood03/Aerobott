@@ -1,13 +1,19 @@
 import React, { useState } from 'react';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
 
 const NewsletterSubscription = () => {
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
     phone: '',
     message: ''
   });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', null
+  const [errors, setErrors] = useState([]);
+
+  // Get API URL from environment variable
+  const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:8080';
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -15,6 +21,53 @@ const NewsletterSubscription = () => {
       ...prev,
       [name]: value
     }));
+
+    // Clear errors when user starts typing
+    if (errors.length > 0) {
+      setErrors([]);
+      setSubmitStatus(null);
+    }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setErrors([]);
+    setSubmitStatus(null);
+
+    try {
+      const response = await fetch(`${API_URL}/api/newsletter/subscribe`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        // Reset form
+        setFormData({
+          name: '',
+          phone: '',
+          message: ''
+        });
+      } else {
+        setSubmitStatus('error');
+        if (data.errors) {
+          setErrors(data.errors);
+        } else {
+          setErrors([data.error || 'Failed to subscribe to newsletter']);
+        }
+      }
+    } catch (error) {
+      setSubmitStatus('error');
+      setErrors(['Network error. Please check your connection and try again.']);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   // Indian Flag Component
@@ -91,8 +144,41 @@ const NewsletterSubscription = () => {
               </p>
             </div>
 
+            {/* Success Message */}
+            {submitStatus === 'success' && (
+              <div className="mb-6 p-4 bg-green-500/20 border border-green-400/30 rounded-xl backdrop-blur-sm">
+                <div className="flex items-center">
+                  <CheckCircle className="text-green-400 mr-3 text-xl flex-shrink-0" />
+                  <div>
+                    <p className="text-green-300 text-sm font-semibold font-raleway">
+                      Successfully subscribed to newsletter!
+                    </p>
+                    <p className="text-green-300/80 text-xs mt-1 font-raleway">
+                      Thank you for subscribing. You'll receive the latest updates in your inbox.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Error Messages */}
+            {submitStatus === 'error' && (
+              <div className="mb-6 p-4 bg-red-500/20 border border-red-400/30 rounded-xl backdrop-blur-sm">
+                <div className="flex items-start">
+                  <AlertCircle className="text-red-400 mr-3 text-xl mt-0.5 flex-shrink-0" />
+                  <div>
+                    {errors.map((error, index) => (
+                      <p key={index} className="text-red-300 text-sm font-raleway">
+                        {error}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
+
             {/* Form Section */}
-            <div className="w-full">
+            <form onSubmit={handleSubmit} className="w-full">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-8">
                 
                 {/* Name Field */}
@@ -108,6 +194,7 @@ const NewsletterSubscription = () => {
                       onChange={handleInputChange}
                       placeholder="Enter Your Name"
                       className="flex-1 bg-transparent text-gray-900 text-sm sm:text-base font-normal font-raleway leading-normal outline-none placeholder:text-gray-500 placeholder:font-light placeholder:leading-loose"
+                      disabled={isSubmitting}
                     />
                   </div>
                 </div>
@@ -133,6 +220,7 @@ const NewsletterSubscription = () => {
                         onChange={handleInputChange}
                         placeholder="Enter Your Phone Number"
                         className="flex-1 bg-transparent text-gray-900 text-sm sm:text-base font-normal font-raleway leading-normal outline-none placeholder:text-gray-500"
+                        disabled={isSubmitting}
                       />
                     </div>
                   </div>
@@ -151,6 +239,7 @@ const NewsletterSubscription = () => {
                       onChange={handleInputChange}
                       placeholder="Type your message"
                       className="flex-1 bg-transparent text-gray-900 text-sm sm:text-base font-normal font-raleway leading-normal outline-none placeholder:text-gray-500 placeholder:font-light placeholder:leading-loose"
+                      disabled={isSubmitting}
                     />
                   </div>
                 </div>
@@ -159,16 +248,25 @@ const NewsletterSubscription = () => {
               {/* Subscribe Button */}
               <div className="flex justify-center">
                 <button
-                  type="button"
-                  onClick={() => console.log('Form submitted:', formData)}
-                  className="w-full sm:w-72 h-12 sm:h-14 px-3 py-2 sm:py-2.5 bg-[#152063] hover:bg-[#1a2570] transition-colors duration-200 rounded-[10px] shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)] flex justify-center items-center gap-2 cursor-pointer"
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full sm:w-72 h-12 sm:h-14 px-3 py-2 sm:py-2.5 bg-[#152063] hover:bg-[#1a2570] disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200 rounded-[10px] shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)] flex justify-center items-center gap-2 cursor-pointer"
                 >
-                  <span className="text-white text-sm sm:text-base font-normal font-raleway leading-tight">
-                    Subscribe
-                  </span>
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="w-5 h-5 text-white animate-spin" />
+                      <span className="text-white text-sm sm:text-base font-normal font-raleway leading-tight">
+                        Subscribing...
+                      </span>
+                    </>
+                  ) : (
+                    <span className="text-white text-sm sm:text-base font-normal font-raleway leading-tight">
+                      Subscribe
+                    </span>
+                  )}
                 </button>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
