@@ -34,18 +34,39 @@ const Banner = () => {
       />
       
       <div className="relative w-full h-screen overflow-hidden bg-black">
-        {/* Background with parallax effect */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: "url('/images/products/p3.jpg')",
-            transform: `translateY(${scrollY * 0.2}px)`,
-            filter: "brightness(0.4)"
-          }}
-        />
+        {/* Background Video */}
+        <div className="absolute inset-0">
+          <video
+            className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto transform -translate-x-1/2 -translate-y-1/2 object-cover"
+            style={{
+              filter: "brightness(0.7) contrast(1.2)",
+              transform: `translate(-50%, -50%) scale(${1 + scrollY * 0.0001})`,
+            }}
+            autoPlay
+            muted
+            loop
+            playsInline
+          >
+            <source src="/images/videos/agri1.mp4" type="video/mp4" />
+            {/* Fallback image if video fails to load */}
+            <div 
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+              style={{
+                backgroundImage: "url('/images/fallback-bg.jpg')",
+                filter: "brightness(0.7)"
+              }}
+            />
+          </video>
+          
+          {/* Video overlay for better text readability */}
+          <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+        </div>
+        
+        {/* Bottom gradient for smooth section transition */}
+        <div className="w-full h-24 sm:h-32 lg:h-36 absolute left-0 bottom-0 bg-gradient-to-b from-transparent to-zinc-950 z-10"></div>
         
         {/* Animated particles - Responsive count */}
-        <div className="absolute inset-0">
+        {/* <div className="absolute inset-0 z-10">
           {Array.from({ length: window.innerWidth < 768 ? 10 : 20 }).map((_, i) => (
             <div
               key={i}
@@ -58,10 +79,10 @@ const Banner = () => {
               }}
             />
           ))}
-        </div>
+        </div> */}
         
         {/* Content Container - Responsive layout */}
-        <div className="relative flex flex-col items-center justify-center h-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 max-w-7xl mx-auto text-center">
+        <div className="relative flex flex-col items-center justify-center h-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 max-w-7xl mx-auto text-center z-20">
           {/* Main Content */}
           <div className="text-white z-10 w-full">
             <h1 
@@ -136,11 +157,29 @@ const Banner = () => {
             100% { transform: scale(1.5); opacity: 0.2; }
           }
           
+          /* Video specific styles */
+          video {
+            transition: transform 0.1s ease-out;
+          }
+          
           /* Ensure smooth scrolling on mobile */
           @media (max-width: 768px) {
-            .parallax-bg {
-              transform: none !important;
+            video {
+              transform: translate(-50%, -50%) !important;
             }
+          }
+          
+          /* Handle video loading states */
+          video::-webkit-media-controls {
+            display: none !important;
+          }
+          
+          video::-moz-media-controls {
+            display: none !important;
+          }
+          
+          video::-ms-media-controls {
+            display: none !important;
           }
         `}</style>
       </div>

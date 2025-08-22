@@ -97,7 +97,7 @@ const WhyChooseAerobottSection = () => {
           <div className="relative h-full w-full flex justify-center xl:justify-end">
             <img 
               className="w-full max-w-[620px] h-[400px] sm:h-[500px] lg:h-[600px] xl:h-full rounded-[20px] sm:rounded-[30px] lg:rounded-[40px] object-cover" 
-              src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=620&h=776&fit=crop" 
+              src="/images/drone/d11.jpg" 
               alt="Why Choose Aerobott - Professional team member"
             />
           </div>

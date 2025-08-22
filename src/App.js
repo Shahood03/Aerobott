@@ -16,9 +16,24 @@ import CourseDetailsPage from "./components/version_2/Training/CourseDetailsPage
 import Contactus from "./components/vesion_1/contactus/Contactus";
 import PartnerWithUs from "./components/version_2/PartnerWithUs/PartnerWithUs";
 
+// Import individual course components
+import RemotePilotSmall from "./components/version_2/Training/courses/RemotePilotSmall";
+import RemotePilotMedium from "./components/version_2/Training/courses/RemotePilotMedium";
+import ComprehensiveFlightSmall from "./components/version_2/Training/courses/ComprehensiveFlightSmall";
+import ComprehensiveFlightMedium from "./components/version_2/Training/courses/ComprehensiveFlightMedium";
+import AgricultureDrone from "./components/version_2/Training/courses/AgricultureDrone";
+import DroneTechnician from "./components/version_2/Training/courses/DroneTechnician";
+import FPVRacing from "./components/version_2/Training/courses/FPVRacing";
+import AerialCinematography from "./components/version_2/Training/courses/AerialCinematography";
+import GISSurvey from "./components/version_2/Training/courses/GISSurvey";
+import DroneInstructor from "./components/version_2/Training/courses/DroneInstructor";
+import AIMLForUAVs from "./components/version_2/Training/courses/AIMLForUAVs";
+import MappingSurveying from "./components/version_2/Training/courses/MappingSurveying";
+
 // ScrollToTop component to handle scroll restoration
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { Aboutus } from "./components/vesion_1/aboutus/Aboutus";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -41,33 +56,7 @@ function App() {
       <ScrollToTop />
       <Routes>
         <Route element={<Layout />}>
-          {/* Existing defined routes */}
-          {/* <Route path="/" element={<Home />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/howitworks" element={<Howitworks />} />
-          <Route path="/ContactUs" element={<ContactUs />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/products" element={<ProductsPageMain />} />
-          <Route path="/products/:productId" element={<DetailProductPage />} />
-          <Route path="/checkout" element={<CheckoutPage />} />
-          <Route path="/enroll/:trainingId" element={<EnrollNowPage />} />
-          <Route path="/defence/surveillance-drone" element={<Surveillance />} />
-          <Route path="/defence/kamikaze-drone" element={<Kamikaze />} />
-          <Route path="/defence/fpv-combat" element={<FPVDrone />} />
-          <Route path="/defence/logistics-drone" element={<LogisticsMedicalDrone />} />
-          <Route path="/defence/anti-drone" element={<AntiDroneSystem />} />
-          <Route path="/drone-pilot-training" element={<DroneTrainingUserPage />} />
-          <Route path="/gis-drones" element={<GISDrones />} />
-          <Route path="/drone-agriculture" element={<Agriculture />} />
-          <Route path="/about-us" element={<Aboutus />} />
-          <Route path="/daas" element={<DaasMain/>} />
-          <Route path="/contact-us" element={<Contactus/>} />
-                   
-          <Route path="/page-under-development" element={<UnderDevelopmentPage />} /> */}
-          
-          {/* Routes that should show UnderDevelopmentPage */}
-                  
-          {/* *****************************  Version *************************************** */}
+          {/* *****************************  Version 2 Routes *************************************** */}
           <Route path="/" element={<HomeMain />} />
           <Route path="/drone-as-service" element={<Daas />} />
           <Route path="/about-us" element={<AboutUsMain />} />       
@@ -76,8 +65,27 @@ function App() {
           <Route path="/products/flyt-i" element={<FlytMain />} />
           <Route path="/products/aero-agri" element={<AeroAgriMain />} />
           <Route path="/products/survey-master-pro" element={<SurveyMain />} />
+          
+          {/* Training Routes */}
           <Route path="/training" element={<TrainingMain />} />
           <Route path="/training/course/:courseId" element={<CourseDetailsPage />} />
+          
+          {/* Individual Course Detail Routes */}
+          <Route path="/training/remote-pilot-small" element={<RemotePilotSmall />} />
+          <Route path="/training/remote-pilot-medium" element={<RemotePilotMedium />} />
+          <Route path="/training/comprehensive-flight-small" element={<ComprehensiveFlightSmall />} />
+          <Route path="/training/comprehensive-flight-medium" element={<ComprehensiveFlightMedium />} />
+          <Route path="/training/agriculture-drone" element={<AgricultureDrone />} />
+          <Route path="/training/drone-technician" element={<DroneTechnician />} />
+          <Route path="/training/fpv-racing" element={<FPVRacing />} />
+          <Route path="/training/aerial-cinematography" element={<AerialCinematography />} />
+          <Route path="/training/gis-survey" element={<GISSurvey />} />
+          <Route path="/training/drone-instructor" element={<DroneInstructor />} />
+          <Route path="/training/ai-ml-uavs" element={<AIMLForUAVs />} />
+          <Route path="/training/mapping-surveying" element={<MappingSurveying />} />
+          <Route path="/Aboutus" element={<Aboutus />} />
+          
+          {/* Other Routes */}
           <Route path="/partner-with-us" element={<PartnerWithUs />} />           
           <Route path="/contact-us" element={<Contactus/>} />                                     
         </Route>

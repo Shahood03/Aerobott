@@ -15,7 +15,7 @@ const Banner = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleDemoRequest = () => {
+  const openDemoPopup = () => {
     setIsDemoPopupOpen(true);
   };
 
@@ -24,152 +24,172 @@ const Banner = () => {
   };
 
   return (
-    <div className="relative w-full h-screen overflow-hidden bg-black">
-      {/* Background with parallax effect */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "url('/images/products/p2.png')",
-          transform: `translateY(${scrollY * 0.2}px)`,
-          filter: "brightness(0.4)"
-        }}
+    <>
+      {/* Load Raleway font from Google Fonts */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link 
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" 
+        rel="stylesheet" 
       />
       
-      {/* Animated particles - Responsive count */}
-      <div className="absolute inset-0">
-        {Array.from({ length: window.innerWidth < 768 ? 10 : window.innerWidth < 1024 ? 15 : 20 }).map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-0.5 h-0.5 sm:w-1 sm:h-1 rounded-full bg-blue-400"
+      <div className="relative w-full h-screen overflow-hidden bg-black">
+        {/* Background Video */}
+        <div className="absolute inset-0">
+          <video
+            className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto transform -translate-x-1/2 -translate-y-1/2 object-cover"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              opacity: 0.6,
-              animation: `pulse ${1 + Math.random() * 3}s infinite alternate`,
+              filter: "brightness(0.7) contrast(1.2)",
+              transform: `translate(-50%, -50%) scale(${1 + scrollY * 0.0001})`,
             }}
-          />
-        ))}
-      </div>
-      
-      {/* Content Container - Fully responsive */}
-      <div className="relative flex flex-col items-center justify-center h-full px-4 sm:px-6 md:px-8 lg:px-16 xl:px-20 2xl:px-24 max-w-7xl mx-auto text-center">
-        {/* Main Content */}
-        <div className="text-white z-10 w-full">
-          <h1 
-            className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-normal mb-4 sm:mb-6 md:mb-8 bg-clip-text text-gray-200 leading-tight tracking-wide"
-            style={{ fontFamily: 'Raleway, sans-serif' }}
+            autoPlay
+            muted
+            loop
+            playsInline
           >
-            Map Smarter. Build Faster.
-          </h1>
-          
-          <p 
-            className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl xl:text-2xl mb-6 sm:mb-8 md:mb-10 text-gray-200 max-w-xs xs:max-w-sm sm:max-w-md md:max-w-2xl lg:max-w-3xl xl:max-w-4xl mx-auto font-normal leading-relaxed px-2 sm:px-0"
-            style={{ fontFamily: 'Raleway, sans-serif' }}
-          >
-             Empowering surveyors, infrastructure planners, and GIS professionals with high-accuracy drone mapping and aerial data collection.
-          </p>
-          
-          {/* Responsive button container */}
-          <div className="flex flex-col xs:flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 justify-center items-center w-full max-w-md sm:max-w-2xl mx-auto">
-            <button 
-              className="group relative w-full xs:w-full sm:w-auto px-6 xs:px-8 sm:px-10 md:px-12 py-3 xs:py-4 sm:py-5 bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg sm:rounded-xl overflow-hidden transition-all duration-300 hover:bg-blue-700 hover:scale-105 hover:shadow-[0px_0px_20px_0px_rgba(59,130,246,0.7)] sm:hover:shadow-[0px_0px_35px_0px_rgba(59,130,246,0.7)]"
+            <source src="/images/videos/survey.mp4" type="video/mp4" />
+            {/* Fallback image if video fails to load */}
+            <div 
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat"
               style={{
-                boxShadow: '0px 0px 20px 0px rgba(59,130,246,0.50)',
-                outline: '1px solid rgba(147, 197, 253, 0.3)',
-                outlineOffset: '-1px'
+                backgroundImage: "url('/images/fallback-bg.jpg')",
+                filter: "brightness(0.7)"
               }}
+            />
+          </video>
+          
+          {/* Video overlay for better text readability */}
+          <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+        </div>
+        
+        {/* Bottom gradient for smooth section transition */}
+        <div className="w-full h-24 sm:h-32 lg:h-36 absolute left-0 bottom-0 bg-gradient-to-b from-transparent to-zinc-950 z-10"></div>
+        
+        {/* Animated particles - Responsive count */}
+        <div className="absolute inset-0 z-10">
+          {Array.from({ length: window.innerWidth < 768 ? 10 : 20 }).map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-1 h-1 rounded-full bg-blue-400"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                opacity: 0.6,
+                animation: `pulse ${1 + Math.random() * 3}s infinite alternate`,
+              }}
+            />
+          ))}
+        </div>
+        
+        {/* Content Container - Responsive layout */}
+        <div className="relative flex flex-col items-center justify-center h-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 max-w-7xl mx-auto text-center z-20">
+          {/* Main Content */}
+          <div className="text-white z-10 w-full">
+            <h1 
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-normal mb-4 sm:mb-6 md:mb-8 bg-clip-text text-gray-200 leading-tight tracking-wide px-2"
+              style={{ fontFamily: 'Raleway, sans-serif' }}
             >
-              <span 
-                className="text-white text-sm xs:text-base sm:text-lg md:text-xl font-normal leading-tight relative z-10"
-                style={{ fontFamily: 'Raleway, sans-serif' }}
-              >
-                View Specifications
-              </span>
-            </button>
+               Map Smarter. Build Faster!
+            </h1>
             
-            <button 
-              onClick={handleDemoRequest}
-              className="group relative w-full xs:w-full sm:w-auto px-6 xs:px-8 sm:px-10 md:px-12 py-3 xs:py-4 sm:py-5 bg-transparent border border-blue-600 rounded-lg sm:rounded-xl overflow-hidden transition-all duration-300 hover:bg-blue-600/20 hover:scale-105 hover:shadow-[0px_0px_15px_0px_rgba(59,130,246,0.5)] sm:hover:shadow-[0px_0px_25px_0px_rgba(59,130,246,0.5)]"
-              style={{
-                outline: '1px solid rgba(147, 197, 253, 0.3)',
-                outlineOffset: '-1px'
-              }}
+            <p 
+              className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-6 sm:mb-8 md:mb-10 text-gray-200 max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-3xl xl:max-w-4xl mx-auto font-normal leading-relaxed px-2"
+              style={{ fontFamily: 'Raleway, sans-serif' }}
             >
-              <span 
-                className="text-blue-300 text-sm xs:text-base sm:text-lg md:text-xl font-normal leading-tight"
-                style={{ fontFamily: 'Raleway, sans-serif' }}
+              Empowering surveyors, infrastructure planners, and GIS professionals with high-accuracy drone mapping and aerial data collection.
+            </p>
+            
+            {/* Responsive button layout */}
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center w-full max-w-md sm:max-w-none mx-auto">
+              <button 
+                className="group relative w-full sm:w-auto px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg sm:rounded-xl overflow-hidden transition-all duration-300 hover:bg-blue-700 hover:scale-105 hover:shadow-[0px_0px_35px_0px_rgba(59,130,246,0.7)] active:scale-95"
+                style={{
+                  boxShadow: '0px 0px 28.6px 0px rgba(59,130,246,0.50)',
+                  outline: '1px solid rgba(147, 197, 253, 0.3)',
+                  outlineOffset: '-1px'
+                }}
               >
-                Request Demo
-              </span>
-            </button>
+                <span 
+                  className="text-white text-sm sm:text-base md:text-lg font-normal leading-tight relative z-10"
+                  style={{ fontFamily: 'Raleway, sans-serif' }}
+                >
+                  View Specifications
+                </span>
+              </button>
+              
+              <button 
+                onClick={openDemoPopup}
+                className="group relative w-full sm:w-auto px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 bg-transparent border border-blue-600 rounded-lg sm:rounded-xl overflow-hidden transition-all duration-300 hover:bg-blue-600/20 hover:scale-105 hover:shadow-[0px_0px_25px_0px_rgba(59,130,246,0.5)] active:scale-95"
+                style={{
+                  outline: '1px solid rgba(147, 197, 253, 0.3)',
+                  outlineOffset: '-1px'
+                }}
+              >
+                <span 
+                  className="text-blue-300 text-sm sm:text-base md:text-lg font-normal leading-tight"
+                  style={{ fontFamily: 'Raleway, sans-serif' }}
+                >
+                  Request Demo
+                </span>
+              </button>
+            </div>
           </div>
         </div>
+        
+        {/* Add CSS for animations */}
+        <style jsx>{`
+          @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(1deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+          }
+          
+          @media (min-width: 768px) {
+            @keyframes float {
+              0% { transform: translateY(0px) rotate(0deg); }
+              50% { transform: translateY(-20px) rotate(2deg); }
+              100% { transform: translateY(0px) rotate(0deg); }
+            }
+          }
+          
+          @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.6; }
+            100% { transform: scale(1.5); opacity: 0.2; }
+          }
+          
+          /* Video specific styles */
+          video {
+            transition: transform 0.1s ease-out;
+          }
+          
+          /* Ensure smooth scrolling on mobile */
+          @media (max-width: 768px) {
+            video {
+              transform: translate(-50%, -50%) !important;
+            }
+          }
+          
+          /* Handle video loading states */
+          video::-webkit-media-controls {
+            display: none !important;
+          }
+          
+          video::-moz-media-controls {
+            display: none !important;
+          }
+          
+          video::-ms-media-controls {
+            display: none !important;
+          }
+        `}</style>
       </div>
-
+      
       {/* Demo Request Popup */}
       <DemoRequestPopup 
         isOpen={isDemoPopupOpen} 
         onClose={closeDemoPopup} 
       />
-      
-      {/* Enhanced CSS for animations and responsive design */}
-      <style jsx>{`
-        @keyframes float {
-          0% { transform: translateY(0px) rotate(0deg); }
-          50% { transform: translateY(-10px) rotate(1deg); }
-          100% { transform: translateY(0px) rotate(0deg); }
-        }
-        
-        @keyframes pulse {
-          0% { transform: scale(1); opacity: 0.6; }
-          100% { transform: scale(1.5); opacity: 0.2; }
-        }
-        
-        /* Custom responsive breakpoint for very small devices */
-        @media (max-width: 475px) {
-          .xs\\:text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
-          .xs\\:text-base { font-size: 1rem; line-height: 1.5rem; }
-          .xs\\:px-8 { padding-left: 2rem; padding-right: 2rem; }
-          .xs\\:py-4 { padding-top: 1rem; padding-bottom: 1rem; }
-          .xs\\:w-56 { width: 14rem; }
-          .xs\\:h-28 { height: 7rem; }
-          .xs\\:gap-x-3 { column-gap: 0.75rem; }
-          .xs\\:px-4 { padding-left: 1rem; padding-right: 1rem; }
-          .xs\\:block { display: block; }
-          .xs\\:hidden { display: none; }
-          .xs\\:w-full { width: 100%; }
-          .xs\\:flex-col { flex-direction: column; }
-          .xs\\:max-w-sm { max-width: 24rem; }
-        }
-        
-        /* Enhanced mobile-first animations */
-        @media (max-width: 640px) {
-          @keyframes float {
-            0% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-5px) rotate(0.5deg); }
-            100% { transform: translateY(0px) rotate(0deg); }
-          }
-        }
-        
-        /* Tablet optimizations */
-        @media (min-width: 641px) and (max-width: 1024px) {
-          @keyframes float {
-            0% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-15px) rotate(1.5deg); }
-            100% { transform: translateY(0px) rotate(0deg); }
-          }
-        }
-        
-        /* Desktop optimizations */
-        @media (min-width: 1025px) {
-          @keyframes float {
-            0% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(2deg); }
-            100% { transform: translateY(0px) rotate(0deg); }
-          }
-        }
-      `}</style>
-    </div>
+    </>
   );
 };
 
