@@ -8,93 +8,105 @@ const courses = [
     title: "Remote Pilot Training – Small Rotorcraft [DGCA Certified]",
     duration: "5 to 8 Days",
     location: "Mumbai and Chandigarh",
-    image: "/images/training/t14.jpeg"
+    image: "/images/training/t14.jpeg",
+    path: "/training/remote-pilot-small"
   },
   {
     id: 2,
     title: "Remote Pilot Training – Medium Rotorcraft [DGCA Certified]",
     duration: "5 to 8 Days",
     location: "Chandigarh",
-    image: "/images/training/t16.jpeg"
+    image: "/images/training/t16.jpeg",
+    path: "/training/remote-pilot-medium"
   },
   {
     id: 3,
     title: "20 Hours of Comprehensive Flight - Small Rotorcraft",
     duration: "15 Days",
     location: "Mumbai and Chandigarh",
-    image: "/images/training/t7.jpeg"
+    image: "/images/training/t7.jpeg",
+    path: "/training/comprehensive-flight-small"
   },
   {
     id: 4,
     title: "20 Hours of Comprehensive Flight - Medium Rotorcraft",
     duration: "15 Days",
     location: "Chandigarh",
-    image: "/images/training/t1.jpg"
+    image: "/images/course/c2.jpg",
+    path: "/training/comprehensive-flight-medium"
   },
   {
     id: 5,
     title: "Agriculture Specific Drone Training",
     duration: "15 Days",
     location: "Chandigarh",
-    image: "/images/agri/a4.png"
+    image: "/images/agri/a4.png",
+    path: "/training/agriculture-drone"
   },
   {
     id: 6,
     title: "Drone Technician Training",
     duration: "3 months",
     location: "Mumbai",
-    image: "/images/training/t6.jpg"
+    image: "/images/drone/b2.jpg",
+    path: "/training/drone-technician"
   },
   {
     id: 7,
     title: "FPV Drone Racing",
     duration: "15 Days",
     location: "Mumbai",
-    image: "/images/training/t5.jpg"
+    image: "/images/training/t5.jpg",
+    path: "/training/fpv-racing"
   },
   {
     id: 8,
     title: "Aerial Cinematography",
     duration: "15 Days",
     location: "Mumbai",
-    image: "/images/training/t11.png"
+    image: "/images/course/z21.jpg",
+    path: "/training/aerial-cinematography"
   },
   {
     id: 9,
     title: "GIS Survey and mapping",
     duration: "15 Days",
     location: "Mumbai",
-    image: "/images/training/t13.png"
+    image: "/images/home/s3.png",
+    path: "/training/gis-survey"
   },
   {
     id: 10,
     title: "Drone Instructor Course - Small, Rotorcraft [DGCA CERTIFIED]",
     duration: "9 Days",
     location: "Mumbai",
-    image: "/images/agri/a3.png"
+    image: "/images/gallery/g1.png",
+    path: "/training/drone-instructor"
   },
   {
     id: 11,
     title: "AI/ML For UAVs",
     duration: "20 Days",
     location: "Mumbai",
-    image: "/images/training/t12.png"
+    image: "/images/ai/ai1.jpeg",
+    path: "/training/ai-ml-uavs"
   },
   {
     id: 12,
     title: "Mapping, Modeling & Surveying Course (RPTO)",
     duration: "15 Days",
     location: "Mumbai",
-    image: "/images/training/t13.png"
+    image: "/images/training/t12.png",
+    path: "/training/mapping-surveying"
   }
 ];
 
 function Training() {
   const navigate = useNavigate();
 
-  // Handle Know More button click - navigates to course details page
-  const handleKnowMore = (courseId) => {
-    navigate(`/training/course/${courseId}`);
+  // Handle Know More button click - navigates to course details page using path
+  const handleKnowMore = (coursePath) => {
+    navigate(coursePath);
   };
 
   return (
@@ -172,7 +184,7 @@ function Training() {
 
                 {/* Button */}
                 <button 
-                  onClick={() => handleKnowMore(course.id)}
+                  onClick={() => handleKnowMore(course.path)}
                   className="mt-auto w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-medium py-3 px-6 rounded-lg flex items-center justify-center gap-2 transition-all duration-300 shadow-lg hover:shadow-blue-500/25"
                   style={{ fontFamily: 'Raleway, sans-serif' }}
                 >

@@ -33,7 +33,7 @@ const HowItWorksSection = () => {
   ];
 
   return (
-    <section className="bg-black text-white px-16 flex flex-col items-center justify-center relative overflow-hidden">
+    <section className="bg-black text-white pt-10 px-16 flex flex-col items-center justify-center relative overflow-hidden">
       {/* Container */}
       <div className="w-full h-full flex flex-col justify-center relative z-10">
         

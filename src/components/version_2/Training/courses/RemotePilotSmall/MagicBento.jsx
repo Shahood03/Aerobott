@@ -10,44 +10,38 @@ const cardData = [
   {
     color: "#060010",
     title: "Drone Fundamentals",
-    description: "Master the basics of drone technology and flight principles",
     label: "Basics",
     image: "/images/drone/d10.jpg",
   },
   {
     color: "#060010",
-    title: "Flight Operations",
-    description: "Learn safe and efficient flight operations and procedures",
-    label: "Operations",
+    title: "Day 1: Theory Class",
+    label: "Theory",
     image: "/images/gallery/g5.jpg",
   },
   {
     color: "#060010",
-    title: "AI Integration",
-    description: "Understand AI-powered autonomous flight systems",
-    label: "Technology",
-    image: "/images/ai/ai1.jpeg",
+    title: "Day 2: Theory Class",
+    label: "Theory",
+    image: "/images/gallery/g2.jpg",
   },
   {
     color: "#060010",
-    title: "Regulations",
-    description: "Navigate DGCA regulations and compliance requirements",
-    label: "Compliance",
+    title: "Day 3: Simulation Class",
+    label: "Simulation",
+    image: "/images/gallery/g1.png",
+  },
+  {
+    color: "#060010",
+    title: "Day 4: Flying Class",
+    label: "Practical",
     image: "/images/drone/d9.jpg",
   },
   {
     color: "#060010",
-    title: "Industry Applications",
-    description: "Explore real-world applications across various sectors",
-    label: "Applications",
-    image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=800&h=600&fit=crop&crop=center",
-  },
-  {
-    color: "#060010",
-    title: "Advanced Techniques",
-    description: "Master advanced piloting and technical skills",
-    label: "Advanced",
-    image: "/images/ai/a2.png",
+    title: "Day 5: Flying Class",
+    label: "Assessment",
+    image: "/images/drone/c4.jpg",
   },
 ];
 
@@ -722,12 +716,6 @@ const MagicBento = ({
                       >
                         {card.title}
                       </h3>
-                      <p
-                        className={`card__description text-sm sm:text-base leading-relaxed text-[#d5dbe6]/80 ${textAutoHide ? "text-clamp-2" : ""}`}
-                        style={{fontFamily: 'Raleway, sans-serif'}}
-                      >
-                        {card.description}
-                      </p>
                     </div>
                   </div>
                 </ParticleCard>

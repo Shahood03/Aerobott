@@ -1,121 +1,213 @@
-import React from 'react';
-import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin, Youtube } from 'lucide-react';
+import React from "react";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Facebook,
+  Instagram,
+  Linkedin,
+  Youtube,
+  ExternalLink,
+} from "lucide-react";
 
 const Footer = () => {
+  const footerSections = {
+    products: {
+      title: "Products",
+      links: [
+        { label: "Flyt-1", href: "/products/flyt-i" },
+        { label: "Survey Master Pro", href: "/products/survey-master-pro" },
+        { label: "Aeroagri", href: "/products/aero-agri" },
+      ],
+    },
+    explore: {
+      title: "Explore",
+      links: [
+        { label: "Home", href: "/" },
+        { label: "About Us", href: "/about-us" },
+        { label: "Trainings", href: "/training" },
+        { label: "Drone as a Service", href: "/drone-as-service" },
+        { label: "Hire a Pilot", href: "/hire-pilot" },
+        { label: "Partner with us", href: "/partner-with-us" },
+      ],
+    },
+    education: {
+      title: "Training",
+      links: [
+        { label: "Remote Pilot Training", href: "/training" },
+        { label: "AI Drone Excellence", href: "/" },
+        { label: "Industrial Course", href: "/" },
+        { label: "STEM Lab", href: "/" },
+      ],
+    },
+  };
+
   return (
-    <footer className="bg-black text-white pt-8 sm:pt-12 lg:pt-16 pb-6 sm:pb-8 px-4 sm:px-6 md:px-8">
-      <div className="w-full max-w-none mx-auto">
-        {/* Footer Top Section */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-10 lg:mb-12">
-          {/* Company Info */}
-          <div className="col-span-1 sm:col-span-2 lg:col-span-1">
-            <img 
-              src="/images/logo/logo.png" 
-              alt="Aerobott Logo" 
-              className="h-8 sm:h-10 brightness-0 invert mb-4 sm:mb-6" 
-            />
-            <p className="text-gray-400 mb-4 sm:mb-6 font-raleway font-normal leading-relaxed text-sm sm:text-base">
-              Leading the drone industry with innovative technology for aerial imaging, 
-              defense systems, and drone-as-a-service solutions.
-            </p>
-            <div className="flex space-x-3 sm:space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">
-                <Facebook size={18} className="sm:w-5 sm:h-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">
-                <Twitter size={18} className="sm:w-5 sm:h-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">
-                <Instagram size={18} className="sm:w-5 sm:h-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">
-                <Linkedin size={18} className="sm:w-5 sm:h-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-300">
-                <Youtube size={18} className="sm:w-5 sm:h-5" />
-              </a>
+    <>
+      {/* Main Footer */}
+      <footer className="bg-black backdrop-blur-md border-t border-gray-300/20 text-white pt-12 lg:pt-16 pb-8 px-16">
+        <div className="w-full max-w-none mx-auto">
+          {/* Footer Top Section */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12 mb-12">
+            {/* Company Info - Takes 2 columns on large screens */}
+            <div className="col-span-1 md:col-span-2 lg:col-span-2">
+              <div className="mb-6">
+                <img
+                  src="/images/logo/logo.png"
+                  alt="Aerobott Logo"
+                  className="h-10 sm:h-12 brightness-0 invert mb-6"
+                />
+                <p className="text-gray-300 mb-6 font-raleway font-normal leading-relaxed text-sm sm:text-base max-w-md">
+                  Leading the drone industry with innovative technology for
+                  aerial imaging, defense systems, and drone-as-a-service
+                  solutions. Empowering the future of aviation.
+                </p>
+              </div>
+
+              {/* Contact Info */}
+              <div className="mb-6 space-y-2">
+                <p className="flex items-start text-gray-300 text-sm">
+                  <MapPin size={16} className="mr-2 mt-0.5 text-blue-300" />
+                  Hotel Sahara Star, North Tower Ground Floor, Chhatrapati Shivaji International, 70-C, Nehru Rd, Navpada, Airport Area, Vile Parle, Mumbai, Maharashtra 400099
+                </p>
+                <p className="flex items-center text-gray-300 text-sm">
+                  <Phone size={16} className="mr-2 text-blue-300" />  9004711184
+                </p>
+                <p className="flex items-center text-gray-300 text-sm">
+                  <Mail size={16} className="mr-2 text-blue-300" />{" "}
+                  info@aerobott.com
+                </p>
+              </div>
+
+              {/* Social Media Links */}
+              <div className="mb-8">
+                <h4 className="text-base font-raleway font-semibold mb-4 text-blue-200">
+                  Follow Us
+                </h4>
+                <div className="flex space-x-4">
+                  {[
+                    { Icon: Facebook, href: "https://www.facebook.com/Aerobott", label: "Facebook" },
+                    { Icon: Instagram, href: "https://www.instagram.com/aerobott_academy", label: "Instagram" },
+                    { Icon: Linkedin, href: "https://www.linkedin.com/company/aerobott/", label: "LinkedIn" },
+                    { Icon: Youtube, href: "https://www.youtube.com/@Aerobottdrone", label: "YouTube" },
+                  ].map(({ Icon, href, label }) => (
+                    <a
+                      key={label}
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-400 hover:text-blue-300 transition-all duration-300 transform hover:scale-110 hover:-translate-y-1"
+                      aria-label={label}
+                    >
+                      <Icon size={20} />
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Products */}
+            <div className="col-span-1">
+              <h3 className="text-base sm:text-lg font-raleway font-semibold mb-6 text-blue-200 relative">
+                {footerSections.products.title}
+                <span className="absolute bottom-0 left-0 w-8 h-0.5 bg-blue-400 rounded-full"></span>
+              </h3>
+              <ul className="space-y-3 mb-8">
+                {footerSections.products.links.map((link, index) => (
+                  <li key={index}>
+                    <a
+                      href={link.href}
+                      className="text-gray-300 hover:text-blue-200 transition-all duration-300 font-raleway font-normal text-sm sm:text-base group flex items-center transform hover:translate-x-2"
+                    >
+                      <span className="group-hover:text-blue-300">
+                        {link.label}
+                      </span>
+                      <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-all duration-300" />
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Explore */}
+            <div className="col-span-1">
+              <h3 className="text-base sm:text-lg font-raleway font-semibold mb-6 text-blue-200 relative">
+                {footerSections.explore.title}
+                <span className="absolute bottom-0 left-0 w-8 h-0.5 bg-blue-400 rounded-full"></span>
+              </h3>
+              <ul className="space-y-3 mb-8">
+                {footerSections.explore.links.map((link, index) => (
+                  <li key={index}>
+                    <a
+                      href={link.href}
+                      className="text-gray-300 hover:text-blue-200 transition-all duration-300 font-raleway font-normal text-sm sm:text-base group flex items-center transform hover:translate-x-2"
+                    >
+                      <span className="group-hover:text-blue-300">
+                        {link.label}
+                      </span>
+                      <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-all duration-300" />
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Education */}
+            <div className="col-span-1">
+              <h3 className="text-base sm:text-lg font-raleway font-semibold mb-6 text-blue-200 relative">
+                {footerSections.education.title}
+                <span className="absolute bottom-0 left-0 w-8 h-0.5 bg-blue-400 rounded-full"></span>
+              </h3>
+              <ul className="space-y-3">
+                {footerSections.education.links.map((link, index) => (
+                  <li key={index}>
+                    <a
+                      href={link.href}
+                      className="text-gray-300 hover:text-blue-200 transition-all duration-300 font-raleway font-normal text-sm sm:text-base group flex items-center transform hover:translate-x-2"
+                    >
+                      <span className="group-hover:text-blue-300">
+                        {link.label}
+                      </span>
+                      <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-all duration-300" />
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
-          
-          {/* Quick Links */}
-          <div className="col-span-1">
-            <h3 className="text-base sm:text-lg font-raleway font-semibold mb-4 sm:mb-6">Quick Links</h3>
-            <ul className="space-y-2 sm:space-y-3">
-              {['Home', 'Drone Tech', 'Defence', 'DAAS', 'Contact Us'].map((item) => (
-                <li key={item}>
-                  <a 
-                    href={`#${item.toLowerCase().replace(' ', '-')}`}
-                    className="text-gray-400 hover:text-white transition-colors duration-300 font-raleway font-normal text-sm sm:text-base"
-                  >
-                    {item}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-          
-          {/* Products */}
-          <div className="col-span-1">
-            <h3 className="text-base sm:text-lg font-raleway font-semibold mb-4 sm:mb-6">Products</h3>
-            <ul className="space-y-2 sm:space-y-3">
-              {['Consumer Drones', 'Enterprise Drones', 'Defense Systems', 'Accessories', 'Software Solutions'].map((item) => (
-                <li key={item}>
-                  <a 
-                    href="#" 
-                    className="text-gray-400 hover:text-white transition-colors duration-300 font-raleway font-normal text-sm sm:text-base"
-                  >
-                    {item}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-          
-          {/* Contact Information */}
-          <div className="col-span-1 sm:col-span-2 lg:col-span-1">
-            <h3 className="text-base sm:text-lg font-raleway font-semibold mb-4 sm:mb-6">Contact Us</h3>
-            <ul className="space-y-3 sm:space-y-4">
-              <li className="flex items-start">
-                <MapPin size={18} className="text-gray-400 mr-2 sm:mr-3 mt-1 flex-shrink-0 sm:w-5 sm:h-5" />
-                <span className="text-gray-400 font-raleway font-normal leading-relaxed text-sm sm:text-base">
-                Hotel Sahara Star, North Tower Ground Floor, Chhatrapati Shivaji International, 70-C, Nehru Rd, Navpada, Airport Area, Vile Parle, Mumbai, Maharashtra 400099
-                </span>
-              </li>
-              <li className="flex items-center">
-                <Phone size={18} className="text-gray-400 mr-2 sm:mr-3 flex-shrink-0 sm:w-5 sm:h-5" />
-                <a href="tel+919004711184" className="text-gray-400 hover:text-white transition-colors duration-300 font-raleway font-normal text-sm sm:text-base">
-                +91 9004711184 
+
+          {/* Footer Bottom */}
+          <div className="border-t border-gray-700/50 pt-8 flex flex-col lg:flex-row items-center justify-between gap-6">
+            <div className="text-center lg:text-left">
+              <p className="text-gray-400 text-sm font-raleway font-normal">
+                &copy; {new Date().getFullYear()} AEROBOTT. All rights reserved.
+              </p>
+              <p className="text-gray-500 text-xs font-raleway font-normal mt-1">
+                Innovating the Future of Drone Technology
+              </p>
+            </div>
+
+            <div className="flex flex-wrap justify-center lg:justify-end items-center gap-6">
+              {[
+                { label: "Privacy Policy", href: "/privacy-policy" },
+                { label: "Terms and Conditions", href: "/terms-and-conditions" },
+                { label: "Refund Policy", href: "/refund-policy" },
+                { label: "Sitemap", href: "/sitemap" },
+              ].map((link, index) => (
+                <a
+                  key={index}
+                  href={link.href}
+                  className="text-gray-400 hover:text-blue-300 text-sm transition-colors duration-300 font-raleway font-normal relative group"
+                >
+                  {link.label}
+                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-300 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
                 </a>
-              </li>
-              <li className="flex items-center">
-                <Mail size={18} className="text-gray-400 mr-2 sm:mr-3 flex-shrink-0 sm:w-5 sm:h-5" />
-                <a href="mailto:info@aerobott.com" className="text-gray-400 hover:text-white transition-colors duration-300 font-raleway font-normal text-sm sm:text-base">
-                info@aerobott.com
-                </a>
-              </li>
-            </ul>
+              ))}
+            </div>
           </div>
         </div>
-        
-        {/* Footer Bottom */}
-        <div className="border-t border-gray-800 pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-gray-400 text-xs sm:text-sm font-raleway font-normal text-center sm:text-left">
-            &copy; {new Date().getFullYear()} AEROBOTT. All rights reserved.
-          </p>
-          <div className="flex flex-wrap justify-center sm:justify-end space-x-4 sm:space-x-6">
-            <a href="#" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300 font-raleway font-normal">
-              Privacy Policy
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300 font-raleway font-normal">
-              Terms of Service
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors duration-300 font-raleway font-normal">
-              Cookie Policy
-            </a>
-          </div>
-        </div>
-      </div>
-    </footer>
+      </footer>
+    </>
   );
 };
 

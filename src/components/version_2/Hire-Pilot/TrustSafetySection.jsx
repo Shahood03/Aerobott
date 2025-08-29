@@ -29,7 +29,7 @@ const TrustSafetySection = () => {
                   <span className="text-xs text-gray-300">✕</span>
                 </button>
                 <span className="text-sm font-medium text-gray-200" style={{ fontFamily: 'Raleway, sans-serif' }}>
-                  Xtreme Heights Productions
+                  Aerobott
                 </span>
               </div>
               <button className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center">
@@ -55,7 +55,7 @@ const TrustSafetySection = () => {
                       ))}
                     </div>
                     <p className="text-xs text-gray-400 font-raleway">
-                      Xtreme Heights Productions
+                      Aerobott
                     </p>
                   </div>
                 </div>
@@ -64,11 +64,11 @@ const TrustSafetySection = () => {
                 <div className="grid grid-cols-2 gap-4 mb-4 text-sm">
                   <div>
                     <span className="text-gray-400">Bid:</span>
-                    <span className="font-semibold ml-2 text-white">$150</span>
+                    <span className="font-semibold ml-2 text-white">₹2000</span>
                   </div>
                   <div>
                     <span className="text-blue-400 font-semibold">Due Now:</span>
-                    <span className="font-semibold ml-2 text-white">$0</span>
+                    <span className="font-semibold ml-2 text-white">₹0</span>
                   </div>
                 </div>
 
@@ -184,9 +184,9 @@ const TrustSafetySection = () => {
                         <Star key={i} className="w-3 h-3 fill-yellow-400 text-yellow-400" />
                       ))}
                     </div>
-                    <p className="text-xs text-red-300">Xtreme Heights</p>
+                    <p className="text-xs text-red-300">Aerobott</p>
                   </div>
-                  <span className="text-red-300 font-bold text-sm">$150</span>
+                  <span className="text-red-300 font-bold text-sm">₹2000</span>
                 </div>
                 <div className="flex items-center justify-center">
                   <Check className="w-4 h-4 text-red-300 mr-1" />
@@ -248,7 +248,7 @@ const TrustSafetySection = () => {
               </div>
               <div className="flex-1">
                 <h3 className="text-white font-medium text-sm font-raleway">
-                  Xtreme Heights
+                  AEROBOTT
                 </h3>
                 <div className="flex items-center space-x-1">
                   <div className="w-2 h-2 bg-green-500 rounded-full"></div>
@@ -348,60 +348,68 @@ const TrustSafetySection = () => {
           {/* Left Side - Content */}
           <div className="space-y-8">
             
-            {/* Main Trust & Safety Banner */}
+           {/* Main Trust & Safety Banner */}
             <div 
-              className={`bg-gradient-to-r from-red-600 to-red-700 text-white p-6 rounded-lg shadow-2xl border cursor-pointer transition-all duration-300 ${
+              className={`p-6 rounded-lg shadow-lg border border-gray-700/50 border-l-4 cursor-pointer transition-all duration-300 ${
                 activeTab === 'trust-safety' 
-                  ? 'border-red-400 shadow-red-500/50 transform scale-105' 
-                  : 'border-red-500/20 hover:border-red-400 hover:shadow-red-500/30'
+                  ? 'bg-gradient-to-r from-red-600 to-red-700 text-white border-red-400 shadow-red-500/50 transform scale-105 shadow-2xl' 
+                  : 'bg-gray-900/50 backdrop-blur-sm border-l-red-500 hover:bg-gradient-to-r hover:from-red-600 hover:to-red-700 hover:text-white hover:border-red-400 hover:shadow-red-500/50 hover:shadow-2xl hover:scale-105'
               }`}
               onClick={() => setActiveTab('trust-safety')}
             >
-              <h2 className="text-2xl font-bold mb-3 font-raleway">
+              <h2 className={`text-2xl font-bold mb-3 font-raleway transition-colors ${
+                activeTab === 'trust-safety' ? 'text-white' : 'text-red-400'
+              }`}>
                 TRUST & SAFETY GUARANTEE
                 {activeTab === 'trust-safety' && <span className="ml-2 text-lg">✓</span>}
               </h2>
-              <p className="text-white/90 leading-relaxed font-raleway">
+              <p className={`leading-relaxed font-raleway transition-colors ${
+                activeTab === 'trust-safety' ? 'text-white/90' : 'text-gray-300'
+              }`}>
                 Rest assured that you're in good hands when using our platform.
               </p>
             </div>
 
             {/* Recommendations Section */}
             <div 
-              className={`bg-gray-900/50 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-gray-700/50 border-l-4 cursor-pointer transition-all duration-300 ${
+              className={`p-6 rounded-lg shadow-lg border border-gray-700/50 border-l-4 cursor-pointer transition-all duration-300 ${
                 activeTab === 'recommendations' 
-                  ? 'border-l-red-500 bg-red-600/10 border-red-500/30' 
-                  : 'border-l-red-500 hover:bg-red-600/5'
+                  ? 'bg-gradient-to-r from-red-600 to-red-700 text-white border-red-400 shadow-red-500/50 transform scale-105 shadow-2xl' 
+                  : 'bg-gray-900/50 backdrop-blur-sm border-l-red-500 hover:bg-gradient-to-r hover:from-red-600 hover:to-red-700 hover:text-white hover:border-red-400 hover:shadow-red-500/50 hover:shadow-2xl hover:scale-105'
               }`}
               onClick={() => setActiveTab('recommendations')}
             >
-              <h3 className={`text-xl font-bold mb-3 transition-colors font-raleway ${
-                activeTab === 'recommendations' ? 'text-red-300' : 'text-red-400'
+              <h3 className={`text-2xl font-bold mb-3 transition-colors font-raleway ${
+                activeTab === 'recommendations' ? 'text-white' : 'text-red-400'
               }`}>
                 RECOMMENDATIONS
-                {activeTab === 'recommendations' && <span className="ml-2 text-sm">✓</span>}
+                {activeTab === 'recommendations' && <span className="ml-2 text-lg">✓</span>}
               </h3>
-              <p className="text-gray-300 leading-relaxed font-raleway">
+              <p className={`leading-relaxed font-raleway transition-colors ${
+                activeTab === 'recommendations' ? 'text-white/90' : 'text-gray-300'
+              }`}>
                 Get pilot recommendations, compare prices & portfolios to find the best fit.
               </p>
             </div>
 
             {/* Pilot Chat Section */}
             <div 
-              className={`bg-gray-900/50 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-gray-700/50 border-l-4 cursor-pointer transition-all duration-300 ${
+              className={`p-6 rounded-lg shadow-lg border border-gray-700/50 border-l-4 cursor-pointer transition-all duration-300 ${
                 activeTab === 'chat' 
-                  ? 'border-l-red-500 bg-red-600/10 border-red-500/30' 
-                  : 'border-l-red-500 hover:bg-red-600/5'
+                  ? 'bg-gradient-to-r from-red-600 to-red-700 text-white border-red-400 shadow-red-500/50 transform scale-105 shadow-2xl' 
+                  : 'bg-gray-900/50 backdrop-blur-sm border-l-red-500 hover:bg-gradient-to-r hover:from-red-600 hover:to-red-700 hover:text-white hover:border-red-400 hover:shadow-red-500/50 hover:shadow-2xl hover:scale-105'
               }`}
               onClick={() => setActiveTab('chat')}
             >
-              <h3 className={`text-xl font-bold mb-3 transition-colors font-raleway ${
-                activeTab === 'chat' ? 'text-red-300' : 'text-red-400'
+              <h3 className={`text-2xl font-bold mb-3 transition-colors font-raleway ${
+                activeTab === 'chat' ? 'text-white' : 'text-red-400'
               }`}>
                 PILOT CHAT
-                {activeTab === 'chat' && <span className="ml-2 text-sm">✓</span>}
+                {activeTab === 'chat' && <span className="ml-2 text-lg">✓</span>}
               </h3>
-              <p className="text-gray-300 leading-relaxed font-raleway">
+              <p className={`leading-relaxed font-raleway transition-colors ${
+                activeTab === 'chat' ? 'text-white/90' : 'text-gray-300'
+              }`}>
                 Get your questions answered and the details before making a decision.
               </p>
             </div>
@@ -413,16 +421,6 @@ const TrustSafetySection = () => {
             {/* Dynamic Phone Mockup */}
             <div className="relative transition-all duration-500 ease-in-out">
               {tabContent[activeTab].image}
-            </div>
-
-            {/* Optional: Active tab indicator */}
-            <div className="text-center">
-              <p className="text-red-400 font-semibold text-lg mb-2 font-raleway">
-                {tabContent[activeTab].title}
-              </p>
-              <p className="text-gray-400 text-sm max-w-md mx-auto font-raleway">
-                {tabContent[activeTab].description}
-              </p>
             </div>
           </div>
         </div>
