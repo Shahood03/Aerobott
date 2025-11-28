@@ -35,9 +35,8 @@ const Footer = () => {
       title: "Training",
       links: [
         { label: "Remote Pilot Training", href: "/training" },
-        { label: "AI Drone Excellence", href: "/" },
-        { label: "Industrial Course", href: "/" },
-        { label: "STEM Lab", href: "/" },
+        { label: "AI Drone Excellence", href: "/AIExcellence" },
+        { label: "Industrial Course", href: "/IndustrialCourse" },
       ],
     },
   };

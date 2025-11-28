@@ -7,7 +7,7 @@ const AgriDroneOverview = () => {
   // Handle scroll visibility
   useEffect(() => {
     const handleScroll = () => {
-      const section = document.getElementById('agri-drone-section');
+      const section = document.getElementById('aerobott-overview');
       if (section) {
         const sectionTop = section.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
@@ -109,7 +109,7 @@ const AgriDroneOverview = () => {
       `}</style>
       
       <section 
-        id="agri-drone-section"
+        id="aerobott-overview"
         className="relative bg-[#000000] py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24 px-4 sm:px-6 md:px-8 lg:px-12 overflow-hidden font-raleway"
       >
         <div className="max-w-7xl mx-auto">

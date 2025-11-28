@@ -23,7 +23,7 @@ const OurPartners = () => {
             </h2>
           </div>
           
-          {/* Subtitle */}
+          {/* Subtitle*/}
           <div className="w-full">
             <p className="text-center text-[#d5dbe6]/60 text-sm sm:text-base font-raleway leading-relaxed mb-6 sm:mb-8 px-2">
               Explore our collaborative partnerships and creative works
@@ -150,7 +150,8 @@ const OurPartners = () => {
             animation: none;
           }
         }
-      `}</style>
+      `}
+      </style>
     </section>
   );
 };

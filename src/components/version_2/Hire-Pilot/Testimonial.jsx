@@ -24,7 +24,7 @@ const TestimonialCarousel = () => {
     {
       id: 3,
       quote: "Outstanding training program that covers everything from basic operations to advanced commercial applications. The certification process was seamless.",
-      name: "Rajpal Yadav",
+      name: "Rajesh Yadav",
       position: "Fleet Manager",
       image: "/images/team/t8.jpg",
       backgroundImage: "/images/element/Rectangle.jpg"

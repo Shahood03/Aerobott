@@ -1,82 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Menu, X, ChevronDown, ChevronUp } from 'lucide-react';
-import { DroneDropdown } from './DroneDropdown'; // Import the drone dropdown component
-// import { DefenceDropdown } from './DefenceDropdown'; // Import the new defence dropdown component - COMMENTED OUT
-
-// Products Dropdown Component
-const ProductsDropdown = ({ scrolled, isOpen, toggleDropdown }) => {
-  const products = [
-    {
-      name: 'FLYT-I - Training Drone',
-      description: 'Professional training drone for pilot certification',
-      image: '/images/products/p10.png',
-      href: '/products/flyt-i'
-    },
-    {
-      name: 'Survey Master Pro - Survey Drone',
-      description: 'Advanced surveying and mapping solutions',
-      image: '/images/products/p2.png', 
-      href: '/products/survey-master-pro'
-    },
-    {
-      name: 'Aero Agri - Agriculture Drone',
-      description: 'Smart farming and crop monitoring technology',
-      image: '/images/agri/a7.jpg',
-      href: '/products/aero-agri'
-    }
-  ];
-
-  return (
-    <div className="relative">
-      <button
-        onClick={toggleDropdown}
-        className="relative font-medium transition-all duration-300 group text-white hover:text-blue-200 flex items-center"
-        style={{ fontFamily: 'Raleway, sans-serif' }}
-      >
-        <span>Products</span>
-        <ChevronDown 
-          className={`ml-1 w-4 h-4 transition-transform duration-300 ${
-            isOpen ? 'rotate-180' : 'rotate-0'
-          }`} 
-        />
-        <span className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-300 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
-      </button>
-      
-      {/* Dropdown Menu */}
-      {isOpen && (
-        <div className="absolute top-full left-0 mt-6 w-80 bg-gray-900/95 backdrop-blur-md border border-gray-300/20 rounded-xl shadow-xl animate-fade-in-down">
-          <div className="p-4">
-            <div className="space-y-3">
-              {products.map((product, index) => (
-                <a
-                  key={index}
-                  href={product.href}
-                  className="flex items-center p-3 rounded-lg transition-all duration-300 hover:bg-gray-800/50 group"
-                >
-                  <div className="w-12 h-12 rounded-lg overflow-hidden mr-4 border border-gray-600 group-hover:border-blue-400 transition-colors duration-300">
-                    <img 
-                      src={product.image} 
-                      alt={product.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-white font-medium text-sm group-hover:text-blue-200 transition-colors duration-300" style={{ fontFamily: 'Raleway, sans-serif' }}>
-                      {product.name}
-                    </h3>
-                    <p className="text-gray-400 text-xs mt-1 group-hover:text-gray-300 transition-colors duration-300" style={{ fontFamily: 'Raleway, sans-serif' }}>
-                      {product.description}
-                    </p>
-                  </div>
-                </a>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
-    </div>
-  );
-};
 
 // Hook to get current active section
 const useActiveSection = () => {
@@ -139,51 +62,39 @@ const useActiveSection = () => {
 
 // Centralized function for all navigation links
 const useNavigationLinks = () => {
-  // Main navigation items - Defence will be inserted after Training
+  // Main navigation items
   const mainNavLinks = [
     { label: 'About Us', href: '/about-us', id: 'about-us' },
-    // Products will be handled as dropdown
-    { label: 'Training', href: '/training', id: 'training' },
-    // Defence dropdown will be inserted here programmatically - COMMENTED OUT
+    // Products and Training will be handled as dropdowns
     { label: 'DAAS', href: '/drone-as-service', id: 'daas' },
     { label: 'Hire a Pilot', href: '/hire-pilot', id: 'hire-pilot' },
     { label: 'Contact Us', href: '/contact-us', id: 'contact-us' }
   ];
 
-  // Drone submenu items for mobile
-  const droneSubItems = [
-    { 
-      label: 'Training', 
+  // Training submenu items for mobile and desktop
+  const trainingSubItems = [
+   {
+      name: 'Remote Pilot Training',
+      description: 'DGCA certified drone pilot training program',
+      image: '/images/training/t13.png',
       href: '/training',
       isExternal: false
     },
-    { 
-      label: 'Drone Pilot Training DGCA Certified', 
-      href: '/drone-pilot-training',
+    {
+      name: 'AI Center of Excellence',
+      description: 'Learn to build and assemble drones from scratch',
+      image: '/images/AIExcellence/aimlfordrone/aid6.jpg',
+      href: '/AIExcellence',
       isExternal: false
     },
-    { 
-      label: 'Drone Building', 
-      href: '/drone-building',
+    {
+      name: 'Industrial Course',
+      description: 'Geographic Information Systems for drone mapping',
+      image: '/images/industries/WCU.jpg',
+      href: '/IndustrialCourse',
       isExternal: false
-    },
-    { 
-      label: 'GIS for Drones', 
-      href: '/gis-drones',
-      isExternal: false
-    },
-    { 
-      label: 'Drone in Defence', 
-      href: '/drone-defence',
-      isExternal: false
-    },
-    { 
-      label: 'Drone in Agriculture', 
-      href: 'https://external-site.com/drone-agriculture',
-      isExternal: true
     }
   ];
-
 
   // Products submenu items for mobile
   const productsSubItems = [
@@ -210,7 +121,7 @@ const useNavigationLinks = () => {
     }
   ];
 
-  return { mainNavLinks, droneSubItems, productsSubItems };
+  return { mainNavLinks, trainingSubItems, productsSubItems };
 };
 
 // Navigation link component - updated with active state highlighting
@@ -265,7 +176,7 @@ const PartnerButton = () => {
   );
 };
 
-// Mobile menu toggle button - updated for glassmorphism navbar
+// Mobile menu toggle button
 const MobileMenuButton = ({ isOpen, toggleMenu }) => {
   return (
     <button
@@ -277,8 +188,8 @@ const MobileMenuButton = ({ isOpen, toggleMenu }) => {
   );
 };
 
-// Mobile dropdown component for navigation items - updated with active states
-const MobileDropdown = ({ title, items, isOpen, toggleDropdown, setMobileMenuOpen, isProductsDropdown = false }) => {
+// Mobile dropdown component for navigation items
+const MobileDropdown = ({ title, items, isOpen, toggleDropdown, setMobileMenuOpen, currentPath }) => {
   return (
     <div>
       <button
@@ -299,27 +210,35 @@ const MobileDropdown = ({ title, items, isOpen, toggleDropdown, setMobileMenuOpe
           isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        {isProductsDropdown ? (
-          // Products items have a different structure
-          items.map((item, index) => (
+        {items.map((item, index) => {
+          const isActive = currentPath === item.href;
+          return (
             <a
               key={index}
               href={item.href}
               target={item.isExternal ? "_blank" : "_self"}
               rel={item.isExternal ? "noopener noreferrer" : ""}
-              className="block pl-2 border-l-2 border-gray-300/50 font-medium transition-all duration-300 text-white hover:text-blue-200"
+              className={`block pl-2 border-l-2 font-medium transition-all duration-300 ${
+                isActive 
+                  ? 'border-blue-300 text-blue-300' 
+                  : 'border-gray-300/50 text-white hover:text-blue-200 hover:border-blue-300/50'
+              }`}
               onClick={() => setMobileMenuOpen(false)}
               style={{ fontFamily: 'Raleway, sans-serif' }}
             >
               <div className="flex items-center py-1 transform transition-transform duration-300 hover:translate-x-2">
-                <div className="w-8 h-8 rounded-full overflow-hidden mr-2 border border-transparent hover:border-blue-300 transition-all duration-300">
-                  <img 
-                    src={item.image} 
-                    alt={item.name} 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <span>
+                {item.image && (
+                  <div className={`w-8 h-8 rounded-full overflow-hidden mr-2 border transition-all duration-300 ${
+                    isActive ? 'border-blue-300' : 'border-transparent hover:border-blue-300'
+                  }`}>
+                    <img 
+                      src={item.image} 
+                      alt={item.name} 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                )}
+                <span className="text-sm">
                   {item.name}
                   {item.isExternal && (
                     <span className="inline-block ml-1 text-xs text-blue-300">↗</span>
@@ -327,28 +246,8 @@ const MobileDropdown = ({ title, items, isOpen, toggleDropdown, setMobileMenuOpe
                 </span>
               </div>
             </a>
-          ))
-        ) : (
-          // Standard items
-          items.map((item, index) => (
-            <a
-              key={index}
-              href={item.href}
-              target={item.isExternal ? "_blank" : "_self"}
-              rel={item.isExternal ? "noopener noreferrer" : ""}
-              className="block pl-2 border-l-2 border-gray-300/50 font-medium transition-all duration-300 text-white hover:text-blue-200"
-              onClick={() => setMobileMenuOpen(false)}
-              style={{ fontFamily: 'Raleway, sans-serif' }}
-            >
-              <div className="transform transition-transform duration-300 hover:translate-x-2">
-                {item.label}
-                {item.isExternal && (
-                  <span className="inline-block ml-1 text-xs text-blue-300">↗</span>
-                )}
-              </div>
-            </a>
-          ))
-        )}
+          );
+        })}
       </div>
     </div>
   );
@@ -358,9 +257,9 @@ const MobileDropdown = ({ title, items, isOpen, toggleDropdown, setMobileMenuOpe
 const MobileMenu = ({ 
   isOpen, 
   setMobileMenuOpen,
-  mobileDroneDropdownOpen,
-  toggleMobileDroneDropdown,
-  droneSubItems,
+  mobileTrainingDropdownOpen,
+  toggleMobileTrainingDropdown,
+  trainingSubItems,
   mobileProductsDropdownOpen,
   toggleMobileProductsDropdown,
   productsSubItems,
@@ -377,6 +276,14 @@ const MobileMenu = ({
 
   // Check if products should be highlighted in mobile menu
   const isProductsActive = activeSection === 'products' || currentPath.startsWith('/products/');
+  
+  // Check if training should be highlighted in mobile menu
+  const isTrainingActive = activeSection === 'training' || 
+    currentPath === '/drone-pilot-training' || 
+    currentPath === '/drone-building' || 
+    currentPath === '/gis-drones' || 
+    currentPath === '/drone-defence' || 
+    currentPath === '/drone-agriculture';
 
   return (
     <div
@@ -384,8 +291,8 @@ const MobileMenu = ({
         isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
       }`}
     >
-      <div className="container mx-auto px-6  py-4 space-y-4">
-        {/* Navigation items with Products and Defence inserted */}
+      <div className="container mx-auto px-6 py-4 space-y-4">
+        {/* Navigation items with Products and Training inserted */}
         {mainNavLinks.map((item, index) => {
           const isActive = isLinkActive(item);
           
@@ -417,26 +324,18 @@ const MobileMenu = ({
                     isProductsDropdown={true}
                   />
                 </div>
-              </React.Fragment>
-            );
-          }
-          
-          if (item.label === 'Training') {
-            return (
-              <React.Fragment key={item.label}>
-                {/* Training Link */}
-                <a
-                  href={item.href}
-                  className={`block font-medium transition-all duration-300 ${
-                    isActive 
-                      ? 'text-blue-300 border-l-2 border-blue-300 pl-3' 
-                      : 'text-white hover:text-blue-200'
-                  }`}
-                  onClick={() => setMobileMenuOpen(false)}
-                  style={{ fontFamily: 'Raleway, sans-serif' }}
-                >
-                  {item.label}
-                </a>
+
+                {/* Training Dropdown - After Products */}
+                <div className={`${isTrainingActive ? 'border-l-2 border-blue-300 pl-3' : ''}`}>
+                  <MobileDropdown 
+                    title="Training"
+                    items={trainingSubItems}
+                    isOpen={mobileTrainingDropdownOpen}
+                    toggleDropdown={toggleMobileTrainingDropdown}
+                    setMobileMenuOpen={setMobileMenuOpen}
+                    isProductsDropdown={true}
+                  />
+                </div>
               </React.Fragment>
             );
           }
@@ -472,7 +371,90 @@ const MobileMenu = ({
   );
 };
 
-// Enhanced Products Dropdown with active state - FIXED VERSION
+// Enhanced Training Dropdown with images
+const EnhancedTrainingDropdown = ({ scrolled, isOpen, toggleDropdown, isActive }) => {
+  const trainingItems = [
+    {
+      name: 'Remote Pilot Training',
+      description: 'DGCA certified drone pilot training program',
+      image: '/images/training/t13.png',
+      href: '/training'
+    },
+    {
+      name: 'AI Center of Excellence',
+      description: 'Learn to build and assemble drones from scratch',
+      image: '/images/AIExcellence/aimlfordrone/aid6.jpg',
+      href: '/AIExcellence'
+    },
+    {
+      name: 'Industrial Course',
+      description: 'Geographic Information Systems for drone mapping',
+      image: '/images/industries/WCU.jpg',
+      href: '/IndustrialCourse'
+    }
+  ];
+
+  return (
+    <div className="relative">
+      <button
+        onClick={toggleDropdown}
+        className={`relative font-medium transition-all duration-300 group flex items-center ${
+          isActive 
+            ? 'text-blue-300' 
+            : 'text-white hover:text-blue-200'
+        }`}
+        style={{ fontFamily: 'Raleway, sans-serif' }}
+      >
+        <span>Training</span>
+        <ChevronDown 
+          className={`ml-1 w-4 h-4 transition-transform duration-300 ${
+            isOpen ? 'rotate-180' : 'rotate-0'
+          }`} 
+        />
+        <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-blue-300 transform transition-transform duration-300 origin-left ${
+          isActive 
+            ? 'scale-x-100' 
+            : 'scale-x-0 group-hover:scale-x-100'
+        }`}></span>
+      </button>
+      
+      {/* Dropdown Menu */}
+      {isOpen && (
+        <div className="absolute top-full left-0 mt-6 w-80 bg-gray-900/95 backdrop-blur-md border border-gray-300/20 rounded-xl shadow-xl animate-fade-in-down">
+          <div className="p-4">
+            <div className="space-y-3">
+              {trainingItems.map((item, index) => (
+                <a
+                  key={index}
+                  href={item.href}
+                  className="flex items-center p-3 rounded-lg transition-all duration-300 hover:bg-gray-800/50 group"
+                >
+                  <div className="w-12 h-12 rounded-lg overflow-hidden mr-4 border border-gray-600 group-hover:border-blue-400 transition-colors duration-300">
+                    <img 
+                      src={item.image} 
+                      alt={item.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-white font-medium text-sm group-hover:text-blue-200 transition-colors duration-300" style={{ fontFamily: 'Raleway, sans-serif' }}>
+                      {item.name}
+                    </h3>
+                    <p className="text-gray-400 text-xs mt-1 group-hover:text-gray-300 transition-colors duration-300" style={{ fontFamily: 'Raleway, sans-serif' }}>
+                      {item.description}
+                    </p>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+// Enhanced Products Dropdown with active state
 const EnhancedProductsDropdown = ({ scrolled, isOpen, toggleDropdown, isActive }) => {
   const products = [
     {
@@ -593,21 +575,21 @@ const AnimationStyles = () => {
   );
 };
 
-// Main Navbar component - FIXED VERSION
+// Main Navbar component
 const Navbar = () => {
   const navbarRef = useRef(null);
-  const droneDropdownRef = useRef(null);
+  const trainingDropdownRef = useRef(null);
   const productsDropdownRef = useRef(null);
   
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [droneDropdownOpen, setDroneDropdownOpen] = useState(false);
+  const [trainingDropdownOpen, setTrainingDropdownOpen] = useState(false);
   const [productsDropdownOpen, setProductsDropdownOpen] = useState(false);
-  const [mobileDroneDropdownOpen, setMobileDroneDropdownOpen] = useState(false);
+  const [mobileTrainingDropdownOpen, setMobileTrainingDropdownOpen] = useState(false);
   const [mobileProductsDropdownOpen, setMobileProductsDropdownOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1920);
 
   // Get navigation links and active section
-  const { mainNavLinks, droneSubItems, productsSubItems } = useNavigationLinks();
+  const { mainNavLinks, trainingSubItems, productsSubItems } = useNavigationLinks();
   const { activeSection, currentPath } = useActiveSection();
 
   // Function to check if a navigation item is active
@@ -617,8 +599,15 @@ const Navbar = () => {
     return false;
   };
 
-  // FIXED: Check if products dropdown should be highlighted - only when actually on products pages
+  // Check if products dropdown should be highlighted - only when actually on products pages
   const isProductsActive = currentPath.startsWith('/products/');
+  
+  // Check if training dropdown should be highlighted
+  const isTrainingActive = currentPath === '/drone-pilot-training' || 
+    currentPath === '/drone-building' || 
+    currentPath === '/gis-drones' || 
+    currentPath === '/drone-defence' || 
+    currentPath === '/drone-agriculture';
 
   // Handle window resize for responsiveness
   useEffect(() => {
@@ -643,30 +632,30 @@ const Navbar = () => {
     const handleClickOutside = (event) => {
       if (navbarRef.current && !navbarRef.current.contains(event.target)) {
         setMobileMenuOpen(false);
-        setDroneDropdownOpen(false);
+        setTrainingDropdownOpen(false);
         setProductsDropdownOpen(false);
       }
     };
   
-    if (droneDropdownOpen || productsDropdownOpen || mobileMenuOpen) {
+    if (trainingDropdownOpen || productsDropdownOpen || mobileMenuOpen) {
       document.addEventListener('mousedown', handleClickOutside);
     }
   
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [droneDropdownOpen, productsDropdownOpen, mobileMenuOpen]);
+  }, [trainingDropdownOpen, productsDropdownOpen, mobileMenuOpen]);
   
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
-  const toggleDroneDropdown = (e) => {
+  const toggleTrainingDropdown = (e) => {
     if (e) {
       e.stopPropagation();
     }
-    setDroneDropdownOpen(!droneDropdownOpen);
+    setTrainingDropdownOpen(!trainingDropdownOpen);
     // Close other dropdowns if they're open
     if (productsDropdownOpen) setProductsDropdownOpen(false);
   };
@@ -677,13 +666,13 @@ const Navbar = () => {
     }
     setProductsDropdownOpen(!productsDropdownOpen);
     // Close other dropdowns if they're open
-    if (droneDropdownOpen) setDroneDropdownOpen(false);
+    if (trainingDropdownOpen) setTrainingDropdownOpen(false);
   };
 
-  const toggleMobileDroneDropdown = (e) => {
+  const toggleMobileTrainingDropdown = (e) => {
     // Stop event propagation
     if (e) e.stopPropagation();
-    setMobileDroneDropdownOpen(!mobileDroneDropdownOpen);
+    setMobileTrainingDropdownOpen(!mobileTrainingDropdownOpen);
     if (mobileProductsDropdownOpen) setMobileProductsDropdownOpen(false);
   };
 
@@ -691,13 +680,13 @@ const Navbar = () => {
     // Stop event propagation
     if (e) e.stopPropagation();
     setMobileProductsDropdownOpen(!mobileProductsDropdownOpen);
-    if (mobileDroneDropdownOpen) setMobileDroneDropdownOpen(false);
+    if (mobileTrainingDropdownOpen) setMobileTrainingDropdownOpen(false);
   };
 
   return (
     <nav
       ref={navbarRef}
-      className="fixed top-0  left-0 right-0 z-50 bg-gray-500/30 backdrop-blur-md border border-gray-300/20 shadow-[0px_0px_20px_4px_rgba(92,92,92,0.3)] py-2"
+      className="fixed top-0 left-0 right-0 z-50 bg-gray-500/30 backdrop-blur-md border border-gray-300/20 shadow-[0px_0px_20px_4px_rgba(92,92,92,0.3)] py-2"
     >
       <div className="w-full px-16">
         <div className="flex items-center justify-between">
@@ -706,7 +695,7 @@ const Navbar = () => {
 
           {/* Desktop Navigation - Center */}
           <div className="hidden lg:flex items-center space-x-8">
-            {/* Navigation items with Products and Defence inserted */}
+            {/* Navigation items with Products and Training inserted */}
             {mainNavLinks.map((item) => {
               if (item.label === 'About Us') {
                 return (
@@ -729,19 +718,18 @@ const Navbar = () => {
                         />
                       </div>
                     </div>
-                  </React.Fragment>
-                );
-              }
-              
-              if (item.label === 'Training') {
-                return (
-                  <React.Fragment key={item.label}>
-                    {/* Training Link */}
-                    <NavLink 
-                      href={item.href} 
-                      label={item.label}
-                      isActive={isNavItemActive(item)}
-                    />
+
+                    {/* Training Dropdown - After Products */}
+                    <div data-dropdown="training" className="relative">
+                      <div ref={trainingDropdownRef}>
+                        <EnhancedTrainingDropdown 
+                          scrolled={true} 
+                          isOpen={trainingDropdownOpen} 
+                          toggleDropdown={toggleTrainingDropdown}
+                          isActive={isTrainingActive}
+                        />
+                      </div>
+                    </div>
                   </React.Fragment>
                 );
               }
@@ -779,9 +767,9 @@ const Navbar = () => {
       <MobileMenu 
         isOpen={mobileMenuOpen}
         setMobileMenuOpen={setMobileMenuOpen}
-        mobileDroneDropdownOpen={mobileDroneDropdownOpen}
-        toggleMobileDroneDropdown={toggleMobileDroneDropdown}
-        droneSubItems={droneSubItems}
+        mobileTrainingDropdownOpen={mobileTrainingDropdownOpen}
+        toggleMobileTrainingDropdown={toggleMobileTrainingDropdown}
+        trainingSubItems={trainingSubItems}
         mobileProductsDropdownOpen={mobileProductsDropdownOpen}
         toggleMobileProductsDropdown={toggleMobileProductsDropdown}
         productsSubItems={productsSubItems}

@@ -3,7 +3,7 @@ import MagicBento from './ComprehensiveFlightSmall/MagicBento';
 import WhoCanApply from './ComprehensiveFlightSmall/WhoCanApply';
 import Hero from './ComprehensiveFlightSmall/Hero';
 import About from '../About';
-import CertificationSection from './ComprehensiveFlightSmall/CertificationSection';
+import CertificationMumbaiChandigarh from '../CertificationMumbaiChandigarh';
 
 
 const ComprehensiveFlightSmall = () => {
@@ -16,7 +16,7 @@ const ComprehensiveFlightSmall = () => {
         <MagicBento />
         <About />
         <WhoCanApply />
-        <CertificationSection />
+        <CertificationMumbaiChandigarh />
       </div>
     </>
   );

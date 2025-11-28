@@ -3,7 +3,7 @@ import MagicBento from './ComprehensiveFlightMedium/MagicBento';
 import WhoCanApply from './ComprehensiveFlightSmall/WhoCanApply';
 import Hero from './ComprehensiveFlightMedium/Hero';
 import About from '../About';
-import CertificationSection from './ComprehensiveFlightMedium/CertificationSection';
+import CertificationChandigarh from '../CertificationChandigarh';
 
 
 const ComprehensiveFlightMedium = () => {
@@ -16,7 +16,7 @@ const ComprehensiveFlightMedium = () => {
         <MagicBento />
         <About />
         <WhoCanApply />
-        <CertificationSection />
+        <CertificationChandigarh />
       </div>
     </>
   );

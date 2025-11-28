@@ -3,7 +3,7 @@ import MagicBento from './DroneInstructor/MagicBento';
 import WhoCanApply from './DroneInstructor/WhoCanApply';
 import Hero from './DroneInstructor/Hero';
 import About from '../About';
-import CertificationSection from './DroneInstructor/CertificationSection';
+import CertificationMumbaiChandigarh from '../CertificationMumbaiChandigarh';
 
 const DroneInstructor = () => {
   return (
@@ -15,7 +15,7 @@ const DroneInstructor = () => {
         <MagicBento />
         <About />
         <WhoCanApply />
-        <CertificationSection />
+        <CertificationMumbaiChandigarh />
       </div>
     </>
   );

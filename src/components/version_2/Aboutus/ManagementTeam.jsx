@@ -1,5 +1,5 @@
-import React, { useRef, useEffect } from "react";
-import { gsap } from "gsap";
+import React, { useRef, useEffect } from "react";            
+import { gsap } from "gsap";                 
 import { Linkedin, Twitter, Mail, Globe, Users, Shield, Brain, Settings, MapPin, Award } from 'lucide-react';
 
 const ChromaGrid = ({
@@ -9,7 +9,7 @@ const ChromaGrid = ({
   damping = 0.45,
   fadeOut = 0.6,
   ease = "power3.out",
-}) => {
+}) => { 
   const rootRef = useRef(null);
   const fadeRef = useRef(null);
   const setX = useRef(null);
@@ -200,18 +200,18 @@ const ManagementTeamSection = () => {
           borderColor: "#4F46E5",
           gradient: "linear-gradient(145deg,#4F46E5,#000)"
         },
-        {
-          name: "Arpana Mishra",
-          position: "Co-Founder & Chief Operating Officer (COO)",
-          description: "Oversees operations, strategic partnerships, and long-term growth. Arpana is the visionary Co-Founder and Director driving the strategic growth and innovation at the heart of our organization.",
-          image: "/images/team/t4.jpg",
-          socialLinks: [
-            { icon: Linkedin, url: "https://www.linkedin.com/in/arpana-mishra-162a6543" },
-            { icon: Mail, url: "mailto:ceo@aerobott.com" }
-          ],
-          borderColor: "#10B981",
-          gradient: "linear-gradient(210deg,#10B981,#000)"
-        },
+        // {
+        //   name: "Arpana Mishra",
+        //   position: "Co-Founder & Chief Operating Officer (COO)",
+        //   description: "Oversees operations, strategic partnerships, and long-term growth. Arpana is the visionary Co-Founder and Director driving the strategic growth and innovation at the heart of our organization.",
+        //   image: "/images/team/t4.jpg",
+        //   socialLinks: [
+        //     { icon: Linkedin, url: "https://www.linkedin.com/in/arpana-mishra-162a6543" },
+        //     { icon: Mail, url: "mailto:ceo@aerobott.com" }
+        //   ],
+        //   borderColor: "#10B981",
+        //   gradient: "linear-gradient(210deg,#10B981,#000)"
+        // },
         {
           name: "Deepak Vaidh",
           position: "Co-Founder",
@@ -223,7 +223,19 @@ const ManagementTeamSection = () => {
           ],
           borderColor: "#F59E0B",
           gradient: "linear-gradient(165deg,#F59E0B,#000)"
-        }
+        },
+                {
+          name: "Mr. Alok Govil",
+          position: "Consultant and Advisor",
+          description: "Providing strategic guidance to Aerobott in Defence, UAV, AI, and emerging technologies. Advising on technology adoption, innovation pathways, and partnerships to strengthen Aerobott’s role in India’s aerospace and defense ecosystem.",
+          image: "/images/team/coreteam.jpeg",
+          socialLinks: [
+            { icon: Linkedin, url: "https://www.linkedin.com/in/alok-govil-alok-34855841/" },
+            { icon: Mail, url: "" }
+          ],
+          borderColor: "#10B981",
+          gradient: "linear-gradient(210deg,#10B981,#000)"
+        },
       ]
     },
     advisory: {
@@ -268,25 +280,25 @@ const ManagementTeamSection = () => {
           position: "Chief Technology Officer (CTO)",
           description: "Leads R&D in drones, AI solutions, and defence technologies. Drives technological innovation and oversees the development of cutting-edge UAV systems and autonomous flight technologies.",
           image: "/images/team/t13.png",
-          socialLinks: [{ icon: Linkedin, url: "#" }, { icon: Twitter, url: "#" }, { icon: Mail, url: "#" }],
+          socialLinks: [{ icon: Linkedin, url: "https://www.linkedin.com/in/vaibhav-gupta-g10?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" }, { icon: Twitter, url: "#" }, { icon: Mail, url: "#" }],
           borderColor: "#2563EB",
           gradient: "linear-gradient(215deg,#2563EB,#000)"
         },
-        {
-          name: "Mr. Harsh",
-          position: "General Manager",
-          description: "Manages RPTO Drone Pilot curriculum and AI & Data Science courses. Develops comprehensive training programs and certification processes for drone pilots and technical personnel.",
-          image: "/images/team/t14.jpeg",
-          socialLinks: [{ icon: Linkedin, url: "#" }, { icon: Mail, url: "#" }],
-          borderColor: "#D97706",
-          gradient: "linear-gradient(275deg,#D97706,#000)"
-        },
+        // {
+        //   name: "Mr. Harsh",
+        //   position: "General Manager",
+        //   description: "Manages RPTO Drone Pilot curriculum and AI & Data Science courses. Develops comprehensive training programs and certification processes for drone pilots and technical personnel.",
+        //   image: "/images/team/t14.jpeg",
+        //   socialLinks: [{ icon: Linkedin, url: "https://www.linkedin.com/in/harsh-srivastava-7284a91b1" }, { icon: Mail, url: "#" }],
+        //   borderColor: "#D97706",
+        //   gradient: "linear-gradient(275deg,#D97706,#000)"
+        // },
         {
           name: "Somay Vaidh",
           position: "AI & Data Science Director",
           description: "Industry leader in AI/ML, analytics, and defence tech applications. Spearheads artificial intelligence initiatives and data-driven solutions for defense and commercial drone operations.",
-          image: "https://images.unsplash.com/photo-1556157382-97eda2d62296?w=300&h=300&fit=crop&crop=face",
-          socialLinks: [{ icon: Linkedin, url: "#" }, { icon: Twitter, url: "#" }, { icon: Mail, url: "#" }],
+          image: "/images/team/t18.jpg",
+          socialLinks: [{ icon: Linkedin, url: "https://www.linkedin.com/in/somay-vaidh-33b58b203?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" }, { icon: Twitter, url: "#" }, { icon: Mail, url: "#" }],
           borderColor: "#7C3AED",
           gradient: "linear-gradient(245deg,#7C3AED,#000)"
         },
@@ -296,21 +308,21 @@ const ManagementTeamSection = () => {
       title: "Technical & Training Division",
       icon: Brain,
       members: [
-        {
-          name: "Mr. Gautam Lakhani",
-          position: "Drone Operations Lead",
-          description: "Supervises drone testing, pilot certification, and field operations. Ensures operational excellence and safety standards in all drone-related activities and training programs.",
-          image: "/images/team/t15.jpg",
-          socialLinks: [{ icon: Linkedin, url: "#" }, { icon: Mail, url: "#" }],
-          borderColor: "#DC2626",
-          gradient: "linear-gradient(335deg,#DC2626,#000)"
-        },
+        // {
+        //   name: "Mr. Gautam Lakhani",
+        //   position: "Drone Operations Lead",
+        //   description: "Supervises drone testing, pilot certification, and field operations. Ensures operational excellence and safety standards in all drone-related activities and training programs.",
+        //   image: "/images/team/t15.jpg",
+        //   socialLinks: [{ icon: Linkedin, url: "https://www.linkedin.com/in/gautam-lakhani-20a1b4215?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" }, { icon: Mail, url: "#" }],
+        //   borderColor: "#DC2626",
+        //   gradient: "linear-gradient(335deg,#DC2626,#000)"
+        // },
         {
           name: "Mr. Altamash Shaikh",
           position: "AI/ML Lead Engineer",
           description: "Develops AI models for defence and commercial applications. Specializes in machine learning algorithms, computer vision, and autonomous systems for advanced drone capabilities.",
           image: "/images/team/t17.jpeg",
-          socialLinks: [{ icon: Linkedin, url: "#" }, { icon: Twitter, url: "#" }, { icon: Mail, url: "#" }],
+          socialLinks: [{ icon: Linkedin, url: "https://www.linkedin.com/in/altamash-shaikh-a2445a242?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" }, { icon: Twitter, url: "#" }, { icon: Mail, url: "#" }],
           borderColor: "#7C3AED",
           gradient: "linear-gradient(25deg,#7C3AED,#000)"
         },
@@ -319,19 +331,10 @@ const ManagementTeamSection = () => {
           position: "RPTO Training Instructor",
           description: "Certified drone pilot and defence trainer. Provides hands-on training and certification for drone pilots, ensuring compliance with DGCA regulations and industry standards.",
           image: "/images/team/t16.jpeg",
-          socialLinks: [{ icon: Linkedin, url: "#" }, { icon: Mail, url: "#" }],
+          socialLinks: [{ icon: Linkedin, url: "https://www.linkedin.com/in/sonu-saini-640589215/" }, { icon: Mail, url: "#" }],
           borderColor: "#059669",
           gradient: "linear-gradient(65deg,#059669,#000)"
         },
-        // {
-        //   name: "Ms. Samina Shaikh",
-        //   position: "AI & Data Science Trainer",
-        //   description: "Industry-certified instructor delivering hands-on training. Specializes in AI/ML education, data analytics, and practical implementation of artificial intelligence in drone technology.",
-        //   image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=300&fit=crop&crop=face",
-        //   socialLinks: [{ icon: Linkedin, url: "#" }, { icon: Mail, url: "#" }],
-        //   borderColor: "#DC2626",
-        //   gradient: "linear-gradient(95deg,#DC2626,#000)"
-        // }
       ]
     }
   };

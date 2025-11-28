@@ -3,7 +3,7 @@ import MagicBento from './RemotePilotSmall/MagicBento';
 import WhoCanApply from '../WhoCanApply';
 import Hero from './RemotePilotSmall/Hero';
 import About from '../About';
-import CertificationSection from './RemotePilotSmall/CertificationSection';
+import CertificationMumbaiChandigarh from '../CertificationMumbaiChandigarh';
 
 const RemotePilotSmall = () => {
   return (
@@ -15,7 +15,7 @@ const RemotePilotSmall = () => {
         <MagicBento />
         <About />
         <WhoCanApply />
-        <CertificationSection />
+        <CertificationMumbaiChandigarh />
       </div>
     </>
   );

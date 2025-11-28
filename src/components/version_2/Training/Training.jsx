@@ -37,68 +37,12 @@ const courses = [
   },
   {
     id: 5,
-    title: "Agriculture Specific Drone Training",
-    duration: "15 Days",
-    location: "Chandigarh",
-    image: "/images/agri/a4.png",
-    path: "/training/agriculture-drone"
-  },
-  {
-    id: 6,
-    title: "Drone Technician Training",
-    duration: "3 months",
-    location: "Mumbai",
-    image: "/images/drone/b2.jpg",
-    path: "/training/drone-technician"
-  },
-  {
-    id: 7,
-    title: "FPV Drone Racing",
-    duration: "15 Days",
-    location: "Mumbai",
-    image: "/images/training/t5.jpg",
-    path: "/training/fpv-racing"
-  },
-  {
-    id: 8,
-    title: "Aerial Cinematography",
-    duration: "15 Days",
-    location: "Mumbai",
-    image: "/images/course/z21.jpg",
-    path: "/training/aerial-cinematography"
-  },
-  {
-    id: 9,
-    title: "GIS Survey and mapping",
-    duration: "15 Days",
-    location: "Mumbai",
-    image: "/images/home/s3.png",
-    path: "/training/gis-survey"
-  },
-  {
-    id: 10,
     title: "Drone Instructor Course - Small, Rotorcraft [DGCA CERTIFIED]",
     duration: "9 Days",
     location: "Mumbai",
     image: "/images/gallery/g1.png",
     path: "/training/drone-instructor"
   },
-  {
-    id: 11,
-    title: "AI/ML For UAVs",
-    duration: "20 Days",
-    location: "Mumbai",
-    image: "/images/ai/ai1.jpeg",
-    path: "/training/ai-ml-uavs"
-  },
-  {
-    id: 12,
-    title: "Mapping, Modeling & Surveying Course (RPTO)",
-    duration: "15 Days",
-    location: "Mumbai",
-    image: "/images/training/t12.png",
-    path: "/training/mapping-surveying"
-  }
 ];
 
 function Training() {

@@ -7,6 +7,8 @@ import HomeMain from "./components/version_2/Home/HomeMain";
 import Daas from "./components/version_2/DAAS/DaasMain";
 import AboutUsMain from "./components/version_2/Aboutus/AboutusMain";
 import TrainingMain from "./components/version_2/Training/TrainingMain";
+import AIExcellenceMain from "./components/version_2/AIExcellence/AIExcellenceMain";
+import IndustrialCourseMain from "./components/version_2/IndustrialCourse/IndustrialCourseMain";
 import HirePilot from "./components/version_2/Hire-Pilot/HirePilotMain";
 import ProductMain from "./components/version_2/Products/ProductMain";
 import FlytMain from "./components/version_2/Products/FLYT-I/FlytMain";
@@ -21,19 +23,26 @@ import RemotePilotSmall from "./components/version_2/Training/courses/RemotePilo
 import RemotePilotMedium from "./components/version_2/Training/courses/RemotePilotMedium";
 import ComprehensiveFlightSmall from "./components/version_2/Training/courses/ComprehensiveFlightSmall";
 import ComprehensiveFlightMedium from "./components/version_2/Training/courses/ComprehensiveFlightMedium";
-import AgricultureDrone from "./components/version_2/Training/courses/AgricultureDrone";
-import DroneTechnician from "./components/version_2/Training/courses/DroneTechnician";
-import FPVRacing from "./components/version_2/Training/courses/FPVRacing";
-import AerialCinematography from "./components/version_2/Training/courses/AerialCinematography";
-import GISSurvey from "./components/version_2/Training/courses/GISSurvey";
 import DroneInstructor from "./components/version_2/Training/courses/DroneInstructor";
-import AIMLForUAVs from "./components/version_2/Training/courses/AIMLForUAVs";
-import MappingSurveying from "./components/version_2/Training/courses/MappingSurveying";
 
 // ScrollToTop component to handle scroll restoration
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Aboutus } from "./components/vesion_1/aboutus/Aboutus";
+import DroneManufacturingMain from "./components/version_2/AIExcellence/course/DroneManufacturingMain";
+import MeteorologyMain from "./components/version_2/AIExcellence/course/MeteorologyMain";
+import DataScienceMain from "./components/version_2/AIExcellence/course/DataScienceMain";
+import CyberSecurityMain from "./components/version_2/AIExcellence/course/CyberSecurityMain";
+import AimlForDroneApplicationMain from "./components/version_2/AIExcellence/course/AimlForDroneApplicationMain";
+import AimlMain from "./components/version_2/AIExcellence/course/AimlMain";
+import GISMain from "./components/version_2/AIExcellence/course/GISMain";
+import DroneBuilding from "./components/version_2/IndustrialCourse/courses/DroneBuilding";
+import DroneRepair from "./components/version_2/IndustrialCourse/courses/DroneRepair";
+import FPVRacing from "./components/version_2/IndustrialCourse/courses/FPVRacing";
+import Cinematography from "./components/version_2/IndustrialCourse/courses/Cinematography";
+import GISSurvey from "./components/version_2/IndustrialCourse/courses/GISSurvey";
+import MappingSurveying from "./components/version_2/IndustrialCourse/courses/MappingSurveying";
+
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -70,21 +79,37 @@ function App() {
           <Route path="/training" element={<TrainingMain />} />
           <Route path="/training/course/:courseId" element={<CourseDetailsPage />} />
           
-          {/* Individual Course Detail Routes */}
+          {/* Individual Course Detail Routes */}   
           <Route path="/training/remote-pilot-small" element={<RemotePilotSmall />} />
           <Route path="/training/remote-pilot-medium" element={<RemotePilotMedium />} />
           <Route path="/training/comprehensive-flight-small" element={<ComprehensiveFlightSmall />} />
           <Route path="/training/comprehensive-flight-medium" element={<ComprehensiveFlightMedium />} />
-          <Route path="/training/agriculture-drone" element={<AgricultureDrone />} />
-          <Route path="/training/drone-technician" element={<DroneTechnician />} />
-          <Route path="/training/fpv-racing" element={<FPVRacing />} />
-          <Route path="/training/aerial-cinematography" element={<AerialCinematography />} />
-          <Route path="/training/gis-survey" element={<GISSurvey />} />
           <Route path="/training/drone-instructor" element={<DroneInstructor />} />
-          <Route path="/training/ai-ml-uavs" element={<AIMLForUAVs />} />
-          <Route path="/training/mapping-surveying" element={<MappingSurveying />} />
           <Route path="/Aboutus" element={<Aboutus />} />
           
+
+          <Route path="/AIExcellence" element={<AIExcellenceMain /> } />
+
+          {/* AI Excellence Course Detail Routes */}   
+          <Route path="/AIExcellence/drone-manufacturing-and-assembly" element={<DroneManufacturingMain />} />
+          <Route path="/AIExcellence/meteorology" element={<MeteorologyMain />} />
+          <Route path="/AIExcellence/data-science" element={<DataScienceMain />} />
+          <Route path="/AIExcellence/cyber-security" element={<CyberSecurityMain />} />
+          <Route path="/AIExcellence/ai-and-ml" element={<AimlMain />} />
+          <Route path="AIExcellence/aiml-for-drone-applications" element={<AimlForDroneApplicationMain />} />
+          <Route path='/AIExcellence/geographic-information-system' element={<GISMain />}/>
+
+
+
+
+          <Route path="/IndustrialCourse" element={<IndustrialCourseMain />} />
+          <Route path="/IndustrialCourse/drone-building" element={<DroneBuilding />} />
+          <Route path="/IndustrialCourse/drone-repair" element={<DroneRepair />} />
+          <Route path="/IndustrialCourse/fpv-racing" element={<FPVRacing />} />
+          <Route path="/IndustrialCourse/aerial-cinematography" element={<Cinematography />} />
+          <Route path="/IndustrialCourse/gis-survey" element={<GISSurvey />} />
+          <Route path="/IndustrialCourse/gis-data-processing" element={<MappingSurveying />} />
+
           {/* Other Routes */}
           <Route path="/partner-with-us" element={<PartnerWithUs />} />           
           <Route path="/contact-us" element={<Contactus/>} />                                     

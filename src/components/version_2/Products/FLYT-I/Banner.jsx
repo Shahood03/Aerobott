@@ -1,52 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
-// Mock DemoRequestPopup component since it's not available
-const DemoRequestPopup = ({ isOpen, onClose }) => {
-  if (!isOpen) return null;
-  
-  return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-      <div className="bg-white rounded-xl p-6 max-w-md w-full">
-        <h2 className="text-2xl font-bold mb-4 text-gray-800">Request Demo</h2>
-        <p className="text-gray-600 mb-6">Fill out the form below and we'll get back to you within 24 hours.</p>
-        <div className="space-y-4">
-          <input 
-            type="text" 
-            placeholder="Your Name" 
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg"
-          />
-          <input 
-            type="email" 
-            placeholder="Your Email" 
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg"
-          />
-          <textarea 
-            placeholder="Tell us about your farming needs..." 
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg h-24"
-          ></textarea>
-        </div>
-        <div className="flex gap-4 mt-6">
-          <button 
-            onClick={onClose}
-            className="px-6 py-2 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400 transition-colors"
-          >
-            Cancel
-          </button>
-          <button 
-            onClick={onClose}
-            className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Submit
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-};
-
 const Banner = () => {
   const [scrollY, setScrollY] = useState(0);
-  const [isDemoPopupOpen, setIsDemoPopupOpen] = useState(false);
   
   // Handle scroll effect
   useEffect(() => {
@@ -58,12 +13,25 @@ const Banner = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const openDemoPopup = () => {
-    setIsDemoPopupOpen(true);
+  // Smooth scroll to section function
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
   };
 
-  const closeDemoPopup = () => {
-    setIsDemoPopupOpen(false);
+  // Handle View Specifications click`
+  const handleViewSpecifications = () => {
+    scrollToSection('aerobott-overview');
+  };
+
+  // Handle Request Demo click
+  const handleRequestDemo = () => {
+    scrollToSection('demo-form');
   };
 
   return (
@@ -117,6 +85,7 @@ const Banner = () => {
             {/* Responsive button layout */}
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center w-full max-w-md sm:max-w-none mx-auto">
               <button 
+                onClick={handleViewSpecifications}
                 className="group relative w-full sm:w-auto px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg sm:rounded-xl overflow-hidden transition-all duration-300 hover:bg-blue-700 hover:scale-105 hover:shadow-[0px_0px_35px_0px_rgba(59,130,246,0.7)] active:scale-95"
                 style={{
                   boxShadow: '0px 0px 28.6px 0px rgba(59,130,246,0.50)',
@@ -133,7 +102,7 @@ const Banner = () => {
               </button>
               
               <button 
-                onClick={openDemoPopup}
+                onClick={handleRequestDemo}
                 className="group relative w-full sm:w-auto px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 bg-transparent border border-blue-600 rounded-lg sm:rounded-xl overflow-hidden transition-all duration-300 hover:bg-blue-600/20 hover:scale-105 hover:shadow-[0px_0px_25px_0px_rgba(59,130,246,0.5)] active:scale-95"
                 style={{
                   outline: '1px solid rgba(147, 197, 253, 0.3)',
@@ -185,12 +154,6 @@ const Banner = () => {
           }
         `}</style>
       </div>
-      
-      {/* Demo Request Popup */}
-      <DemoRequestPopup 
-        isOpen={isDemoPopupOpen} 
-        onClose={closeDemoPopup} 
-      />
     </>
   );
 };

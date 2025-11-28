@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import DemoRequestPopup from '../DemoRequestPopup';
 
 const Banner = () => {
   const [scrollY, setScrollY] = useState(0);
-  const [isDemoPopupOpen, setIsDemoPopupOpen] = useState(false);
   
   // Handle scroll effect
   useEffect(() => {
@@ -15,13 +13,27 @@ const Banner = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const openDemoPopup = () => {
-    setIsDemoPopupOpen(true);
+  // Smooth scroll to section function
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
   };
 
-  const closeDemoPopup = () => {
-    setIsDemoPopupOpen(false);
+  // Handle View Specifications click
+  const handleViewSpecifications = () => {
+    scrollToSection('aerobott-overview');
   };
+
+    // Handle Request Demo click
+  const handleRequestDemo = () => {
+    scrollToSection('demo-form');
+  };
+
 
   return (
     <>
@@ -65,22 +77,6 @@ const Banner = () => {
         {/* Bottom gradient for smooth section transition */}
         <div className="w-full h-24 sm:h-32 lg:h-36 absolute left-0 bottom-0 bg-gradient-to-b from-transparent to-zinc-950 z-10"></div>
         
-        {/* Animated particles - Responsive count */}
-        {/* <div className="absolute inset-0 z-10">
-          {Array.from({ length: window.innerWidth < 768 ? 10 : 20 }).map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-1 h-1 rounded-full bg-blue-400"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                opacity: 0.6,
-                animation: `pulse ${1 + Math.random() * 3}s infinite alternate`,
-              }}
-            />
-          ))}
-        </div> */}
-        
         {/* Content Container - Responsive layout */}
         <div className="relative flex flex-col items-center justify-center h-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 max-w-7xl mx-auto text-center z-20">
           {/* Main Content */}
@@ -99,9 +95,11 @@ const Banner = () => {
               Transforming Indian agriculture with AI-powered drone spraying, crop analytics, and sustainable field practices.
             </p>
             
-            {/* Responsive button layout */}
+            {/* Single button layout */}
+           {/* Responsive button layout */}
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center w-full max-w-md sm:max-w-none mx-auto">
               <button 
+                onClick={handleViewSpecifications}
                 className="group relative w-full sm:w-auto px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg sm:rounded-xl overflow-hidden transition-all duration-300 hover:bg-blue-700 hover:scale-105 hover:shadow-[0px_0px_35px_0px_rgba(59,130,246,0.7)] active:scale-95"
                 style={{
                   boxShadow: '0px 0px 28.6px 0px rgba(59,130,246,0.50)',
@@ -118,7 +116,7 @@ const Banner = () => {
               </button>
               
               <button 
-                onClick={openDemoPopup}
+                onClick={handleRequestDemo}
                 className="group relative w-full sm:w-auto px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 bg-transparent border border-blue-600 rounded-lg sm:rounded-xl overflow-hidden transition-all duration-300 hover:bg-blue-600/20 hover:scale-105 hover:shadow-[0px_0px_25px_0px_rgba(59,130,246,0.5)] active:scale-95"
                 style={{
                   outline: '1px solid rgba(147, 197, 253, 0.3)',
@@ -183,12 +181,6 @@ const Banner = () => {
           }
         `}</style>
       </div>
-      
-      {/* Demo Request Popup */}
-      <DemoRequestPopup 
-        isOpen={isDemoPopupOpen} 
-        onClose={closeDemoPopup} 
-      />
     </>
   );
 };
