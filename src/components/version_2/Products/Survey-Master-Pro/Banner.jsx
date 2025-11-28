@@ -57,7 +57,7 @@ const Banner = () => {
             loop
             playsInline
           >
-            <source src="/images/videos/survey.mp4" type="video/mp4" />
+            <source src="/videos/survey.mp4" type="video/mp4" />
             {/* Fallback image if video fails to load */}
             <div 
               className="absolute inset-0 bg-cover bg-center bg-no-repeat"
