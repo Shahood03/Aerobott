@@ -8,7 +8,6 @@ const Banner = () => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
     };
-    
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -23,6 +22,7 @@ const Banner = () => {
       });
     }
   };
+
  // Handle View Specifications click
   const handleViewSpecifications = () => {
     scrollToSection('aerobott-overview');
@@ -59,15 +59,14 @@ const Banner = () => {
           >
             <source src="/videos/survey.mp4" type="video/mp4" />
             {/* Fallback image if video fails to load */}
-            <div 
-              className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-              style={{
-                backgroundImage: "url('/images/fallback-bg.jpg')",
-                filter: "brightness(0.7)"
-              }}
-            />
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: "url('/images/fallback-bg.jpg')",
+              filter: "brightness(0.7)"
+            }}
+          />
           </video>
-          
           {/* Video overlay for better text readability */}
           <div className="absolute inset-0 bg-black bg-opacity-20"></div>
         </div>
@@ -95,17 +94,13 @@ const Banner = () => {
         <div className="relative flex flex-col items-center justify-center h-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 max-w-7xl mx-auto text-center z-20">
           {/* Main Content */}
           <div className="text-white z-10 w-full">
-            <h1 
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-normal mb-4 sm:mb-6 md:mb-8 bg-clip-text text-gray-200 leading-tight tracking-wide px-2"
-              style={{ fontFamily: 'Raleway, sans-serif' }}
-            >
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-normal mb-4 sm:mb-6 md:mb-8 bg-clip-text text-gray-200 leading-tight tracking-wide px-2"
+              style={{ fontFamily: 'Raleway, sans-serif' }}>
                Map Smarter. Build Faster!
             </h1>
             
-            <p 
-              className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-6 sm:mb-8 md:mb-10 text-gray-200 max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-3xl xl:max-w-4xl mx-auto font-normal leading-relaxed px-2"
-              style={{ fontFamily: 'Raleway, sans-serif' }}
-            >
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-6 sm:mb-8 md:mb-10 text-gray-200 max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-3xl xl:max-w-4xl mx-auto font-normal leading-relaxed px-2"
+              style={{ fontFamily: 'Raleway, sans-serif' }}>
               Empowering surveyors, infrastructure planners, and GIS professionals with high-accuracy drone mapping and aerial data collection.
             </p>
             
@@ -120,10 +115,8 @@ const Banner = () => {
                   outlineOffset: '-1px'
                 }}
               >
-                <span 
-                  className="text-white text-sm sm:text-base md:text-lg font-normal leading-tight relative z-10"
-                  style={{ fontFamily: 'Raleway, sans-serif' }}
-                >
+                <span className="text-white text-sm sm:text-base md:text-lg font-normal leading-tight relative z-10"
+                  style={{ fontFamily: 'Raleway, sans-serif' }}>
                   View Specifications
                 </span>
               </button>
@@ -134,8 +127,7 @@ const Banner = () => {
                 style={{
                   outline: '1px solid rgba(147, 197, 253, 0.3)',
                   outlineOffset: '-1px'
-                }}
-              >
+                }}>
                 <span 
                   className="text-blue-300 text-sm sm:text-base md:text-lg font-normal leading-tight"
                   style={{ fontFamily: 'Raleway, sans-serif' }}
@@ -154,7 +146,7 @@ const Banner = () => {
             50% { transform: translateY(-10px) rotate(1deg); }
             100% { transform: translateY(0px) rotate(0deg); }
           }
-          
+
           @media (min-width: 768px) {
             @keyframes float {
               0% { transform: translateY(0px) rotate(0deg); }
@@ -162,12 +154,12 @@ const Banner = () => {
               100% { transform: translateY(0px) rotate(0deg); }
             }
           }
-          
+
           @keyframes pulse {
             0% { transform: scale(1); opacity: 0.6; }
             100% { transform: scale(1.5); opacity: 0.2; }
           }
-          
+
           /* Video specific styles */
           video {
             transition: transform 0.1s ease-out;
@@ -179,12 +171,12 @@ const Banner = () => {
               transform: translate(-50%, -50%) !important;
             }
           }
-          
+
           /* Handle video loading states */
           video::-webkit-media-controls {
             display: none !important;
           }
-          
+
           video::-moz-media-controls {
             display: none !important;
           }
