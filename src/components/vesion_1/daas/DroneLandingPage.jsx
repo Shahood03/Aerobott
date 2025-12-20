@@ -30,7 +30,7 @@ const DroneLandingPage = () => {
         {/* Drone Image - Centered */}
         <div className="relative w-full max-w-2xl mx-auto">
           <img 
-            src="/images/daas/d1.png" 
+            src="/images/daas/d1.avif" 
             alt="Drone flying above mountains" 
             className="w-full h-auto object-contain"
           />

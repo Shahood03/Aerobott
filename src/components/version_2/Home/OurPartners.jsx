@@ -38,30 +38,30 @@ const OurPartners = () => {
             <div className="flex animate-scroll-left space-x-3 sm:space-x-4">
               {/* First set of images */}
               <div className="flex items-center space-x-3 sm:space-x-4 shrink-0">
-                <PartnerImage src="/images/partners/p1.png" alt="Partner collaboration 1" />
-                <PartnerImage src="/images/partners/p2.png" alt="Technology innovation partnership" />
-                <PartnerImage src="/images/partners/p3.png" alt="Strategic alliance workshop" />
-                <PartnerImage src="/images/partners/p4.png" alt="Innovation lab partnership" />
-                <PartnerImage src="/images/partners/p5.png" alt="Skills development initiative" />
-                <PartnerImage src="/images/partners/p6.png" alt="Joint venture achievement" />
-                <PartnerImage src="/images/partners/p7.jpg" alt="Collaborative project" />
-                <PartnerImage src="/images/partners/p8.png" alt="Partnership milestone" />
-                <PartnerImage src="/images/partners/p9.png" alt="Strategic alliance workshop" />
-                <PartnerImage src="/images/partners/p10.png" alt="Innovation lab partnership" />
+                <PartnerImage src="/images/partners/p1.avif" alt="Partner collaboration 1" />
+                <PartnerImage src="/images/partners/p2.avif" alt="Technology innovation partnership" />
+                <PartnerImage src="/images/partners/p3.avif" alt="Strategic alliance workshop" />
+                <PartnerImage src="/images/partners/p4.avif" alt="Innovation lab partnership" />
+                <PartnerImage src="/images/partners/p5.avif" alt="Skills development initiative" />
+                <PartnerImage src="/images/partners/p6.avif" alt="Joint venture achievement" />
+                <PartnerImage src="/images/partners/p7.avif" alt="Collaborative project" />
+                <PartnerImage src="/images/partners/p8.avif" alt="Partnership milestone" />
+                <PartnerImage src="/images/partners/p9.avif" alt="Strategic alliance workshop" />
+                <PartnerImage src="/images/partners/p10.avif" alt="Innovation lab partnership" />
               </div>
 
               {/* Duplicate set for seamless loop */}
               <div className="flex items-center space-x-3 sm:space-x-4 shrink-0">
-                <PartnerImage src="/images/partners/p1.png" alt="Partner collaboration 1" />
-                <PartnerImage src="/images/partners/p2.png" alt="Technology innovation partnership" />
-                <PartnerImage src="/images/partners/p3.png" alt="Strategic alliance workshop" />
-                <PartnerImage src="/images/partners/p4.png" alt="Innovation lab partnership" />
-                <PartnerImage src="/images/partners/p5.png" alt="Skills development initiative" />
-                <PartnerImage src="/images/partners/p6.png" alt="Joint venture achievement" />
-                <PartnerImage src="/images/partners/p7.jpg" alt="Collaborative project" />
-                <PartnerImage src="/images/partners/p8.png" alt="Partnership milestone" />
-                <PartnerImage src="/images/partners/p9.png" alt="Strategic alliance workshop" />
-                <PartnerImage src="/images/partners/p10.png" alt="Innovation lab partnership" />
+                <PartnerImage src="/images/partners/p1.avif" alt="Partner collaboration 1" />
+                <PartnerImage src="/images/partners/p2.avif" alt="Technology innovation partnership" />
+                <PartnerImage src="/images/partners/p3.avif" alt="Strategic alliance workshop" />
+                <PartnerImage src="/images/partners/p4.avif" alt="Innovation lab partnership" />
+                <PartnerImage src="/images/partners/p5.avif" alt="Skills development initiative" />
+                <PartnerImage src="/images/partners/p6.avif" alt="Joint venture achievement" />
+                <PartnerImage src="/images/partners/p7.avif" alt="Collaborative project" />
+                <PartnerImage src="/images/partners/p8.avif" alt="Partnership milestone" />
+                <PartnerImage src="/images/partners/p9.avif" alt="Strategic alliance workshop" />
+                <PartnerImage src="/images/partners/p10.avif" alt="Innovation lab partnership" />
               </div>
             </div>
           </div>
@@ -71,30 +71,30 @@ const OurPartners = () => {
             <div className="flex animate-scroll-right space-x-3 sm:space-x-4">
               {/* First set of images */}
               <div className="flex items-center space-x-3 sm:space-x-4 shrink-0">
-                <PartnerImage src="/images/partners/p10.png" alt="Innovation lab partnership" />
-                <PartnerImage src="/images/partners/p9.png" alt="Strategic alliance workshop" />
-                <PartnerImage src="/images/partners/p8.png" alt="Partnership milestone" />
-                <PartnerImage src="/images/partners/p7.jpg" alt="Collaborative project" />
-                <PartnerImage src="/images/partners/p6.png" alt="Joint venture achievement" />
-                <PartnerImage src="/images/partners/p5.png" alt="Skills development initiative" />
-                <PartnerImage src="/images/partners/p4.png" alt="Innovation lab partnership" />
-                <PartnerImage src="/images/partners/p3.png" alt="Strategic alliance workshop" />
-                <PartnerImage src="/images/partners/p2.png" alt="Technology innovation partnership" />
-                <PartnerImage src="/images/partners/p1.png" alt="Partner collaboration 1" />
+                <PartnerImage src="/images/partners/p10.avif" alt="Innovation lab partnership" />
+                <PartnerImage src="/images/partners/p9.avif" alt="Strategic alliance workshop" />
+                <PartnerImage src="/images/partners/p8.avif" alt="Partnership milestone" />
+                <PartnerImage src="/images/partners/p7.avif" alt="Collaborative project" />
+                <PartnerImage src="/images/partners/p6.avif" alt="Joint venture achievement" />
+                <PartnerImage src="/images/partners/p5.avif" alt="Skills development initiative" />
+                <PartnerImage src="/images/partners/p4.avif" alt="Innovation lab partnership" />
+                <PartnerImage src="/images/partners/p3.avif" alt="Strategic alliance workshop" />
+                <PartnerImage src="/images/partners/p2.avif" alt="Technology innovation partnership" />
+                <PartnerImage src="/images/partners/p1.avif" alt="Partner collaboration 1" />
               </div>
 
               {/* Duplicate set for seamless loop */}
               <div className="flex items-center space-x-3 sm:space-x-4 shrink-0">
-                <PartnerImage src="/images/partners/p10.png" alt="Innovation lab partnership" />
-                <PartnerImage src="/images/partners/p9.png" alt="Strategic alliance workshop" />
-                <PartnerImage src="/images/partners/p8.png" alt="Partnership milestone" />
-                <PartnerImage src="/images/partners/p7.jpg" alt="Collaborative project" />
-                <PartnerImage src="/images/partners/p6.png" alt="Joint venture achievement" />
-                <PartnerImage src="/images/partners/p5.png" alt="Skills development initiative" />
-                <PartnerImage src="/images/partners/p4.png" alt="Innovation lab partnership" />
-                <PartnerImage src="/images/partners/p3.png" alt="Strategic alliance workshop" />
-                <PartnerImage src="/images/partners/p2.png" alt="Technology innovation partnership" />
-                <PartnerImage src="/images/partners/p1.png" alt="Partner collaboration 1" />
+                <PartnerImage src="/images/partners/p10.avif" alt="Innovation lab partnership" />
+                <PartnerImage src="/images/partners/p9.avif" alt="Strategic alliance workshop" />
+                <PartnerImage src="/images/partners/p8.avif" alt="Partnership milestone" />
+                <PartnerImage src="/images/partners/p7.avif" alt="Collaborative project" />
+                <PartnerImage src="/images/partners/p6.avif" alt="Joint venture achievement" />
+                <PartnerImage src="/images/partners/p5.avif" alt="Skills development initiative" />
+                <PartnerImage src="/images/partners/p4.avif" alt="Innovation lab partnership" />
+                <PartnerImage src="/images/partners/p3.avif" alt="Strategic alliance workshop" />
+                <PartnerImage src="/images/partners/p2.avif" alt="Technology innovation partnership" />
+                <PartnerImage src="/images/partners/p1.avif" alt="Partner collaboration 1" />
               </div>
             </div>
           </div>

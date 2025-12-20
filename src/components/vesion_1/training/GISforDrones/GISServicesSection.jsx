@@ -18,7 +18,7 @@ const GISServicesSection = () => {
         "Progress monitoring"
       ],
       applications: ["Construction", "Mining", "Agriculture", "Urban Planning"],
-      image: "/images/survey/s1.jpg"
+      image: "/images/survey/s1.avif"
     },
     {
       id: 2,
@@ -33,7 +33,7 @@ const GISServicesSection = () => {
         "Virtual site tours"
       ],
       applications: ["Real Estate", "Architecture", "Heritage Sites", "Insurance"],
-      image: "/images/survey/s2.jpg"
+      image: "/images/survey/s2.avif"
     },
     {
       id: 3,
@@ -48,7 +48,7 @@ const GISServicesSection = () => {
         "Reporting & visualization"
       ],
       applications: ["Environmental", "Government", "Utilities", "Research"],
-      image: "/images/survey/s3.jpg"
+      image: "/images/survey/s3.avif"
     },
     {
       id: 4,
@@ -63,7 +63,7 @@ const GISServicesSection = () => {
         "Change detection analysis"
       ],
       applications: ["Farming", "Forestry", "Environmental", "Research"],
-      image: "/images/survey/s1.jpg"
+      image: "/images/survey/s1.avif"
     }
   ];
 

@@ -32,11 +32,11 @@ const OverviewSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
           <div className="w-full h-[500px]">
             <img
-              src="/images/drone/b3.jpg"
+              src="/images/drone/b3.avif"
               alt="Drone overview"
               className="w-full h-full object-cover rounded-2xl shadow-lg"
               onError={(e) => {
-                console.error('Failed to load image: /images/drone/b3.jpg');
+                console.error('Failed to load image: /images/drone/b3.avif');
                 e.target.style.display = 'none';
               }}
             />

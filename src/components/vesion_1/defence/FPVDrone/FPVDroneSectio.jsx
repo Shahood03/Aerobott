@@ -38,19 +38,19 @@ const FPVDroneSection = () => {
       id: 'military',
       title: 'Military Applications',
       description: 'Rapid payload delivery to forward operating positions with real-time visual confirmation.',
-      image: '/images/drone/n3.png'
+      image: '/images/drone/n3.avif'
     },
     {
       id: 'disaster',
       title: 'Disaster Response',
       description: 'Deliver critical medical supplies and emergency equipment to hard-to-reach disaster zones.',
-      image: '/images/drone/n3.png'
+      image: '/images/drone/n3.avif'
     },
     {
       id: 'border',
       title: 'Border Security',
       description: 'Quick deployment of specialized payloads for surveillance and security operations.',
-      image: '/images/drone/n3.png'
+      image: '/images/drone/n3.avif'
     }
   ];
 
@@ -113,7 +113,7 @@ const FPVDroneSection = () => {
                 {/* Drone image */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <img 
-                    src="/images/drone/n3.png" 
+                    src="/images/drone/n3.avif" 
                     alt="FPV Payload Drone" 
                     className="max-w-full h-auto object-contain"
                     style={{

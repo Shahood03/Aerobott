@@ -37,7 +37,7 @@ const LogisticsMedicalDroneHeroSection = () => {
         <div 
           className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${activeTab === 'combat' ? 'opacity-100' : 'opacity-0'}`}
           style={{
-            backgroundImage: "url('/images/drone/n4.png')",
+            backgroundImage: "url('/images/drone/n4.avif')",
             filter: "brightness(0.4)"
           }}
         ></div>
@@ -45,7 +45,7 @@ const LogisticsMedicalDroneHeroSection = () => {
         <div 
           className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${activeTab === 'disaster' ? 'opacity-100' : 'opacity-0'}`}
           style={{
-            backgroundImage: "url('/images/drone/n4.png')",
+            backgroundImage: "url('/images/drone/n4.avif')",
             filter: "brightness(0.4)"
           }}
         ></div>

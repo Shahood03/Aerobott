@@ -11,25 +11,25 @@ const WhoCanApply = () => {
     {
       title: "Age Limit",
       value: "18 to 65 Years",
-      icon: "/images/element/age.png",
+      icon: "/images/element/age.avif",
       description: "Minimum age requirement for enrollment",
     },
     {
       title: "Education",
       value: "10th Pass",
-      icon: "/images/element/edu.png",
+      icon: "/images/element/edu.avif",
       description: "Basic educational qualification required",
     },
     {
       title: "Valid Govt. ID",
       value: "Aadhaar, Pan, Voter ID, Passport",
-      icon: "/images/element/id.png",
+      icon: "/images/element/id.avif",
       description: "Any valid government identification document",
     },
     {
       title: "Valid RPC",
       value: "Small or Medium Class",
-      icon: "/images/element/certificate.png", 
+      icon: "/images/element/certificate.avif", 
       description: "Remote Pilot Certificate in small or medium class drones",
     },
   ];

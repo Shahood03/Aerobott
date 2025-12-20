@@ -4,19 +4,19 @@ export default function NewProductsPage() {
       id: 1,
       name: "FLYT-I - Training Drone",
       description: "Powerful camera drone at an affordable price range. Camera up to 4K resolution, optimize shots automatically.",
-      image: "/images/products/p1.png"
+      image: "/images/products/p1.avif"
     },
     {
       id: 2,
       name: "Survey Master Pro - Survey Drone",
       description: "Professional-grade mapping drone with LiDAR sensors. Extended 45-minute flight time for large-scale projects.",
-      image: "/images/products/p2.png"
+      image: "/images/products/p2.avif"
     },
     {
       id: 3,
       name: "Aero Agri - Agriculture Drone",
       description: "Autonomous inspection drone with advanced AI. Real-time defect detection and automated reporting capabilities.",
-      image: "/images/agri/a2.png"
+      image: "/images/agri/a2.avif"
     }
   ];
 

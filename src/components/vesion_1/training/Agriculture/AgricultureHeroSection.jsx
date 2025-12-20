@@ -9,19 +9,19 @@ const AgricultureHeroSection = () => {
     {
       title: "Precision Agriculture",
       subtitle: "Monitor crop health with millimeter accuracy",
-      image: "/images/agri/a1.jpg",
+      image: "/images/agri/a1.avif",
       stats: { value: "95%", label: "Crop Health Accuracy" }
     },
     {
       title: "Smart Irrigation",
       subtitle: "Optimize water usage with thermal imaging",
-      image: "/images/agri/a2.png",
+      image: "/images/agri/a2.avif",
       stats: { value: "40%", label: "Water Savings" }
     },
     {
       title: "Yield Prediction",
       subtitle: "AI-powered harvest forecasting",
-      image: "/images/agri/a3.png",
+      image: "/images/agri/a3.avif",
       stats: { value: "85%", label: "Prediction Accuracy" }
     }
   ];

@@ -11,37 +11,37 @@ const cardData = [
     color: "#060010",
     title: "Fundamentals Refresher",
     label: "Basics",
-    image: "/images/drone/d10.jpg",
+    image: "/images/drone/d10.avif",
   },
   {
     color: "#060010",
     title: "Study of precision agricultur",
     label: "Basics",
-    image: "/images/course/c11.jpg",
+    image: "/images/course/c11.avif",
   },
   {
     color: "#060010",
     title: "Crop monitoring and analysis",
     label: "Planning",
-    image: "/images/course/z3.jpg",
+    image: "/images/course/z3.avif",
   },
   {
     color: "#060010",
     title: "Simulation Class",
     label: "Practical",
-    image: "/images/course/c8.jpg",
+    image: "/images/course/c8.avif",
   },
   {
     color: "#060010",
     title: "Practical flying exercises",
     label: "Safety",
-    image: "/images/course/z4.jpg",
+    image: "/images/course/z4.avif",
   },
   {
     color: "#060010",
     title: "Application of data collection techniques",
     label: "Flight",
-    image: "/images/course/z11.jpg",
+    image: "/images/course/z11.avif",
   },
 ];
 

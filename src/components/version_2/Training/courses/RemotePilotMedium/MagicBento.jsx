@@ -11,37 +11,37 @@ const cardData = [
     color: "#060010",
     title: "Drone Fundamentals",
     label: "Basics",
-    image: "/images/drone/d10.jpg",
+    image: "/images/drone/d10.avif",
   },
   {
     color: "#060010",
     title: "Day 1: Theory Class",
     label: "Theory",
-    image: "/images/gallery/g5.jpg",
+    image: "/images/gallery/g5.avif",
   },
   {
     color: "#060010",
     title: "Day 2: Theory Class",
     label: "Theory",
-    image: "/images/gallery/g2.jpg",
+    image: "/images/gallery/g2.avif",
   },
   {
     color: "#060010",
     title: "Day 3: Simulation Class",
     label: "Simulation",
-    image: "/images/gallery/g1.png",
+    image: "/images/gallery/g1.avif",
   },
   {
     color: "#060010",
     title: "Day 4: Flying Class",
     label: "Practical",
-    image: "/images/drone/d9.jpg",
+    image: "/images/drone/d9.avif",
   },
   {
     color: "#060010",
     title: "Day 5: Flying Class",
     label: "Assessment",
-    image: "/images/drone/c4.jpg",
+    image: "/images/drone/c4.avif",
   },
 ];
 

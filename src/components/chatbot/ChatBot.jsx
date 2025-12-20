@@ -210,7 +210,7 @@ const botResponses = {
       >
         {/* WhatsApp PNG with same size as drone */}
         <img 
-          src="/images/element/wicon.png" 
+          src="/images/element/wicon.avif" 
           alt="WhatsApp" 
           className="h-20 w-20 sm:h-24 sm:w-24 object-contain filter drop-shadow-lg"
         />
@@ -232,7 +232,7 @@ const botResponses = {
           <div className="relative">
             {/* Reduced PNG image size */}
             <img 
-              src="/images/drone/n6.png" 
+              src="/images/drone/n6.avif" 
               alt="Aerobott Chatbot" 
               className="h-24 w-24 sm:h-28 sm:w-28 object-contain filter drop-shadow-lg"
             />
@@ -248,7 +248,7 @@ const botResponses = {
             <div className="flex items-center space-x-3">
               {/* Avatar in header */}
               <img 
-                src="/images/drone/n6.png" 
+                src="/images/drone/n6.avif" 
                 alt="Aerobott Assistant" 
                 className="w-8 h-8 rounded-full object-cover border-2 border-white/20"
               />
@@ -282,7 +282,7 @@ const botResponses = {
                 {!message.isUser && (
                   <div className="mr-2 flex-shrink-0">
                     <img 
-                      src="/images/drone/n6.png" 
+                      src="/images/drone/n6.avif" 
                       alt="Bot" 
                       className="w-6 h-6 rounded-full object-cover"
                     />
@@ -306,7 +306,7 @@ const botResponses = {
               <div className="flex justify-start">
                 <div className="mr-2 flex-shrink-0">
                   <img 
-                    src="/images/drone/n6.png" 
+                    src="/images/drone/n6.avif" 
                     alt="Bot" 
                     className="w-6 h-6 rounded-full object-cover"
                   />

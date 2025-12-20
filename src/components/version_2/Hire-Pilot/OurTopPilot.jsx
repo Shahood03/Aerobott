@@ -6,18 +6,18 @@ const OurTopPilot = () => {
   const teamData = {
     leadership: {
       members: [
-        {
-          name: "Gautam Lakhani",
-          position: "Remote Pilot Instructor Small",
-          image: "/images/hirePilot/p1.jpg",
-          socialLinks: [
-            { icon: Linkedin, url: "#" },
-          ]
-        },
+        // {
+        //   name: "Gautam Lakhani",
+        //   position: "Remote Pilot Instructor Small",
+        //   image: "/images/hirePilot/p1.avif",
+        //   socialLinks: [
+        //     { icon: Linkedin, url: "#" },
+        //   ]
+        // },
         {
           name: "Arpana Mishra",
           position: "Remote Pilot Instructor Small",
-          image: "/images/team/t4.jpg",
+          image: "/images/team/t4.avif",
           socialLinks: [
             { icon: Linkedin, url: "https://www.linkedin.com/in/arpana-mishra-162a6543?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
           ]
@@ -25,31 +25,31 @@ const OurTopPilot = () => {
         {
           name: "Deepak Vaidh",
           position: "Remote Pilot Instructor Small",
-          image: "/images/team/t3.png",
+          image: "/images/team/t3.avif",
           socialLinks: [
             { icon: Linkedin, url: "https://www.linkedin.com/in/deepak-vaidh-a26b00274" },
           ]
         },
-        {
-          name: "Harsh Srivastava",
-          position: "Remote Pilot Instructor Medium & Small",
-          image: "/images/hirePilot/p2.jpeg",
-          socialLinks: [
-            { icon: Linkedin, url: "https://www.linkedin.com/in/harsh-srivastava-7284a91b1" },
-          ]
-        },
-        {
-          name: "Sonu Saini",
-          position: "Remote Pilot Instructor Medium & Small",
-          image: "/images/hirePilot/p4.jpeg",
-          socialLinks: [
-            { icon: Linkedin, url: "www.linkedin.com/in/sonu-saini-640589215" },
-          ]
-        },
+        // {
+        //   name: "Harsh Srivastava",
+        //   position: "Remote Pilot Instructor Medium & Small",
+        //   image: "/images/hirePilot/p2.avif",
+        //   socialLinks: [
+        //     { icon: Linkedin, url: "https://www.linkedin.com/in/harsh-srivastava-7284a91b1" },
+        //   ]
+        // },
+        // {
+        //   name: "Sonu Saini",
+        //   position: "Remote Pilot Instructor Medium & Small",
+        //   image: "/images/hirePilot/p4.avif",
+        //   socialLinks: [
+        //     { icon: Linkedin, url: "www.linkedin.com/in/sonu-saini-640589215" },
+        //   ]
+        // },
         {
           name: "Shantanu Mane",
           position: "Remote Pilot Instructor Small",
-          image: "/images/hirePilot/p3.jpg",
+          image: "/images/hirePilot/p3.avif",
           socialLinks: [
             { icon: Linkedin, url: "https://www.linkedin.com/in/shantanu-mane-08669326b" },
           ]
@@ -61,7 +61,7 @@ const OurTopPilot = () => {
   const sectionOrder = ['leadership'];
 
   return (
-    <section className="bg-black text-white min-h-screen pt-12 px-4 sm:px-6 lg:px-8 overflow-x-hidden">
+    <section className="bg-black text-white pt-12 px-4 sm:px-6 lg:px-8 overflow-x-hidden">
       {/* Import Raleway font */}
       <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
       

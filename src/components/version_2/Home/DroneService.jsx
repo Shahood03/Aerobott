@@ -47,7 +47,7 @@ const DroneServicesSection = () => {
             <ServiceCard
               title="Agriculture"
               description="Precision farming, crop monitoring, and automated spraying solutions for enhanced agricultural productivity"
-              imageUrl="/images/agri/a3.png"
+              imageUrl="/images/agri/a3.avif"
               altText="Drone agriculture and precision farming services"
             />
           </div>
@@ -57,7 +57,7 @@ const DroneServicesSection = () => {
             <ServiceCard
               title="GIS"
               description="Geographic information systems, mapping, and spatial data collection for informed decision making"
-              imageUrl="/images/gis/g1.jpg"
+              imageUrl="/images/gis/g1.avif"
               altText="GIS mapping and geographic information services"
             />
           </div>
@@ -67,7 +67,7 @@ const DroneServicesSection = () => {
             <ServiceCard
               title="Defence"
               description="Military-grade aerial solutions, reconnaissance, and tactical support for defense operations"
-              imageUrl="/images/daas/d8.png"
+              imageUrl="/images/daas/d8.avif"
               altText="Defense and military drone services"
             />
           </div>
@@ -77,7 +77,7 @@ const DroneServicesSection = () => {
             <ServiceCard
               title="Security & Surveillance"
               description="Advanced monitoring, perimeter security, and real-time surveillance for comprehensive protection"
-              imageUrl="/images/products/p2.png"
+              imageUrl="/images/products/p2.avif"
               altText="Security and surveillance drone services"
             />
           </div>
@@ -87,7 +87,7 @@ const DroneServicesSection = () => {
             <ServiceCard
               title="Energy & Utility"
               description="Infrastructure inspection, power line monitoring, and utility maintenance for reliable energy systems"
-              imageUrl="/images/daas/d6.jpg"
+              imageUrl="/images/daas/d6.avif"
               altText="Energy and utility inspection services"
             />
           </div>
@@ -97,7 +97,7 @@ const DroneServicesSection = () => {
             <ServiceCard
               title="Mining & Metal"
               description="Site surveying, stockpile measurement, and safety monitoring for mining and metal industries"
-              imageUrl="/images/daas/d7.jpg"
+              imageUrl="/images/daas/d7.avif"
               altText="Mining and metal industry drone services"
             />
           </div>

@@ -59,7 +59,7 @@ const WhyChooseAerobottSection = () => {
                   {/* Icon Container */}
                   <div className="w-10 h-10 relative">
                     <img 
-                      src="/images/element/icon2.png" 
+                      src="/images/element/icon2.avif" 
                       alt={feature.title}
                       className="w-10 h-10 object-contain"
                     />

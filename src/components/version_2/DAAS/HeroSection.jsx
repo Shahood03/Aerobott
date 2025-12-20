@@ -80,7 +80,7 @@ const AerobottLanding = memo(() => {
               {/* Image with loading optimization */}
               <img 
                 className="w-[577px] h-[543px] object-contain"
-                src="/images/element/design.png" 
+                src="/images/element/design.avif" 
                 alt="Drone formation"
                 loading="eager" // Load immediately since it's above the fold
                 decoding="sync"

@@ -1,4 +1,4 @@
-// /images/drone/d8.png
+// /images/drone/d8.avif
 import React from 'react';
 import { ArrowRight, Plus, Users } from 'lucide-react';
 

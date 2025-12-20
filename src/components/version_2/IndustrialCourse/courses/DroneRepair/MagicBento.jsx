@@ -11,37 +11,37 @@ const cardData = [
     color: "#060010",
     title: "Drone Fundamentals",
     label: "Basics",
-    image: "/images/drone/d10.jpg",
+    image: "/images/drone/d10.avif",
   },
   {
     color: "#060010",
     title: "Hardware-Focused Training",
     label: "Theory",
-    image: "/images/training/t1.jpg",
+    image: "/images/training/t1.avif",
   },
   {
     color: "#060010",
     title: "Hands-On Tools & Repairs",
     label: "Theory",
-    image: "/images/training/t6.jpg",
+    image: "/images/training/t6.avif",
   },
   {
     color: "#060010",
     title: " Diagnostic & Troubleshooting Skills",
     label: "Simulation",
-    image: "/images/course/c9.jpg",
+    image: "/images/course/c9.avif",
   },
   {
     color: "#060010",
     title: " Multi-Drone Exposure",
     label: "Practical",
-    image: "/images/course/c6.jpg",
+    image: "/images/course/c6.avif",
   },
   {
     color: "#060010",
     title: "Routine Maintenance Procedures",
     label: "Assessment",
-    image: "/images/course/c10.jpg",
+    image: "/images/course/c10.avif",
   },
 ];
 

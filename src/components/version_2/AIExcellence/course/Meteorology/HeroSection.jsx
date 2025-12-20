@@ -60,7 +60,7 @@ const HeroSection = () => {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/images/AICOE/AI3.jpeg')",
+          backgroundImage: "url('/images/AICOE/AI3.avif')",
           transform: isMobile ? "none" : `translateY(${scrollY * 0.2}px)`,
           filter: "brightness(0.4)",
         }}

@@ -55,7 +55,7 @@ const ProductsSection = () => {
           <ProductCard
             title="Survey Master Pro"
             description="Professional-grade surveying drone with high-precision mapping, LiDAR integration, and advanced geospatial analytics"
-            imageUrl="/images/products/p2.png"
+            imageUrl="/images/products/p2.avif"
             altText="Survey Master Pro professional mapping drone"
             badge="Professional"
             customHeight="h-[300px] sm:h-[400px] md:h-[450px] lg:h-[550px]"

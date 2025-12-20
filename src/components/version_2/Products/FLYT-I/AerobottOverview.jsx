@@ -41,7 +41,7 @@ const AerobottOverview = () => {
         { label: 'Flight Time', value: '20 Minutes' },
         { label: 'Use Case', value: 'RPTOs & Training' }
       ],
-      featureImage: "/images/products/p7.png"
+      featureImage: "/images/products/p7.avif"
     },
     {
       id: 'specs',
@@ -52,7 +52,7 @@ const AerobottOverview = () => {
         { label: 'Telemetry', value: 'RFD868UX' },
         { label: 'Radio', value: 'Taranis QX7' }
       ],
-      featureImage: "/images/products/p6.png"
+      featureImage: "/images/products/p6.avif"
     },
     {
       id: 'build',
@@ -63,7 +63,7 @@ const AerobottOverview = () => {
         { label: 'Motors', value: '4 (260W Each)' },
         { label: 'Propellers', value: '10-Inch Self-Tightening' }
       ],
-      featureImage: "/images/products/p10.png"
+      featureImage: "/images/products/p10.avif"
     },
     {
       id: 'autopilot',
@@ -74,7 +74,7 @@ const AerobottOverview = () => {
         { label: 'Range', value: '1 km' },
         { label: 'Ceiling', value: '50 m' }
       ],
-      featureImage: "/images/products/p8.png"
+      featureImage: "/images/products/p8.avif"
     },
     {
       id: 'gcs',
@@ -85,7 +85,7 @@ const AerobottOverview = () => {
         { label: 'Voltage', value: '16.8V Peak / 14.8V Nominal' },
         { label: 'Operating Temp', value: '-10°C to +55°C' }
       ],
-      featureImage: "/images/products/p9.png"
+      featureImage: "/images/products/p9.avif"
     }
   ];
 
@@ -118,7 +118,7 @@ const AerobottOverview = () => {
             <div className="relative w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
               <div className="relative z-10">
                 <img 
-                  src="/images/products/p5.png" 
+                  src="/images/products/p5.avif" 
                   alt="FLYT-I Drone" 
                   className="w-full h-auto rounded-lg sm:rounded-xl shadow-2xl"
                   onError={(e) => {
@@ -190,7 +190,7 @@ const AerobottOverview = () => {
                       <div className="flex items-center mb-4 sm:mb-6">
                         <div className="mr-3 sm:mr-4 w-10 sm:w-12 md:w-14 lg:w-16 h-10 sm:h-12 md:h-14 lg:h-16 rounded-lg flex items-center justify-center border border-gray-600 flex-shrink-0 overflow-hidden">
                           <img 
-                            src="/images/element/icon1.png" 
+                            src="/images/element/icon1.avif" 
                             alt="Feature Icon" 
                             className="w-full h-full object-cover"
                           />

@@ -128,7 +128,7 @@ export default function AeroAgriFAQ() {
         }
       `}</style>
 
-      <div className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-black text-white">
+      <div className="bg-gradient-to-b from-black via-gray-900 to-black text-white">
         <div className="w-full max-w-none mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-12 md:py-16">
           {/* Header */}
           <div className="text-center mb-8 sm:mb-12 md:mb-16">

@@ -9,19 +9,19 @@ import React from 'react';
 const WhatWeOfferSection = () => {
 const services = [
   {
-    iconSrc: "/images/element/icon1.png",
+    iconSrc: "/images/element/icon1.avif",
     title: "Drone-as-a-Service (DaaS) & Application Solutions",
     description:
       "We deliver tailored drone solutions for agriculture, GIS,  response, and aerial imagery. Aerobott focuses on precision farming, surveying, and other UAV-enabled services. Our approach maximizes efficiency, cuts costs, and ensures accurate data collection, delivering operations aligned with your goals"
   },
   {
-    iconSrc: "/images/element/icon1.png",
+    iconSrc: "/images/element/icon1.avif",
     title: "Technology Integration & Support",
     description:
       "We integrate AI and simulation into drone training with simulators, video tutorials, and post-training support. Our team seamless technology adoption that is scalable and future-ready. From onboarding to optimization, we help clients stay ahead of industry trends with expert guidance and reliable systems."
   },
   {
-    iconSrc: "/images/element/icon1.png",
+    iconSrc: "/images/element/icon1.avif",
     title: "Aerial Surveying & Mapping Solutions",
     description:
       "We provide high-precision aerial surveying and mapping for construction, agriculture, and infrastructure. Using advanced drones and sensors, our solutions deliver reliable geospatial data quickly and efficiently. We help clients plan better, reduce risks, and achieve greater operational efficiency with accurate, timely, and actionable insights."

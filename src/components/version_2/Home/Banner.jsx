@@ -12,7 +12,7 @@ const Banner = () => {
       subtitle: 'Chase the View',
       description: 'Dual-Camera Drone for Travel Photography',
       image: '/api/placeholder/1200/600',
-      backgroundImage: '/images/drone/b2.jpg', 
+      backgroundImage: '/images/drone/b2.avif', 
       product: '',
       url: '/products/aero-air-3s'
     },
@@ -22,7 +22,7 @@ const Banner = () => {
       subtitle: 'Capture Beyond',
       description: 'Professional Aerial Imaging System',
       image: '/api/placeholder/1200/600',
-      backgroundImage: '/images/drone/b3.jpg', 
+      backgroundImage: '/images/drone/b3.avif', 
       product: 'DPT',
       url: '/products/mavic-4-pro'
     },
@@ -32,7 +32,7 @@ const Banner = () => {
       subtitle: 'Create With Clarity',
       description: 'Stabilized Pocket Camera',
       image: '/api/placeholder/1200/600',
-      backgroundImage: '/images/drone/b4.jpg',
+      backgroundImage: '/images/drone/b4.avif',
       product: 'DAAS',
       url: '/products/osmo-pocket-3'
     },
@@ -42,7 +42,7 @@ const Banner = () => {
       subtitle: 'Farm From Above',
       description: 'Precision Agriculture Mapping & Spraying',
       image: '/api/placeholder/1200/600',
-      backgroundImage: '/images/drone/b1.jpg',
+      backgroundImage: '/images/drone/b1.avif',
       product: 'Aero Agri',
       url: '/products/agras-t40'
     }

@@ -464,7 +464,7 @@ const DUMMY_TRAININGS = [
     details: 'DGCA-Approved training program offering Small, Rotorcraft, VLOS Certification. Best in Class Flight Simulators & high quality, NPNT-Ready, Make in India Drones. Top-rated DGCA-approved Instructors offering 1-1 Flying Lessons & Individual attention.',
     date: '2024-06-15',
     has_image: true,
-    image: '/images/training/t14.jpeg'
+    image: '/images/training/t14.avif'
   }, {
     id: '9',
     heading: ' Drone Instructor Course - Small, Rotorcraft [DGCA CERTIFIED] Including 20 Hours Flying Completion',
@@ -475,7 +475,7 @@ const DUMMY_TRAININGS = [
     details: 'This is a 09-Day DGCA-authorised Train the Trainer Course for aspiring Drone professionals who wish to become DGCA-authorised Drone Instructors (Remote Pilot Instructors) on Small, Rotorcraft Drones. ',
     date: '2024-06-15',
     has_image: true,
-    image: '/images/training/t15.jpeg'
+    image: '/images/training/t15.avif'
   }, {
     id: '10',
     heading: ' Remote Pilot Course - Medium, Rotorcraft [DGCA CERTIFIED]',
@@ -486,7 +486,7 @@ const DUMMY_TRAININGS = [
     details: 'DGCA-Approved training program offering Medium (upto 50kg), Rotorcraft, VLOS Certification. Best in Class Flight Simulators & high quality, NPNT-Ready, Make in India Drones. Top-rated DGCA-approved Instructors offering 1-1 Flying Lessons & Individual attention.',
     date: '2024-06-15',
     has_image: true,
-    image: '/images/training/t16.jpeg'
+    image: '/images/training/t16.avif'
   },
   {
     id: '1',
@@ -498,7 +498,7 @@ const DUMMY_TRAININGS = [
     details: 'This comprehensive course covers drone basics, FAA regulations, safety procedures, and hands-on flight training. You\'ll learn pre-flight checks, basic maneuvers, emergency procedures, and how to operate drones safely in various environments.',
     date: '2024-06-15',
     has_image: true,
-    image: '/images/training/t13.png'
+    image: '/images/training/t13.avif'
   },
   {
     id: '2',
@@ -510,7 +510,7 @@ const DUMMY_TRAININGS = [
     details: 'Intensive training program designed for aspiring commercial drone pilots. Covers Part 107 exam preparation, advanced flight techniques, aerial photography, mapping, inspection procedures, and business aspects of drone operations.',
     date: '2024-07-01',
     has_image: true,
-    image: '/images/training/t1.jpg'
+    image: '/images/training/t1.avif'
   },
   {
     id: '3',
@@ -522,7 +522,7 @@ const DUMMY_TRAININGS = [
     details: 'Learn professional aerial photography techniques, camera settings, composition, post-processing, and storytelling through aerial imagery. Includes hands-on projects and portfolio development.',
     date: '2024-06-30',
     has_image: true,
-    image: '/images/training/t6.jpg'
+    image: '/images/training/t6.avif'
   },
   {
     id: '4',
@@ -534,7 +534,7 @@ const DUMMY_TRAININGS = [
     details: 'Professional training for first responders and emergency personnel. Covers thermal imaging, night operations, coordination with ground teams, legal considerations, and mission planning for SAR operations.',
     date: '2024-07-15',
     has_image: true,
-    image: '/images/training/t11.png'
+    image: '/images/training/t11.avif'
   },
   {
     id: '5',
@@ -546,7 +546,7 @@ const DUMMY_TRAININGS = [
     details: 'Learn the exciting world of drone racing with FPV (First Person View) flying, racing drone setup, advanced maneuvers, racing strategies, and competition preparation.',
     date: '2024-08-01',
     has_image: true,
-    image: '/images/training/t5.jpg'
+    image: '/images/training/t5.avif'
   },
   {
     id: '6',
@@ -558,7 +558,7 @@ const DUMMY_TRAININGS = [
     details: 'Comprehensive training on agricultural drone applications including crop monitoring, precision spraying, field mapping, data analysis, and integration with farm management systems.',
     date: '2024-07-20',
     has_image: true,
-    image: '/images/training/t12.png'
+    image: '/images/training/t12.avif'
   },
   {
     id: '7',
@@ -570,7 +570,7 @@ const DUMMY_TRAININGS = [
     details: 'Learn drone electronics, motor systems, battery management, troubleshooting common issues, preventive maintenance, and basic repair techniques to keep your drones in optimal condition.',
     date: '2024-06-25',
     has_image: true,
-    image: '/images/training/t7.jpeg'
+    image: '/images/training/t7.avif'
   },
   {
     id: '11',
@@ -582,7 +582,7 @@ const DUMMY_TRAININGS = [
     details: 'Application Specific Training for RPC Holders in Agricutural Spraying',
     date: '2024-06-25',
     has_image: true,
-    image: '/images/agri/a3.png'
+    image: '/images/agri/a3.avif'
   }
 ];
 
@@ -592,19 +592,19 @@ const RELATED_COURSES = [
     id: 'r1',
     heading: 'Advanced Drone Photography',
     rating: 4.5,
-    image: '/images/training/r1.jpg'
+    image: '/images/training/r1.avif'
   },
   {
     id: 'r2',
     heading: 'Drone Cinematography Pro',
     rating: 4.8,
-    image: '/images/training/r2.jpg'
+    image: '/images/training/r2.avif'
   },
   {
     id: 'r3',
     heading: 'Industrial Inspection Drones',
     rating: 4.7,
-    image: '/images/training/r3.jpg'
+    image: '/images/training/r3.avif'
   }
 ];
 
@@ -658,7 +658,7 @@ const EnrollNowPage = () => {
 
   // Get image URL - now uses static paths from training data
   const getTrainingImageUrl = (training) => {
-    return training.image || `/images/training/t${training.id}.jpg`;
+    return training.image || `/images/training/t${training.id}.avif`;
   };
 
   // Get mode color styling

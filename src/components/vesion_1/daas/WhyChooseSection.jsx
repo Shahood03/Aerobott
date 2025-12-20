@@ -51,7 +51,7 @@ const WhyChooseSection = () => {
           {/* Left Column - Image */}
           <div className="w-full lg:w-1/2 flex justify-center">
             <img 
-              src="/images/banner/b1.jpg" 
+              src="/images/banner/b1.avif" 
               alt="Drone services illustration" 
               className="w-full max-w-[350px] sm:max-w-[450px] md:max-w-[550px] h-auto aspect-[550/662] rounded-[20px] object-cover"
             />

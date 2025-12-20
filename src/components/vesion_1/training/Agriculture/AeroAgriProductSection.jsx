@@ -34,22 +34,22 @@ const AeroAgriProductSection = () => {
 
   const productImages = [
     {
-      src: "/images/agri/a2.png",
+      src: "/images/agri/a2.avif",
       alt: "Aero Agri Spraying Drone - Main View",
       caption: "Professional Agriculture Spraying Drone"
     },
     {
-      src: "/images/agri/a3.png",
+      src: "/images/agri/a3.avif",
       alt: "Aero Agri in Action",
       caption: "Precision Spraying in Action"
     },
     {
-      src: "/images/agri/a2.png",
+      src: "/images/agri/a2.avif",
       alt: "Tank System Detail",
       caption: "20L High-Capacity Tank System"
     },
     {
-      src: "/images/agri/a4.png",
+      src: "/images/agri/a4.avif",
       alt: "Control System",
       caption: "Advanced Flight Control System"
     }

@@ -75,7 +75,7 @@ const WhyChooseUsDesktop = () => {
               alt="Why Choose Us"
               className="rounded-2xl object-cover w-full h-full max-h-[565px]"
               onError={(e) => {
-                console.error('Failed to load image: /images/WCU.jpg');
+                console.error('Failed to load image: /images/WCU.avif');
                 e.target.style.display = 'none';
               }}
             />
@@ -144,11 +144,11 @@ const WhyChooseUsMobile = () => {
           {/* Image Section - Moved to top */}
           <div className="w-full h-[250px] sm:h-[300px]">
             <img
-              src="/images/industries/i1.png"
+              src="/images/industries/i1.avif"
               alt="Why Choose Us"
               className="rounded-2xl object-cover w-full h-full"
               onError={(e) => {
-                console.error('Failed to load image: /images/WCU.jpg');
+                console.error('Failed to load image: /images/WCU.avif');
                 e.target.style.display = 'none';
               }}
             />
@@ -230,11 +230,11 @@ const WhyChooseUsTablet = () => {
           {/* Image Section */}
           <div className="w-full h-[350px]">
             <img
-              src="/images/industries/i1.png"
+              src="/images/industries/i1.avif"
               alt="Why Choose Us"
               className="rounded-2xl object-cover w-full h-full"
               onError={(e) => {
-                console.error('Failed to load image: /images/WCU.jpg');
+                console.error('Failed to load image: /images/WCU.avif');
                 e.target.style.display = 'none';
               }}
             />

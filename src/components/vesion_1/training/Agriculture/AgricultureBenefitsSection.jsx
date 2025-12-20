@@ -91,19 +91,19 @@ const AgricultureBenefitsSection = () => {
     {
       title: "NDVI Mapping",
       description: "Vegetation health analysis using normalized difference vegetation index",
-      image: "/images/agri/s1.jpg",
+      image: "/images/agri/s1.avif",
       features: ["Chlorophyll content", "Plant stress detection", "Growth monitoring"]
     },
     {
       title: "Thermal Imaging",
       description: "Heat signature analysis for irrigation and plant health assessment",
-      image: "/images/agri/s2.jpg",
+      image: "/images/agri/s2.avif",
       features: ["Water stress detection", "Disease identification", "Soil analysis"]
     },
     {
       title: "Multispectral Analysis",
       description: "Multi-band imagery for comprehensive crop health evaluation",
-      image: "/images/agri/s3.jpg",
+      image: "/images/agri/s3.avif",
       features: ["Nutrient deficiency", "Pest infestation", "Yield prediction"]
     }
   ];

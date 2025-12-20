@@ -8,7 +8,7 @@ const courses = [
     title: "Drone Building Course",
     duration: "15 Days",
     location: "Chandigarh",
-    image: "/images/training/t19.webp",
+    image: "/images/training/t19.avif",
     path: "/IndustrialCourse/drone-building"
   },
   {
@@ -16,7 +16,7 @@ const courses = [
     title: "Drone Repair and Maintenance",
     duration: "3 months",
     location: "Mumbai",
-    image: "/images/drone/b2.jpg",
+    image: "/images/drone/b2.avif",
     path: "/IndustrialCourse/drone-repair"
   },
   {
@@ -32,7 +32,7 @@ const courses = [
     title: "Aerial Cinematography",
     duration: "15 Days",
     location: "Mumbai",
-    image: "/images/course/z21.jpg",
+    image: "/images/course/z21.avif",
     path: "/IndustrialCourse/aerial-cinematography"
   },
   {
@@ -40,7 +40,7 @@ const courses = [
     title: "GIS Survey and mapping",
     duration: "15 Days",
     location: "Mumbai",
-    image: "/images/home/s3.png",
+    image: "/images/home/s3.avif",
     path: "/IndustrialCourse/gis-survey"
   },
   {
@@ -48,7 +48,7 @@ const courses = [
     title: "GIS Data Processing",
     duration: "15 Days",
     location: "Mumbai",
-    image: "/images/training/t12.png",
+    image: "/images/training/t12.avif",
     path: "/IndustrialCourse/gis-data-processing"
   }
 ];
@@ -93,7 +93,7 @@ function IndustrialCourse(){
                   className="w-full h-64 object-cover"
                   onError={(e) => {
                     // Fallback to Unsplash image if local image fails
-                    e.target.src = `/images/training/t17.jpg`;
+                    e.target.src = `/images/training/t17.avif`;
                   }}
                 />
                 {/* Gradient overlay */}

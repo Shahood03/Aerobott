@@ -60,7 +60,7 @@ const Hero = () => {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/images/drone/b2.jpg')",
+          backgroundImage: "url('/images/drone/b2.avif')",
           transform: isMobile ? "none" : `translateY(${scrollY * 0.2}px)`,
           filter: "brightness(0.4)",
         }}

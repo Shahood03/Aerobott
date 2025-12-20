@@ -380,11 +380,11 @@ const DroneManufacturingSection = () => {
             >
               <div className="absolute inset-0 rounded-2xl overflow-hidden">
                 <img
-                  src="/images/daas/d3.jpg"
+                  src="/images/daas/d3.avif"
                   alt="Aerobott Drone Manufacturing Facility"
                   className="w-full h-full object-cover hover:scale-105 transition-all duration-700"
                   onError={(e) => {
-                    console.error('Failed to load image: /images/daas/d3.jpg');
+                    console.error('Failed to load image: /images/daas/d3.avif');
                     e.target.style.display = 'none';
                   }}
                 />

@@ -24,7 +24,7 @@ const ClientsLovePilotsSection = () => {
       date: "March 2025",
       excerpt:
         "Breaking new ground in autonomous flight systems with cutting-edge artificial intelligence integration.",
-      imageUrl: "/images/news/ai-drone-launch.jpg",
+      imageUrl: "/images/news/ai-drone-launch.avif",
     },
     {
       id: 2,
@@ -33,7 +33,7 @@ const ClientsLovePilotsSection = () => {
       date: "February 2025",
       excerpt:
         "Strategic partnership marks significant milestone in indigenous drone manufacturing for national security.",
-      imageUrl: "/images/news/defense-contract.jpg",
+      imageUrl: "/images/news/defense-contract.avif",
     },
     {
       id: 3,
@@ -43,7 +43,7 @@ const ClientsLovePilotsSection = () => {
       date: "January 2025",
       excerpt:
         "Transforming traditional farming with intelligent drone technology and precision agriculture capabilities.",
-      imageUrl: "/images/news/agri-revolution.jpg",
+      imageUrl: "/images/news/agri-revolution.avif",
     },
     {
       id: 4,
@@ -52,7 +52,7 @@ const ClientsLovePilotsSection = () => {
       date: "December 2024",
       excerpt:
         "Recognition for outstanding contribution to drone technology and aerospace innovation in India.",
-      imageUrl: "/images/news/innovation-award.jpg",
+      imageUrl: "/images/news/innovation-award.avif",
     },
     {
       id: 5,
@@ -61,7 +61,7 @@ const ClientsLovePilotsSection = () => {
       date: "November 2024",
       excerpt:
         "New lithium-ion advancement extends flight time by 40% for commercial drone operations.",
-      imageUrl: "/images/news/battery-tech.jpg",
+      imageUrl: "/images/news/battery-tech.avif",
     },
     {
       id: 6,
@@ -70,7 +70,7 @@ const ClientsLovePilotsSection = () => {
       date: "October 2024",
       excerpt:
         "Collaboration aims to accelerate innovation in drone technology and aerospace engineering education.",
-      imageUrl: "/images/news/university-partnership.jpg",
+      imageUrl: "/images/news/university-partnership.avif",
     },
   ];
 

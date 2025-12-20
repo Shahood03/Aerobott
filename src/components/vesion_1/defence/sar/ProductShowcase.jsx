@@ -139,7 +139,7 @@ const ProductShowcase = () => {
                 }}
               >
                 <img 
-                  src="/images/drone/n1.png" 
+                  src="/images/drone/n1.avif" 
                   alt="Surveillance Drone 3D Model" 
                   className={`object-contain max-h-full max-w-full transition-all duration-1000 ${isRotating ? 'animate-spin-slow' : 'hover:scale-105'}`}
                   style={{

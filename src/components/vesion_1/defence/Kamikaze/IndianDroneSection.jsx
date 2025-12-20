@@ -99,12 +99,12 @@ const IndianDroneSection = () => {
           <div className="relative">
             {/* India map outline as background */}
             <div className="absolute inset-0 flex items-center justify-center opacity-20">
-              <img src="/images/drone/n1.png" alt="India Map Outline" className="max-w-full h-auto" />
+              <img src="/images/drone/n1.avif" alt="India Map Outline" className="max-w-full h-auto" />
             </div>
             
             {/* Drone illustration */}
             <div className="relative z-10">
-              <img src="/images/drone/n1.png" alt="Kamikaze Drone India" className="max-w-full h-auto" />
+              <img src="/images/drone/n1.avif" alt="Kamikaze Drone India" className="max-w-full h-auto" />
               
               {/* Animated flight path */}
               <svg className="absolute top-0 left-0 w-full h-full" viewBox="0 0 600 350" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -190,7 +190,7 @@ const IndianDroneSection = () => {
                   {/* Feature illustration */}
                   <div className="bg-gradient-to-br from-gray-800/30 to-blue-900/30 rounded-xl p-6 border border-gray-700">
                     <img 
-                      src="/images/drone/n1.png" 
+                      src="/images/drone/n1.avif" 
                       alt={feature.title} 
                       className="w-full h-auto rounded-lg"
                     />

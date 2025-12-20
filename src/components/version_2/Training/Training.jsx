@@ -8,40 +8,40 @@ const courses = [
     title: "Remote Pilot Training – Small Rotorcraft [DGCA Certified]",
     duration: "5 to 8 Days",
     location: "Mumbai and Chandigarh",
-    image: "/images/training/t14.jpeg",
-    path: "/training/remote-pilot-small"
+    image: "/images/training/t14.avif",
+    path: "/rpce/remote-pilot-small"
   },
   {
     id: 2,
     title: "Remote Pilot Training – Medium Rotorcraft [DGCA Certified]",
     duration: "5 to 8 Days",
     location: "Chandigarh",
-    image: "/images/training/t16.jpeg",
-    path: "/training/remote-pilot-medium"
+    image: "/images/training/t16.avif",
+    path: "/rpce/remote-pilot-medium"
   },
   {
     id: 3,
     title: "20 Hours of Comprehensive Flight - Small Rotorcraft",
     duration: "15 Days",
     location: "Mumbai and Chandigarh",
-    image: "/images/training/t7.jpeg",
-    path: "/training/comprehensive-flight-small"
+    image: "/images/training/t7.avif",
+    path: "/rpce/comprehensive-flight-small"
   },
   {
     id: 4,
     title: "20 Hours of Comprehensive Flight - Medium Rotorcraft",
     duration: "15 Days",
     location: "Chandigarh",
-    image: "/images/course/c2.jpg",
-    path: "/training/comprehensive-flight-medium"
+    image: "/images/course/c2 (1).avif",
+    path: "/rpce/comprehensive-flight-medium"
   },
   {
     id: 5,
     title: "Drone Instructor Course - Small, Rotorcraft [DGCA CERTIFIED]",
     duration: "9 Days",
     location: "Mumbai",
-    image: "/images/gallery/g1.png",
-    path: "/training/drone-instructor"
+    image: "/images/gallery/g1.avif",
+    path: "/rpce/drone-instructor"
   },
 ];
 
@@ -93,7 +93,7 @@ function Training() {
                   className="w-full h-64 object-cover"
                   onError={(e) => {
                     // Fallback to Unsplash image if local image fails
-                    e.target.src = `/images/training/t17.jpg`;
+                    e.target.src = `/images/training/t17.avif`;
                   }}
                 />
                 {/* Gradient overlay */}

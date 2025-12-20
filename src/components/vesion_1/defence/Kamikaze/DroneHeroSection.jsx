@@ -20,7 +20,7 @@ const DroneHeroSection = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/images/drone/n2.png')",
+          backgroundImage: "url('/images/drone/n2.avif')",
           transform: `translateY(${scrollY * 0.2}px)`,
           filter: "brightness(0.4)"
         }}
@@ -92,7 +92,7 @@ const DroneHeroSection = () => {
           >
             {/* Placeholder for 3D drone image */}
             <img 
-              src="/images/drone/n2.png" 
+              src="/images/drone/n2.avif" 
               alt="Advanced Tactical Drone" 
               className="max-w-full h-auto"
               style={{

@@ -10,24 +10,24 @@ const TestimonialCarousel = () => {
       quote: "Great pilot. Went out next day after getting hired and uploaded content very quickly. Did everything asked!",
       name: "Ravi Kumar",
       position: "Operations Head",
-      image: "/images/team/t7.jpg",
-      backgroundImage: "/images/element/Rectangle.png"
+      image: "/images/team/t7.avif",
+      backgroundImage: "/images/element/Rectangle.avif"
     },
     {
       id: 2,
       quote: "The comprehensive curriculum and hands-on approach made all the difference. Our drone pilots are now fully certified and operating at peak efficiency.",
       name: "Roshani Khandelwal",
       position: "Technical Director",
-      image: "/images/team/t9.jpg",
-      backgroundImage: "/images/element/Rectangle.png"
+      image: "/images/team/t9.avif",
+      backgroundImage: "/images/element/Rectangle.avif"
     },
     {
       id: 3,
       quote: "Outstanding training program that covers everything from basic operations to advanced commercial applications. The certification process was seamless.",
       name: "Rajesh Yadav",
       position: "Fleet Manager",
-      image: "/images/team/t8.jpg",
-      backgroundImage: "/images/element/Rectangle.jpg"
+      image: "/images/team/t8.avif",
+      backgroundImage: "/images/element/Rectangle.avif"
     }
   ];
 
@@ -64,7 +64,7 @@ const TestimonialCarousel = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black flex flex-col items-center justify-center p-4 sm:p-6 lg:p-8 relative overflow-hidden font-raleway">
+    <div className=" bg-black flex flex-col items-center justify-center p-4 sm:p-6 lg:p-8 relative overflow-hidden font-raleway">
       {/* Background decorative elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-48 sm:w-72 lg:w-96 h-48 sm:h-72 lg:h-96 bg-gradient-to-br from-blue-600/20 to-violet-700/20 rounded-full blur-3xl"></div>
@@ -72,7 +72,7 @@ const TestimonialCarousel = () => {
       </div>
       
       {/* Header */}
-      <div className="relative z-30 text-center">
+      <div className="relative z-30 mb-10 text-center">
         <h2 className="text-[#d5dbe6] text-4xl md:text-5xl font-raleway font-medium leading-tight">
           Clients{" "}
           <span className="text-5xl md:text-8xl inline-block align-middle">
@@ -128,40 +128,6 @@ const TestimonialCarousel = () => {
           </div>
         </div>
       </div>
-
-      {/* Navigation Dots */}
-      <div className="absolute bottom-8 sm:bottom-12 lg:bottom-16 left-1/2 transform -translate-x-1/2 flex space-x-3 z-30">
-        {testimonials.map((_, index) => (
-          <button
-            key={index}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentSlide 
-                ? 'bg-white scale-125' 
-                : 'bg-white/30 hover:bg-white/50'
-            }`}
-            onClick={() => goToSlide(index)}
-          />
-        ))}
-      </div>
-
-      {/* Navigation Arrows */}
-      <button
-        onClick={() => goToSlide(getPreviousIndex())}
-        className="hidden lg:block absolute left-4 xl:left-8 top-1/2 transform -translate-y-1/2 z-30 w-10 xl:w-12 h-10 xl:h-12 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center transition-all duration-300 group"
-      >
-        <svg className="w-5 xl:w-6 h-5 xl:h-6 text-white transform group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-        </svg>
-      </button>
-
-      <button
-        onClick={() => goToSlide(getNextIndex())}
-        className="hidden lg:block absolute right-4 xl:right-8 top-1/2 transform -translate-y-1/2 z-30 w-10 xl:w-12 h-10 xl:h-12 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center transition-all duration-300 group"
-      >
-        <svg className="w-5 xl:w-6 h-5 xl:h-6 text-white transform group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-        </svg>
-      </button>
     </div>
   );
 };
@@ -224,7 +190,7 @@ const TestimonialCard = ({ testimonial, isCenter, isMobile }) => {
         <>
           <div 
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: `url('${testimonial.backgroundImage || '/images/testimonial-bg.png'}')` }}
+            style={{ backgroundImage: `url('${testimonial.backgroundImage || '/images/testimonial-bg.avif'}')` }}
           ></div>
           <div className="absolute inset-0 bg-black/40"></div>
         </>

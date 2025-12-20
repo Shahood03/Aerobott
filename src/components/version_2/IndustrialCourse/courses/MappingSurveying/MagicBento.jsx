@@ -11,42 +11,40 @@ const cardData = [
     color: "#060010",
     title: "Introduction to Survey Drone Piloting",
     label: "Basics",
-    image: "/images/drone/d10.jpg",
+    image: "/images/drone/d10.avif",
   },
   {
     color: "#060010",
     title: "Drone Flight Planning and Preparation",
     label: "Planning",
-    image: "/images/course/g7.jpg",
+    image: "/images/course/g7.avif",
   },
   {
     color: "#060010",
     title: "Land Mapping Basics",
     label: "Mapping",
-    image: "/images/course/g1.webp",
+    image: "/images/course/g1.avif",
   },
   {
     color: "#060010",
     title: "Aerial Data Collection Techniques",
     label: "Data Collection",
-    image: "/images/course/g2.webp",
+    image: "/images/course/g2.avif",
   },
   {
     color: "#060010",
     title: "Data Processing and Analysis",
     label: "Analysis",
-    image: "/images/course/g8.jpg",
+    image: "/images/course/g8.avif",
   },
   {
     color: "#060010",
     title: "Specialization in Land Mapping",
     label: "Advanced Mapping",
-    image: "/images/course/g3.webp",
+    image: "/images/course/g3.avif",
   },
 
 ];
-
-
 
 const createParticleElement = (
   x,

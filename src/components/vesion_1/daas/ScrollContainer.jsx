@@ -5,12 +5,12 @@ const industryData = [
   {
     title: "Agriculture",
     description: "An agriculture drone is an unmanned aerial vehicle (UAV) used in farming for crop monitoring, spraying, mapping, and data collection to increase efficiency and precision in agriculture. Agriculture drones are UAVs used in farming to monitor crops, spray pesticides, map fields, and gather data, enhancing productivity, precision, and sustainability in agricultural practices.",
-    image: "/images/agri/a5.jpg"
+    image: "/images/agri/a5.avif"
   },
   {
     title: "Construction",
     description: "Construction drones provide aerial monitoring of building sites, enabling progress tracking, safety inspection, and topographic mapping. They create 3D models, identify issues early, and improve communication between stakeholders, saving time and reducing costs throughout project lifecycle.",
-    image: "/images/daas/d2.jpg"
+    image: "/images/daas/d2.avif"
   },
   {
     title: "Infrastructure",

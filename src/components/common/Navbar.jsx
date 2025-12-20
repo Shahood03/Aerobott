@@ -14,8 +14,8 @@ const useActiveSection = () => {
       // If we're on a specific page, set that as active
       const path = window.location.pathname;
       if (path === '/about-us') setActiveSection('about-us');
-      else if (path === '/training') setActiveSection('training');
-      else if (path === '/drone-as-service') setActiveSection('daas');
+      else if (path === '/rpce') setActiveSection('training');
+      else if (path === '/drone-as-a-service') setActiveSection('daas');
       else if (path === '/hire-pilot') setActiveSection('hire-pilot');
       else if (path === '/contact-us') setActiveSection('contact-us');
       else if (path.startsWith('/products/')) setActiveSection('products');
@@ -66,8 +66,9 @@ const useNavigationLinks = () => {
   const mainNavLinks = [
     { label: 'About Us', href: '/about-us', id: 'about-us' },
     // Products and Training will be handled as dropdowns
-    { label: 'DAAS', href: '/drone-as-service', id: 'daas' },
+    { label: 'DAAS', href: '/drone-as-a-service', id: 'daas' },
     { label: 'Hire a Pilot', href: '/hire-pilot', id: 'hire-pilot' },
+    { label: 'Careers', href: 'https://docs.google.com/forms/d/e/1FAIpQLScAJKH8uMbRmIKT3gYmR5RuVdiLpDLSMwnpEVJU00KWNnKyrQ/viewform?usp=publish-editor', id: 'careers', isExternal: true },
     { label: 'Contact Us', href: '/contact-us', id: 'contact-us' }
   ];
 
@@ -77,20 +78,20 @@ const useNavigationLinks = () => {
       name: 'Remote Pilot Training',
       description: 'DGCA certified drone pilot training program',
       image: '/images/training/t13.png',
-      href: '/training',
+      href: '/rpce',
       isExternal: false
     },
     {
       name: 'AI Center of Excellence',
       description: 'Learn to build and assemble drones from scratch',
-      image: '/images/AIExcellence/aimlfordrone/aid6.jpg',
+      image: '/images/AIExcellence/aimlfordrone/aid6.avif',
       href: '/AIExcellence',
       isExternal: false
     },
     {
       name: 'Industrial Course',
       description: 'Geographic Information Systems for drone mapping',
-      image: '/images/industries/WCU.jpg',
+      image: '/images/industries/WCU.avif',
       href: '/IndustrialCourse',
       isExternal: false
     }
@@ -100,23 +101,23 @@ const useNavigationLinks = () => {
   const productsSubItems = [
     {
       name: 'FLYT-I - Training Drone',
-      image: '/images/products/p10.png',
+      image: '/images/products/p10.avif',
       description: 'Professional training drone for pilot certification',
-      href: '/products/flyt-i',
+      href: '/products/flyt-i-drone',
       isExternal: false
     },
     {
       name: 'Survey Master Pro - Survey Drone', 
-      image: '/images/products/p2.png',
+      image: '/images/products/p2.avif',
       description: 'Advanced surveying and mapping solutions',
       href: '/products/survey-master-pro',
       isExternal: false
     },
     {
       name: 'Aero Agri - Agriculture Drone',
-      image: '/images/agri/a7.jpg', 
+      image: '/images/agri/a7.avif', 
       description: 'Smart farming and crop monitoring technology',
-      href: '/products/aero-agri',
+      href: '/products/aero-agri-drone',
       isExternal: false
     }
   ];
@@ -154,7 +155,7 @@ const Logo = () => {
     <a href="/" className="flex items-center">
       <div>
         <img
-          src="/images/logo/logo.png"
+          src="/images/logo/logo.avif"
           alt="Aerobott Logo"
           className="h-10"
         />
@@ -344,6 +345,8 @@ const MobileMenu = ({
             <a
               key={item.label}
               href={item.href}
+              target={item.isExternal ? "_blank" : "_self"}
+              rel={item.isExternal ? "noopener noreferrer" : ""}
               className={`block font-medium transition-all duration-300 ${
                 isActive 
                   ? 'text-blue-300 border-l-2 border-blue-300 pl-3' 
@@ -353,6 +356,9 @@ const MobileMenu = ({
               style={{ fontFamily: 'Raleway, sans-serif' }}
             >
               {item.label}
+              {item.isExternal && (
+                <span className="inline-block ml-1 text-xs">↗</span>
+              )}
             </a>
           );
         })}
@@ -378,18 +384,18 @@ const EnhancedTrainingDropdown = ({ scrolled, isOpen, toggleDropdown, isActive }
       name: 'Remote Pilot Training',
       description: 'DGCA certified drone pilot training program',
       image: '/images/training/t13.png',
-      href: '/training'
+      href: '/rpce'
     },
     {
       name: 'AI Center of Excellence',
       description: 'Learn to build and assemble drones from scratch',
-      image: '/images/AIExcellence/aimlfordrone/aid6.jpg',
+      image: '/images/AIExcellence/aimlfordrone/aid6.avif',
       href: '/AIExcellence'
     },
     {
       name: 'Industrial Course',
       description: 'Geographic Information Systems for drone mapping',
-      image: '/images/industries/WCU.jpg',
+      image: '/images/industries/WCU.avif',
       href: '/IndustrialCourse'
     }
   ];
@@ -460,20 +466,20 @@ const EnhancedProductsDropdown = ({ scrolled, isOpen, toggleDropdown, isActive }
     {
       name: 'FLYT-I - Training Drone',
       description: 'Professional training drone for pilot certification',
-      image: '/images/products/p10.png',
-      href: '/products/flyt-i'
+      image: '/images/products/p10.avif',
+      href: '/products/flyt-i-drone'
     },
     {
       name: 'Survey Master Pro - Survey Drone',
       description: 'Advanced surveying and mapping solutions',
-      image: '/images/products/p2.png', 
-      href: '/products/survey-master-pro'
+      image: '/images/products/p2.avif', 
+      href: '/products/survey-master-pro-drone'
     },
     {
       name: 'Aero Agri - Agriculture Drone',
       description: 'Smart farming and crop monitoring technology',
-      image: '/images/agri/a7.jpg',
-      href: '/products/aero-agri'
+      image: '/images/agri/a7.avif',
+      href: '/products/aero-agri-drone'
     }
   ];
 
@@ -739,6 +745,7 @@ const Navbar = () => {
                   key={item.label} 
                   href={item.href} 
                   label={item.label}
+                  isExternal={item.isExternal}
                   isActive={isNavItemActive(item)}
                 />
               );

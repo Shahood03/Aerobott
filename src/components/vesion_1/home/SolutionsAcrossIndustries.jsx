@@ -5,44 +5,44 @@ const SolutionsAcrossIndustries = () => {
     {
       title: "Agriculture",
       description: "Drone-powered precision agriculture with AI crop analysis and targeted spraying to maximize yields and reduce chemical use.",
-      image: "/images/home/s1.jpg",
+      image: "/images/home/s1.avif",
       link: "/solutions/agriculture",
-      iconPath: "/images/icon/i1.png" // Replace with your PNG icon path
+      iconPath: "/images/icon/i1.avif" // Replace with your PNG icon path
     },
     {
       title: "GIS Surveying & Mapping",
       description: "High-precision drone mapping delivering detailed topographical data and 3D models for intelligent land planning.",
       image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
       link: "/solutions/gis-mapping",
-      iconPath: "/images/icon/i2.png" // Replace with your PNG icon path
+      iconPath: "/images/icon/i2.avif" // Replace with your PNG icon path
     },
     {
         title: "Defense",
         description: "Military-grade UAV systems for tactical reconnaissance, perimeter security, and intelligence gathering in harsh environments.",
-        image: "/images/drone/c2.jpg",
+        image: "/images/drone/c2.avif",
         link: "/solutions/defense",
-        iconPath: "/images/icon/i5.png" // Replace with your PNG icon path
+        iconPath: "/images/icon/i5.avif" // Replace with your PNG icon path
       },
     {
       title: "Security & Surveillance",
       description: "Autonomous drone patrols with real-time video analytics for smart cities, borders, and large campus security.",
-      image: "/images/home/s3.png",
+      image: "/images/home/s3.avif",
       link: "/solutions/security",
-      iconPath: "/images/icon/i3.png" // Replace with your PNG icon path
+      iconPath: "/images/icon/i3.avif" // Replace with your PNG icon path
     },
     {
       title: "Energy & Utility",
       description: "Specialized drones for power line inspection, wind turbine monitoring, and solar farm assessment with thermal imaging.",
       image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
       link: "/solutions/energy-utility",
-      iconPath: "/images/icon/i6.png" // Replace with your PNG icon path
+      iconPath: "/images/icon/i6.avif" // Replace with your PNG icon path
     },
     {
       title: "Mining & Metal",
       description: "Heavy-duty drones for volumetric stockpile analysis, pit mapping, and inaccessible area inspection in mining operations.",
-      image: "/images/home/s3.jpg",
+      image: "/images/home/s3.avif",
       link: "/solutions/mining-metal",
-      iconPath: "/images/icon/i7.png" // Replace with your PNG icon path
+      iconPath: "/images/icon/i7.avif" // Replace with your PNG icon path
     }
   ];
 
@@ -191,28 +191,28 @@ export default SolutionsAcrossIndustries;
 //       title: "Agriculture",
 //       description: "Increase yield and sustainability through AI-powered spraying and crop analysis.",
 //       image: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=620&h=400&fit=crop&auto=format",
-//       iconPath: "/images/icon/i1.png",
+//       iconPath: "/images/icon/i1.avif",
 //       link: "/solutions/agriculture"
 //     },
 //     {
 //       title: "GIS Surveying & Mapping",
 //       description: "High-resolution topographical data for smart planning and land use.",
 //       image: "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=620&h=400&fit=crop&auto=format",
-//       iconPath: "/images/icon/i2.png",
+//       iconPath: "/images/icon/i2.avif",
 //       link: "/solutions/gis-mapping"
 //     },
 //     {
 //       title: "Security & Surveillance",
 //       description: "Real-time aerial monitoring for smart cities, borders, and campuses.",
 //       image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=620&h=400&fit=crop&auto=format",
-//       iconPath: "/images/icon/i3.png",
+//       iconPath: "/images/icon/i3.avif",
 //       link: "/solutions/security"
 //     },
 //     {
 //       title: "Disaster Management",
 //       description: "Rapid response, damage assessment, and search & rescue using UAVs.",
 //       image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=620&h=400&fit=crop&auto=format",
-//       iconPath: "/images/icon/i4.png",
+//       iconPath: "/images/icon/i4.avif",
 //       link: "/solutions/disaster-management"
 //     }
 //   ];

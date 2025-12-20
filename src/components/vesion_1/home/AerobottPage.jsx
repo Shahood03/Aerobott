@@ -234,7 +234,7 @@ export default function AerobottPage() {
               {/* Main image */}
               <div className="relative">
                 <img 
-                  src="/images/home/w1.png" 
+                  src="/images/home/w1.avif" 
                   alt="Aerobott team in action" 
                   className="w-full h-auto object-cover rounded-2xl shadow-lg"
                   loading="lazy"
@@ -246,7 +246,7 @@ export default function AerobottPage() {
                 <div className="relative">
                   <div className="rounded-lg sm:rounded-xl overflow-hidden border-2 sm:border-4 border-white shadow-lg sm:shadow-xl bg-white">
                     <img 
-                      src="/images/home/w2.png" 
+                      src="/images/home/w2.avif" 
                       alt="Drone technology showcase" 
                       className="w-full h-auto object-cover"
                       loading="lazy"

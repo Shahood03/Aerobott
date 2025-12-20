@@ -8,12 +8,12 @@ import React from "react";
 
 const Industries = () => {
   const industries = [
-    { name: "Agriculture", image: "/images/industries/agriculture.jpg" },
-    { name: "GIS", image: "/images/industries/GIS.jpg" },
-    { name: "Defence", image: "/images/industries/defence.jpg" },
-    { name: "Energy And Utility", image: "/images/industries/telecommunication.jpg" },
-    { name: "Mining and Metals", image: "/images/industries/MaM.jpg" },
-    { name: "Security and Surveillance", image: "/images/industries/SaS.jpg" }
+    { name: "Agriculture", image: "/images/industries/agriculture.avif" },
+    { name: "GIS", image: "/images/industries/GIS.avif" },
+    { name: "Defence", image: "/images/industries/defence.avif" },
+    { name: "Energy And Utility", image: "/images/industries/telecommunication.avif" },
+    { name: "Mining and Metals", image: "/images/industries/MaM.avif" },
+    { name: "Security and Surveillance", image: "/images/industries/SaS.avif" }
   ];
 
   return (

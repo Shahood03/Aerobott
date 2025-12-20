@@ -128,7 +128,7 @@ export default function SimplicityFAQ() {
         }
       `}</style>
       
-      <div className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-black text-white">
+      <div className="bg-gradient-to-b from-black via-gray-900 to-black text-white">
         <div className="w-full max-w-none mx-auto px-4 xs:px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 py-8 xs:py-12 sm:py-16 lg:py-20">
           {/* Header - Fully responsive */}
           <div className="text-center mb-8 xs:mb-12 sm:mb-16">

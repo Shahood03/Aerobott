@@ -18,7 +18,7 @@ export default function UnderDevelopmentPage() {
           <div className="mb-8 flex justify-center">
             <div className="relative">
               <img 
-                src="/images/banner/b3.png" 
+                src="/images/banner/b3.avif" 
                 alt="3D Development Illustration" 
                 className="w-72 h-72 object-cover rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-300"
               />

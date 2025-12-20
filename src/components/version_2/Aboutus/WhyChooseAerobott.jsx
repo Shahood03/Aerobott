@@ -71,7 +71,7 @@ const WhyChooseAerobottSection = () => {
                   {/* Icon Container */}
                   <div className="w-8 sm:w-10 h-8 sm:h-10 relative flex-shrink-0">
                     <img 
-                      src="/images/element/icon2.png" 
+                      src="/images/element/icon2.avif" 
                       alt={feature.title}
                       className="w-8 sm:w-10 h-8 sm:h-10 object-contain"
                     />
@@ -97,7 +97,7 @@ const WhyChooseAerobottSection = () => {
           <div className="relative h-full w-full flex justify-center xl:justify-end">
             <img 
               className="w-full max-w-[620px] h-[400px] sm:h-[500px] lg:h-[600px] xl:h-full rounded-[20px] sm:rounded-[30px] lg:rounded-[40px] object-cover" 
-              src="/images/drone/d11.jpg" 
+              src="/images/drone/d11.avif" 
               alt="Why Choose Aerobott - Professional team member"
             />
           </div>

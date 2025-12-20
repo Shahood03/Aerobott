@@ -9,7 +9,7 @@
     },
     {
       "name": "Drone Light",
-      "images": "assets/images/products/light-drone.png",
+      "images": "assets/images/products/light-drone.avif",
       "price": "Rp23.086.000",
       "description": "Drone light is every creators dream. Setting apperture manually and high baterry performance. Drone light is everything you need.",
       "status": "new"
@@ -23,21 +23,21 @@
     },
     {
       "name": "Redlight Drone",
-      "images": "assets/images/products/redlight-drone.jpeg",
+      "images": "assets/images/products/redlight-drone.avif",
       "price": "Rp5.860.000",
       "description": "With its small body, HD camera, and affordable price, this drone is perfect for a beginner to shots their content.",
       "status": "old"
     },
     {
       "name": "Smoky Drone",
-      "images": "assets/images/products/smoky-drone.jpeg",
+      "images": "assets/images/products/smoky-drone.avif",
       "price": "Rp13.500.000",
       "description": "Smoky drone have a slim body and good machine so the drone can move very fast. Ready to shots the fast moving object.",
       "status": "old"
     },
     {
       "name": "Imperial Drone",
-      "images": "assets/images/products/imperial-drone.jpeg",
+      "images": "assets/images/products/imperial-drone.avif",
       "price": "Rp20.500.000",
       "description": "Drone with the best durability. Made with the best materials, this drone is water resistant and ready to hit all obstacles.",
       "status": "old"

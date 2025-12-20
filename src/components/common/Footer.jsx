@@ -15,9 +15,9 @@ const Footer = () => {
     products: {
       title: "Products",
       links: [
-        { label: "Flyt-1", href: "/products/flyt-i" },
-        { label: "Survey Master Pro", href: "/products/survey-master-pro" },
-        { label: "Aeroagri", href: "/products/aero-agri" },
+        { label: "Flyt-1", href: "/products/flyt-i-drone" },
+        { label: "Aeroagri", href: "/products/aero-agri-drone" },
+        { label: "Survey Master Pro", href: "/products/survey-master-pro-drone" },
       ],
     },
     explore: {
@@ -25,8 +25,8 @@ const Footer = () => {
       links: [
         { label: "Home", href: "/" },
         { label: "About Us", href: "/about-us" },
-        { label: "Trainings", href: "/training" },
-        { label: "Drone as a Service", href: "/drone-as-service" },
+        { label: "Trainings", href: "/rpce" },
+        { label: "Drone as a Service", href: "/drone-as-a-service" },
         { label: "Hire a Pilot", href: "/hire-pilot" },
         { label: "Partner with us", href: "/partner-with-us" },
       ],
@@ -34,7 +34,7 @@ const Footer = () => {
     education: {
       title: "Training",
       links: [
-        { label: "Remote Pilot Training", href: "/training" },
+        { label: "Remote Pilot Training", href: "/rpce" },
         { label: "AI Drone Excellence", href: "/AIExcellence" },
         { label: "Industrial Course", href: "/IndustrialCourse" },
       ],
@@ -52,7 +52,7 @@ const Footer = () => {
             <div className="col-span-1 md:col-span-2 lg:col-span-2">
               <div className="mb-6">
                 <img
-                  src="/images/logo/logo.png"
+                  src="/images/logo/logo.avif"
                   alt="Aerobott Logo"
                   className="h-10 sm:h-12 brightness-0 invert mb-6"
                 />
@@ -186,7 +186,7 @@ const Footer = () => {
               </p>
             </div>
 
-            <div className="flex flex-wrap justify-center lg:justify-end items-center gap-6">
+            {/* <div className="flex flex-wrap justify-center lg:justify-end items-center gap-6">
               {[
                 { label: "Privacy Policy", href: "/privacy-policy" },
                 { label: "Terms and Conditions", href: "/terms-and-conditions" },
@@ -202,7 +202,7 @@ const Footer = () => {
                   <span className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-300 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
                 </a>
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
       </footer>

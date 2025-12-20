@@ -145,7 +145,7 @@ const DronesServicesHero = () => {
               <div className="relative z-10">
                 <div className="absolute -inset-2 bg-orange-500/20 rounded-full blur-2xl animate-pulse-slow"></div>
                 <img 
-                  src="/images/drone/d7.png" 
+                  src="/images/drone/d7.avif" 
                   alt="Orange and black drone" 
                   className="max-w-full w-auto h-auto object-contain transform lg:scale-110 hover:scale-125 transition-all duration-700"
                 />

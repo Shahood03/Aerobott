@@ -91,7 +91,7 @@ const AboutUsSection = () => {
         {/* Right Visual Content */}
         <div className="flex-1 w-full h-[600px] lg:h-[700px] relative">
           <AboutVisualCard
-            imageUrl="/images/team/t1.png"
+            imageUrl="/images/team/t1.avif"
             altText="Aerobott AI-powered drone innovation and technology"
           />
         </div>

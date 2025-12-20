@@ -1,4 +1,4 @@
-// /images/drone/d8.png
+// /images/drone/d8.avif
 import React from 'react';
 import { ArrowRight, Plus, Users } from 'lucide-react';
 
@@ -54,7 +54,7 @@ export default function Banner() {
   }}
 >
   <img
-    src="/images/drone/d6.png"
+    src="/images/drone/d6.avif"
     alt="Slant decoration"
     className="w-full h-full object-contain " // no crop
     style={{

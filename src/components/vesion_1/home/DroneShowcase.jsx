@@ -15,10 +15,10 @@ const ProductCard = ({ title, subtitle, tagline, backgroundColor = 'bg-gray-300'
   const generatePlaceholderImageUrl = (title) => {
     // Create different placeholder images for different products
     const imageMap = {
-      "Drone Manufacturing": "/images/drone/c1.jpg",
-      "Drone as Defence": "/images/drone/c2.jpg",
-      "Drone Training": "/images/drone/c3.jpg",
-      "Agri Drone": "/images/drone/c4.jpg"
+      "Drone Manufacturing": "/images/drone/c1.avif",
+      "Drone as Defence": "/images/drone/c2.avif",
+      "Drone Training": "/images/drone/c3.avif",
+      "Agri Drone": "/images/drone/c4.avif"
     };
     
     return imageMap[title] || "/api/placeholder/800/600?text=";

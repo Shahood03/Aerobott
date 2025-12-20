@@ -67,24 +67,23 @@ function App() {
         <Route element={<Layout />}>
           {/* *****************************  Version 2 Routes *************************************** */}
           <Route path="/" element={<HomeMain />} />
-          <Route path="/drone-as-service" element={<Daas />} />
+          <Route path="/drone-as-a-service" element={<Daas />} />
           <Route path="/about-us" element={<AboutUsMain />} />       
           <Route path="/hire-pilot" element={<HirePilot />} />
           <Route path="/products" element={<ProductMain />} />
-          <Route path="/products/flyt-i" element={<FlytMain />} />
-          <Route path="/products/aero-agri" element={<AeroAgriMain />} />
-          <Route path="/products/survey-master-pro" element={<SurveyMain />} />
+          <Route path="/products/flyt-i-drone" element={<FlytMain />} />
+          <Route path="/products/aero-agri-drone" element={<AeroAgriMain />} />
+          <Route path="/products/survey-master-pro-drone" element={<SurveyMain />} />
           
           {/* Training Routes */}
-          <Route path="/training" element={<TrainingMain />} />
-          <Route path="/training/course/:courseId" element={<CourseDetailsPage />} />
+          <Route path="/rpce" element={<TrainingMain />} />
           
           {/* Individual Course Detail Routes */}   
-          <Route path="/training/remote-pilot-small" element={<RemotePilotSmall />} />
-          <Route path="/training/remote-pilot-medium" element={<RemotePilotMedium />} />
-          <Route path="/training/comprehensive-flight-small" element={<ComprehensiveFlightSmall />} />
-          <Route path="/training/comprehensive-flight-medium" element={<ComprehensiveFlightMedium />} />
-          <Route path="/training/drone-instructor" element={<DroneInstructor />} />
+          <Route path="/rpce/remote-pilot-small" element={<RemotePilotSmall />} />
+          <Route path="/rpce/remote-pilot-medium" element={<RemotePilotMedium />} />
+          <Route path="/rpce/comprehensive-flight-small" element={<ComprehensiveFlightSmall />} />
+          <Route path="/rpce/comprehensive-flight-medium" element={<ComprehensiveFlightMedium />} />
+          <Route path="/rpce/drone-instructor" element={<DroneInstructor />} />
           <Route path="/Aboutus" element={<Aboutus />} />
           
 

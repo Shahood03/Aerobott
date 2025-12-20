@@ -62,7 +62,7 @@ const Banner = () => {
           <div 
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
-              backgroundImage: "url('/images/fallback-bg.jpg')",
+              backgroundImage: "url('/images/fallback-bg.avif')",
               filter: "brightness(0.7)"
             }}
           />

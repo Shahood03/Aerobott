@@ -10,17 +10,17 @@ const DroneServicesSection = () => {
     {
       title: "Drone as a service",
       description: "Discover the power of drones as a service platform for survey & mapping, photography, videography and more. Streamline data collection, surveillance and visual impact with our cutting-edge drone services.",
-      image: "/images/drone/pngaaa 1.png"  // This would be replaced with actual image
+      image: "/images/drone/pngaaa 1.avif"  // This would be replaced with actual image
     },
     {
       title: "Our Drones",
       description: "Explore the dynamism of our training drone, Agriculture drone and surveillance drone, tailored and manufactured to suit different industries",
-      image: "/images/drone/d6.png"  // This would be replaced with actual image
+      image: "/images/drone/d6.avif"  // This would be replaced with actual image
     },
     {
       title: "Hire a Pilot",
       description: "Hire a pilot for your location and unlock the excellence of aerial mastery with professionally licensed pilots.",
-      image: "/images/drone/d7.png"  // This would be replaced with actual image
+      image: "/images/drone/d7.avif"  // This would be replaced with actual image
     }
   ];
 

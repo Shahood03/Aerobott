@@ -8,25 +8,25 @@ const RecognitionCertificationsSection = () => {
     {
       id: 1,
       title: "DGCA Certification",
-      image: "/images/certifications/c1.png",
+      image: "/images/certifications/c1.avif",
       description: "Directorate General of Civil Aviation approved training center"
     },
     {
       id: 2,
       title: "ISO 9001:2015",
-      image: "/images/certifications/c2.png",
+      image: "/images/certifications/c2.avif",
       description: "Quality Management System Certification"
     },
     {
       id: 3,
       title: "World Book of Records",
-      image: "/images/certifications/c3.png",
+      image: "/images/certifications/c3.avif",
       description: "Recognition for excellence in drone education"
     },
     {
       id: 4,
       title: "Industry Excellence Award",
-      image: "/images/certifications/c4.png",
+      image: "/images/certifications/c4.avif",
       description: "Leading innovation in UAV technology"
     },
     // {

@@ -8,7 +8,7 @@ const courses = [
     title: "Drone Manufacturing and Assembly",
     duration: "2 Months",
     location: "Mumbai and Chandigarh",
-    image: "/images/AICOE/AI5.jpg",
+    image: "/images/AICOE/AI5.avif",
     path: "/AIExcellence/drone-manufacturing-and-assembly"
   },
   {
@@ -16,7 +16,7 @@ const courses = [
     title: "AL/ML for Drone Applications",
     duration: "2 Months",
     location: "Mumbai and Chandigarh",
-    image: "/images/AICOE/AI8.jpg",
+    image: "/images/AICOE/AI8.avif",
     path: "/AIExcellence/aiml-for-drone-applications"
   },
   {
@@ -24,7 +24,7 @@ const courses = [
     title: "Geographic Information System (GIS)",
     duration: "2 Months",
     location: "Mumbai and Chandigarh",
-    image: "/images/AICOE/AI6.jpg",
+    image: "/images/AICOE/AI6.avif",
     path: "/AIExcellence/geographic-information-system"
   },
   {
@@ -32,7 +32,7 @@ const courses = [
     title: "Meteorology",
     duration: "2 Months",
     location: "Mumbai and Chandigarh",
-     image: "/images/AICOE/AI3.jpeg",
+     image: "/images/AICOE/AI3.avif",
     path: "/AIExcellence/meteorology"
   },
   // {
@@ -40,7 +40,7 @@ const courses = [
   //   title: "Data Science",
   //   duration: "2 Months",
   //   location: "Mumbai and Chandigarh",
-  //   image: "/images/AICOE/AI2.png",
+  //   image: "/images/AICOE/AI2.avif",
   //   path: "/AIExcellence/data-science"
   // },
   // {
@@ -48,7 +48,7 @@ const courses = [
   //   title: "Cyber Security",
   //   duration: "2 Months",
   //   location: "Mumbai and Chandigarh",
-  //   image: "/images/AICOE/AI1.jpeg",
+  //   image: "/images/AICOE/AI1.avif",
   //   path: "/AIExcellence/cyber-security"
   // },
   // {
@@ -56,7 +56,7 @@ const courses = [
   //   title: "AI and ML",
   //   duration: "2 Months",
   //   location: "Mumbai and Chandigarh",
-  //   image: "/images/AICOE/AI7.jpg",
+  //   image: "/images/AICOE/AI7.avif",
   //   path: "/AIExcellence/ai-and-ml"
   // }
 ];
@@ -108,7 +108,7 @@ function AlExcellence(){
                   className="w-full h-64 object-cover"
                   onError={(e) => {
                     // Fallback to Unsplash image if local image fails
-                    e.target.src = `/images/training/t17.jpg`;
+                    e.target.src = `/images/training/t17.avif`;
                   }}
                 />
                 {/* Gradient overlay */}

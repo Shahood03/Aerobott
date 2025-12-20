@@ -37,7 +37,7 @@ const FPVDroneHeroSection = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/images/drone/n3.png')",
+          backgroundImage: "url('/images/drone/n3.avif')",
           transform: `translateY(${scrollY * 0.1}px) scale(${1 + scrollY * 0.0005})`,
           filter: "brightness(0.7) contrast(1.2)"
         }}

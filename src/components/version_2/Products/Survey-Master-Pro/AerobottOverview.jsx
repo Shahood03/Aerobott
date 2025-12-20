@@ -33,7 +33,7 @@ const AerobottOverview = () => {
         { label: 'Accuracy Level', value: 'Centimeter' },
         { label: 'IMU Grade', value: 'Professional' }
       ],
-      featureImage: "/images/products/p2.png"
+      featureImage: "/images/products/p2.avif"
     },
     {
       id: 'camera',
@@ -44,7 +44,7 @@ const AerobottOverview = () => {
         { label: 'Image Quality', value: 'Sharp Detail' },
         { label: 'Application', value: 'Photo grammetry' }
       ],
-      featureImage: "/images/products/p2.png"
+      featureImage: "/images/products/p2.avif"
     },
     {
       id: 'flight',
@@ -55,7 +55,7 @@ const AerobottOverview = () => {
         { label: 'Coverage Area', value: '2 sq. km' },
         { label: 'Efficiency', value: 'Extended Range' }
       ],
-      featureImage: "/images/products/p2.png"
+      featureImage: "/images/products/p2.avif"
     },
     {
       id: 'exports',
@@ -66,7 +66,7 @@ const AerobottOverview = () => {
         { label: 'Point Clouds', value: 'Generated' },
         { label: 'File Formats', value: 'Shapefiles' }
       ],
-      featureImage: "/images/products/p2.png"
+      featureImage: "/images/products/p2.avif"
     },
     {
       id: 'planning',
@@ -77,7 +77,7 @@ const AerobottOverview = () => {
         { label: 'Terrain Follow', value: 'Automated' },
         { label: 'AOI Scanning', value: 'Intelligent' }
       ],
-      featureImage: "/images/products/p2.png"
+      featureImage: "/images/products/p2.avif"
     },
     {
       id: 'payload',
@@ -88,7 +88,7 @@ const AerobottOverview = () => {
         { label: 'Multispectral', value: 'Available' },
         { label: 'System Type', value: 'Modular' }
       ],
-      featureImage: "/images/products/p2.png" 
+      featureImage: "/images/products/p2.avif" 
     }
   ];
 
@@ -139,7 +139,7 @@ const AerobottOverview = () => {
               {/* Drone illustration */}
               <div className="relative z-10">
                 <img 
-                  src="/images/survey/s3.png" 
+                  src="/images/survey/s3.avif" 
                   alt="Professional Surveying Drone" 
                   className="w-full h-auto rounded-lg xs:rounded-xl shadow-2xl"
                   onError={(e) => {
@@ -215,7 +215,7 @@ const AerobottOverview = () => {
                       <div className="flex items-center mb-4 sm:mb-6">
                         <div className="mr-3 sm:mr-4 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg flex items-center justify-center border border-gray-600 flex-shrink-0 overflow-hidden">
                           <img 
-                            src={`/images/icon-${feature.id}.png`}
+                            src={`/images/icon-${feature.id}.avif`}
                             alt={`${feature.title} icon`}
                             className="w-full h-full object-cover"
                             onError={(e) => {
@@ -224,7 +224,7 @@ const AerobottOverview = () => {
                             }}
                           />
                           <img 
-                            src="/images/element/icon1.png"
+                            src="/images/element/icon1.avif"
                             alt="Feature icon placeholder"
                             className="w-full h-full object-cover hidden"
                           />

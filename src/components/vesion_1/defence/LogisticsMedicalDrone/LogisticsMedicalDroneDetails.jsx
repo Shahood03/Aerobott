@@ -112,22 +112,22 @@ const LogisticsMedicalDroneDetails = () => {
         {
           title: 'Battlefield CASEVAC Support',
           description: 'Delivery of emergency medical supplies to forward medical stations, including blood products, surgical equipment, and medications. Enables treatment to begin before medical evacuation can be completed.',
-          image: '/images/drone/n4.png'
+          image: '/images/drone/n4.avif'
         },
         {
           title: 'Disaster Zone Relief',
           description: 'Rapid deployment of essential supplies to communities cut off by natural disasters such as floods, earthquakes, or landslides where ground transportation is impossible.',
-          image: '/images/drone/n4.png'
+          image: '/images/drone/n4.avif'
         },
         {
           title: 'Pandemic Response',
           description: 'Distribution of vaccines, test kits, and medications to remote or quarantined areas minimizing human contact and accelerating response times.',
-          image: '/images/drone/n4.png'
+          image: '/images/drone/n4.avif'
         },
         {
           title: 'Remote Medical Support',
           description: 'Regular supply deliveries to isolated medical outposts, rural clinics, or field hospitals in regions with limited infrastructure or seasonal accessibility issues.',
-          image: '/images/drone/n4.png'
+          image: '/images/drone/n4.avif'
         }
       ]
     }
@@ -165,7 +165,7 @@ const LogisticsMedicalDroneDetails = () => {
                 {/* Main drone image */}
                 <div className="absolute inset-0 flex items-center justify-center p-6">
                   <img 
-                    src="/images/drone/n4.png" 
+                    src="/images/drone/n4.avif" 
                     alt="Logistics & Medical Support Drone" 
                     className="max-w-full h-auto object-contain"
                     style={{
@@ -315,7 +315,7 @@ const LogisticsMedicalDroneDetails = () => {
               <div className="relative h-64 md:h-80">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <img 
-                    src="/images/drone/n4.png" 
+                    src="/images/drone/n4.avif" 
                     alt="Drone Technical Dimensions" 
                     className="max-w-full h-auto object-contain"
                   />

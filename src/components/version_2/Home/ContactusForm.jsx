@@ -73,7 +73,7 @@ const NewsletterSubscription = () => {
   // Indian Flag Component
   const IndianFlag = () => (
     <img 
-      src="/images/element/flg.png" 
+      src="/images/element/flg.avif" 
       alt="Indian Flag" 
       className="w-5 sm:w-6 h-3 sm:h-4 object-cover rounded-sm"
     />
@@ -208,7 +208,7 @@ const NewsletterSubscription = () => {
                     {/* Country Code Section */}
                     <div className="pl-3 sm:pl-3.5 pr-2 sm:pr-3 py-2 sm:py-2.5 flex items-center gap-1 border-r border-gray-200">
                       <IndianFlag />
-                      <ChevronDown className="w-4 sm:w-5 h-4 sm:h-5 text-gray-500" />
+                      {/* <ChevronDown className="w-4 sm:w-5 h-4 sm:h-5 text-gray-500" /> */}
                     </div>
                     {/* Phone Input Section */}
                     <div className="flex-1 px-2 sm:px-3.5 py-2 sm:py-2.5 flex items-center gap-2">

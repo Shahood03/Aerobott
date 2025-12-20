@@ -13,7 +13,7 @@ const DroneProductsPage = () => {
       name: "Survey Master Pro",
       category: "mapping",
       price: "",
-      image: "/images/drone/n1.png",
+      image: "/images/drone/n1.avif",
       description: "High-precision mapping drone with 4K camera and LiDAR sensors. Perfect for topographical surveys and 3D modeling.",
       features: [
         "45-minute flight time",
@@ -35,7 +35,7 @@ const DroneProductsPage = () => {
       name: "Aero Agri",
       category: "agriculture",
       price: "",
-      image: "/images/agri/a2.png",
+      image: "/images/agri/a2.avif",
       description: "Specialized agricultural drone with multispectral imaging for crop health monitoring and precision spraying capabilities.",
       features: [
         "Multispectral camera",
@@ -57,7 +57,7 @@ const DroneProductsPage = () => {
       name: "Survey Pro ",
       category: "security",
       price: "",
-      image: "/images/drone/n3.png",
+      image: "/images/drone/n3.avif",
       description: "Advanced security drone with thermal imaging, object tracking, and autonomous patrol capabilities.",
       features: [
         "Thermal and night vision",
@@ -79,7 +79,7 @@ const DroneProductsPage = () => {
       name: "Logistics Support Drone",
       category: "disaster",
       price: "",
-      image: "/images/drone/n4.png",
+      image: "/images/drone/n4.avif",
       description: "Rapid deployment drone for emergency response with thermal imaging, loudspeaker, and payload delivery system.",
       features: [
         "Thermal human detection",
@@ -123,7 +123,7 @@ const DroneProductsPage = () => {
       name: "FPV Combat Drone",
       category: "energy",
       price: "",
-      image: "/images/drone/n2.png",
+      image: "/images/drone/n2.avif",
       description: "Specialized drone for power line, wind turbine, and solar panel inspection with high-resolution thermal imaging.",
       features: [
         "Electromagnetic field sensor",
@@ -145,7 +145,7 @@ const DroneProductsPage = () => {
       name: "Surveillance Drone",
       category: "mining",
       price: "Surveillance Drone",
-      image: "/images/drone/n5.png",
+      image: "/images/drone/n5.avif",
       description: "Rugged drone designed for mining operations with LiDAR mapping, methane detection, and dust-resistant construction.",
       features: [
         "High-precision LiDAR",
@@ -251,7 +251,7 @@ const DroneProductsPage = () => {
             <div className="relative w-64 h-64">
               <div className="absolute w-64 h-64 animate-pulse opacity-30 bg-white rounded-full blur-xl"></div>
               <img 
-                src="/images/drone/d7.png" 
+                src="/images/drone/d7.avif" 
                 alt="Drone" 
                 className="w-48 h-48 object-contain absolute top-8 left-8 animate-float"
                 style={{

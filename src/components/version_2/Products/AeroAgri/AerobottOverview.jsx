@@ -33,7 +33,7 @@ const AgriDroneOverview = () => {
         { label: 'Flow Control', value: 'Smart System' },
         { label: 'Compatibility', value: 'Multi-Chemical' }
       ],
-      featureImage: "/images/agri/a6.jpg"
+      featureImage: "/images/agri/a6.avif"
     },
     {
       id: 'battery',
@@ -44,7 +44,7 @@ const AgriDroneOverview = () => {
         { label: 'Swap Time', value: 'Seconds' },
         { label: 'Operation', value: 'Continuous' }
       ],
-      featureImage: "/images/agri/a7.jpg"
+      featureImage: "/images/agri/a7.avif"
     },
     {
       id: 'terrain',
@@ -55,7 +55,7 @@ const AgriDroneOverview = () => {
         { label: 'Terrain Support', value: 'Uneven Fields' },
         { label: 'Slope Handling', value: 'Adaptive' }
       ],
-      featureImage: "/images/agri/a2.png"
+      featureImage: "/images/agri/a2.avif"
     },
     {
       id: 'nozzles',
@@ -66,7 +66,7 @@ const AgriDroneOverview = () => {
         { label: 'Wind Resistance', value: 'Enhanced' },
         { label: 'Row Alignment', value: 'Precision' }
       ],
-      featureImage: "/images/agri/a9.jpg"
+      featureImage: "/images/agri/a9.avif"
     },
     {
       id: 'planning',
@@ -77,7 +77,7 @@ const AgriDroneOverview = () => {
         { label: 'Navigation', value: 'GPS Guided' },
         { label: 'Path Planning', value: 'Automated' }
       ],
-      featureImage: "/images/agri/a6.jpg"
+      featureImage: "/images/agri/a6.avif"
     },
     {
       id: 'integration',
@@ -88,7 +88,7 @@ const AgriDroneOverview = () => {
         { label: 'SMAM Format', value: 'Supported' },
         { label: 'AIF Reports', value: 'Integrated' }
       ],
-      featureImage: "/images/agri/a7.jpg"
+      featureImage: "/images/agri/a7.avif"
     }
   ];
 
@@ -136,7 +136,7 @@ const AgriDroneOverview = () => {
               {/* Drone illustration */}
               <div className="relative z-10">
                 <img 
-                  src="/images/agri/a5.png" 
+                  src="/images/agri/a5 (1).avif" 
                   alt="Agricultural Drone" 
                   className="w-full h-auto rounded-lg sm:rounded-xl shadow-2xl"
                   onError={(e) => {
@@ -214,7 +214,7 @@ const AgriDroneOverview = () => {
                       <div className="flex items-start sm:items-center mb-3 sm:mb-4 lg:mb-6">
                         <div className="mr-2 sm:mr-3 lg:mr-4 w-8 sm:w-10 md:w-12 lg:w-14 xl:w-16 h-8 sm:h-10 md:h-12 lg:h-14 xl:h-16 rounded-lg flex items-center justify-center border border-gray-600 flex-shrink-0 overflow-hidden">
                           <img 
-                            src="/images/element/icon1.png" 
+                            src="/images/element/icon1.avif" 
                             alt="Feature Icon" 
                             className="w-full h-full object-cover"
                           />

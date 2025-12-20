@@ -122,7 +122,7 @@ const ContactUs = () => {
             <div 
               className="absolute inset-0 w-full h-full z-0 opacity-30 sm:opacity-40"
               style={{
-                backgroundImage: "url('/images/home/c1.png')",
+                backgroundImage: "url('/images/home/c1.avif')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat"

@@ -11,19 +11,19 @@ const cardData = [
     color: "#060010",
     title: "Theory Class",
     label: "Basics",
-    image: "/images/drone/d10.jpg",
+    image: "/images/drone/d10.avif",
   },
   {
     color: "#060010",
     title: "Performance‑Driven Curriculum",
     label: "Theory",
-    image: "/images/course/c12.jpg",
+    image: "/images/course/c12.avif",
   },
   {
     color: "#060010",
     title: "Simulator + Real‑World Racing",
     label: "Simulation",
-    image: "/images/course/c13.jpg",
+    image: "/images/course/c13.avif",
   },
   {
     color: "#060010",
@@ -35,13 +35,13 @@ const cardData = [
     color: "#060010",
     title: "Simulated FPV flight missions",
     label: "Assessment",
-    image: "/images/course/h1.jpg",
+    image: "/images/course/h1.avif",
   },
   {
     color: "#060010",
     title: " Race‑Ready",
     label: "Assessment",
-    image: "/images/drone/d9.jpg",
+    image: "/images/drone/d9.avif",
   },
 ];
 

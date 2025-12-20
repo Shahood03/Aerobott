@@ -119,7 +119,7 @@ const GISDronesBanner = () => {
                   style={{ transformStyle: 'preserve-3d' }}
                 >
                   <img 
-                    src="/images/banner/b2.png" 
+                    src="/images/banner/b2.avif" 
                     alt="GIS mapping with drone technology" 
                     className="w-full h-auto object-cover rounded-lg"
                   />

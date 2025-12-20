@@ -19,7 +19,7 @@ const Banner = () => {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/images/banner/b5.jpg')",
+          backgroundImage: "url('/images/banner/b5.avif')",
           transform: `translateY(${scrollY * 0.2}px)`,
           filter: 'brightness(0.4)',
         }}

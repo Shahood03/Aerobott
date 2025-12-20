@@ -11,37 +11,37 @@ const cardData = [
     color: "#060010",
     title: "Advanced Theory",
     label: "Basics",
-    image: "/images/drone/d10.jpg",
+    image: "/images/drone/d10.avif",
   },
   {
     color: "#060010",
     title: "Waypoint & Mission Planning",
     label: "Planning",
-    image: "/images/course/z15.jpg",
+    image: "/images/course/z15.avif",
   },
   {
     color: "#060010",
     title: "Payload Handling",
     label: "Practical",
-    image: "/images/course/z16.jpg",
+    image: "/images/course/z16.avif",
   },
   {
     color: "#060010",
     title: "Emergency Situations",
     label: "Safety",
-    image: "/images/course/z17.jpg",
+    image: "/images/course/z17.avif",
   },
   {
     color: "#060010",
     title: "Daylight & Low-Light Flying",
     label: "Flight",
-    image: "/images/drone/d9.jpg",
+    image: "/images/drone/d9.avif",
   },
   {
     color: "#060010",
     title: "Progress Tracking",
     label: "Assessment",
-    image:  "/images/course/z18.jpg",
+    image:  "/images/course/z18.avif",
   },
 ];
 

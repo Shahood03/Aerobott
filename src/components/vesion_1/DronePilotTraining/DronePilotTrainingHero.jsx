@@ -24,7 +24,7 @@ const DronePilotTrainingHero = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/images/banner/b1.jpg')",
+          backgroundImage: "url('/images/banner/b1.avif')",
         }}
       >
         <div className="absolute inset-0 bg-white bg-opacity-80"></div>

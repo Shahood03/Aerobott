@@ -18,7 +18,7 @@ const NewsSection = () => {
     date: "April 2025",
     excerpt:
       "Maharashtra Strengthens Global Academic Ties with Leading U.S. Universities",
-    imageUrl: "/images/news/news2.png",
+    imageUrl: "/images/news/news2.avif",
     link:
       "https://msbteadmin.bynaricexam.com/uploads/latestUpdate/MSBTENewsletterJuly2025aIssue.pdf",
   };
@@ -32,7 +32,7 @@ const NewsSection = () => {
       date: "April 2025",
       excerpt:
         "Delegation led by Ganpat Kothari presented key development proposals across agriculture, education, innovation, skills and Drone Manufacturing.",
-      imageUrl: "/images/news/news1.jpeg",
+      imageUrl: "/images/news/news1.avif",
     },
     {
       id: 3,
@@ -42,7 +42,7 @@ const NewsSection = () => {
       date: "March 2025",
       excerpt:
         "Delegation led by Ganpat Kothari presented key development proposals across agriculture, education, innovation, skills and Drone Manufacturing.",
-      imageUrl: "/images/news/news3.jpeg",
+      imageUrl: "/images/news/news3.avif",
     },
     {
       id: 4,
@@ -52,7 +52,7 @@ const NewsSection = () => {
       date: "February 2025",
       excerpt:
         "Delegation led by Ganpat Kothari presented key development proposals across agriculture, education, innovation, skills and Drone Manufacturing.",
-      imageUrl: "/images/news/news5.jpeg",
+      imageUrl: "/images/news/news5.avif",
     },
   ];
 
@@ -72,7 +72,7 @@ const NewsSection = () => {
       date: "January 2025",
       excerpt:
         "Transforming traditional farming with intelligent drone technology and precision agriculture capabilities.",
-      imageUrl: "/images/news/n3.jpg",
+      imageUrl: "/images/news/n3.avif",
     },
     {
       id: 6,
@@ -81,7 +81,7 @@ const NewsSection = () => {
       date: "December 2024",
       excerpt:
         "Recognition for outstanding contribution to drone technology and aerospace innovation in India.",
-      imageUrl: "/images/news/n4.jpg",
+      imageUrl: "/images/news/n4.avif",
     },
     {
       id: 7,
@@ -90,7 +90,7 @@ const NewsSection = () => {
       date: "November 2024",
       excerpt:
         "New lithium-ion advancement extends flight time by 40% for commercial drone operations.",
-      imageUrl: "/images/news/n5.png",
+      imageUrl: "/images/news/n5.avif",
     },
     {
       id: 8,
@@ -99,7 +99,7 @@ const NewsSection = () => {
       date: "October 2024",
       excerpt:
         "Collaboration aims to accelerate innovation in drone technology and aerospace engineering education.",
-      imageUrl: "/images/news/n6.png",
+      imageUrl: "/images/news/n6.avif",
     },
   ];
 

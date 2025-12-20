@@ -3,19 +3,19 @@ import React from 'react';
 const AerobottTeamSection = () => {
   // Team member images - you can replace these with your actual team photos
   const teamImages1 = [
-    "/images/gallery/g1.png",
-    "/images/gallery/g2.jpg",
-    "/images/gallery/g3.jpg",
+    "/images/gallery/g1.avif",
+    "/images/gallery/g2.avif",
+    "/images/gallery/g3.avif",
     "/images/gallery/g4.jpg",
-    "/images/gallery/g5.jpg",
+    "/images/gallery/g5.avif",
   ];
 
   const teamImages2 = [
-    "/images/training/t7.jpeg",
-    "/images/agri/a3.png",
-    "/images/training/t6.jpg",
-    "/images/training/t16.jpeg",
-    "/images/gallery/g2.jpg",
+    "/images/training/t7.avif",
+    "/images/agri/a3.avif",
+    "/images/training/t6.avif",
+    "/images/training/t16.avif",
+    "/images/gallery/g2.avif",
   ];
 
   return (

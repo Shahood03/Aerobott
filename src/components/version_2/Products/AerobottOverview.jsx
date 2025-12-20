@@ -19,7 +19,7 @@ function AerobottOverview() {
           <div className="relative">
             <div className="rounded-2xl overflow-hidden shadow-2xl">
               <img 
-                src="/images/Flyt1.jpg"
+                src="/images/Flyt1.avif"
                 alt="Professional team working on drone technology"
                 className="w-full h-96 object-cover"
               />

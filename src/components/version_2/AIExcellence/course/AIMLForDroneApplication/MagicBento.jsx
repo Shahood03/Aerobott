@@ -11,37 +11,37 @@ const cardData = [
     color: "#060010",
     title: "Introduction to AI",
     label: "Module 1",
-    image: "/images/AIExcellence/aimlfordrone/aid4.jpg",
+    image: "/images/AIExcellence/aimlfordrone/aid4.avif",
   },
   {
     color: "#060010",
     title: "Basics of OpenCV and Image Processing",
     label: "Module 2",
-    image: "/images/AIExcellence/aimlfordrone/aid5.webp",
+    image: "/images/AIExcellence/aimlfordrone/aid5.avif",
   },
   {
     color: "#060010",
     title: "Machine Learning Basics",
     label: "Module 3",
-    image: "/images/AIExcellence/aimlfordrone/aid6.jpg",
+    image: "/images/AIExcellence/aimlfordrone/aid6.avif",
   },
   {
     color: "#060010",
     title: "Image and Object Recognition with AI",
     label: "Module 4",
-    image: "/images/AIExcellence/aimlfordrone/aid3.jpg",
+    image: "/images/AIExcellence/aimlfordrone/aid3.avif",
   },
   {
     color: "#060010",
     title: "Advanced Topics in AI for Drone Programming",
     label: "Module 5",
-    image: "/images/AIExcellence/aimlfordrone/aid1.jpeg",
+    image: "/images/AIExcellence/aimlfordrone/aid1.avif",
   },
   {
     color: "#060010",
     title: "AI for Path Planning and Autonomous Flight",
     label: "Module 6",
-    image: "/images/AIExcellence/aimlfordrone/aid2.webp",
+    image: "/images/AIExcellence/aimlfordrone/aid2.avif",
   },
 ];
 

@@ -74,7 +74,7 @@ export default function WhyAerobott() {
                   <div className="flex items-center flex-1 min-w-0">
                     <div className="mr-3 sm:mr-4 flex-shrink-0">
                       <img 
-                        src="/images/element/ai.png" 
+                        src="/images/element/ai.avif" 
                         alt="AI Innovation Icon"
                         className="w-8 h-8 sm:w-10 sm:h-10"
                       />
@@ -134,7 +134,7 @@ export default function WhyAerobott() {
                   <div className="flex items-center flex-1 min-w-0">
                     <div className="mr-3 sm:mr-4 flex-shrink-0">
                       <img 
-                        src="/images/element/building.png" 
+                        src="/images/element/building.avif" 
                         alt="Ecosystem Icon"
                         className="w-8 h-8 sm:w-10 sm:h-10"
                       />
@@ -194,7 +194,7 @@ export default function WhyAerobott() {
                   <div className="flex items-center flex-1 min-w-0">
                     <div className="mr-3 sm:mr-4 flex-shrink-0">
                       <img 
-                        src="/images/element/trophy.png" 
+                        src="/images/element/trophy.avif" 
                         alt="Industry Applications Icon"
                         className="w-8 h-8 sm:w-10 sm:h-10"
                       />
@@ -252,7 +252,7 @@ export default function WhyAerobott() {
               {/* Main image */}
               <div className="relative">
                 <img 
-                  src="/images/home/w1.png" 
+                  src="/images/home/w1.avif" 
                   alt="Aerobott team in action" 
                   className="w-full h-auto object-cover rounded-2xl shadow-lg border border-white/10"
                   loading="lazy"
@@ -264,7 +264,7 @@ export default function WhyAerobott() {
                 <div className="relative">
                   <div className="rounded-lg sm:rounded-xl overflow-hidden border-2 sm:border-4 border-black shadow-lg sm:shadow-xl bg-black">
                     <img 
-                      src="/images/home/w2.png" 
+                      src="/images/home/w2.avif" 
                       alt="Drone technology showcase" 
                       className="w-full h-auto object-cover"
                       loading="lazy"
