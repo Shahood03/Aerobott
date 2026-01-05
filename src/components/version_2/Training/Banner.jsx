@@ -76,7 +76,7 @@ export default function Banner() {
               {/* Main Heading */}
               <div className="space-y-6">
                 <h1 className="text-5xl lg:text-7xl font-light text-gray-200 leading-tight tracking-wide" style={{ fontFamily: 'Raleway, sans-serif' }}>
-                  Take Off With Confidence
+                  DGCA Certified Remote Pilot License
                 </h1>
                 <p className="text-xl lg:text-2xl text-gray-200 font-normal leading-relaxed" style={{ fontFamily: 'Raleway, sans-serif' }}>
                 Train with Aerobott to master professional drone operations, regulations, and flight safety

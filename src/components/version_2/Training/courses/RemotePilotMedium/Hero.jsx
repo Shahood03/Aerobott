@@ -76,7 +76,7 @@ const Hero = () => {
             className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-normal mb-4 sm:mb-6 md:mb-8 bg-clip-text text-gray-200 leading-tight tracking-wide px-2"
             style={{ fontFamily: "Raleway, sans-serif" }}
           >
-            Build, Repair, and Maintain the Drones That Power the Industry
+            Remote Pilot Training – Medium Rotorcraft [DGCA Certified]
           </h1>
 
           {/* Responsive button container */}

@@ -66,9 +66,14 @@ export default function About() {
   </h3>
   
   <div className="text-[#d5dbe6]/80 text-sm sm:text-base font-raleway leading-relaxed space-y-4">
-    <p>
-      Join <strong>AeroBott’s DGCA-certified Drone Pilot Training Course</strong> and earn your Remote Pilot Certificate (RPC) in just 5 days. 
-    </p>
+<p>
+  Join{" "}
+  <a href="#certification" className="text-blue-400 hover:underline">
+    <strong>AeroBott’s DGCA-certified Drone Pilot Training Course</strong>
+  </a>{" "}
+  and earn your Remote Pilot Certificate (RPC) in just 5 days.
+</p>
+
     <p>
       This government-approved program is designed for students, job seekers, farmers, professionals, and anyone aspiring to build a career in the drone industry. 
     </p>

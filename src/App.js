@@ -42,6 +42,9 @@ import FPVRacing from "./components/version_2/IndustrialCourse/courses/FPVRacing
 import Cinematography from "./components/version_2/IndustrialCourse/courses/Cinematography";
 import GISSurvey from "./components/version_2/IndustrialCourse/courses/GISSurvey";
 import MappingSurveying from "./components/version_2/IndustrialCourse/courses/MappingSurveying";
+import BlogMain from "./components/version_2/blogs/BlogMain";
+import AiPowerDrone from "./components/version_2/blogs/components/blogs/AIPoweredDrone";
+import BuildCareer from "./components/version_2/blogs/components/blogs/BuildCareer";
 
 
 function ScrollToTop() {
@@ -70,20 +73,23 @@ function App() {
           <Route path="/drone-as-a-service" element={<Daas />} />
           <Route path="/about-us" element={<AboutUsMain />} />       
           <Route path="/hire-pilot" element={<HirePilot />} />
+          <Route path="/blogs" element={<BlogMain />} />
+          <Route path="/blogs/AI-powered-drones" element={<AiPowerDrone />} />
+          <Route path="/blogs/build-a-career-drone-technology" element={<BuildCareer />} />
           <Route path="/products" element={<ProductMain />} />
           <Route path="/products/flyt-i-drone" element={<FlytMain />} />
           <Route path="/products/aero-agri-drone" element={<AeroAgriMain />} />
           <Route path="/products/survey-master-pro-drone" element={<SurveyMain />} />
           
           {/* Training Routes */}
-          <Route path="/rpce" element={<TrainingMain />} />
+          <Route path="/drone-pilot-training-courses" element={<TrainingMain />} />
           
           {/* Individual Course Detail Routes */}   
-          <Route path="/rpce/remote-pilot-small" element={<RemotePilotSmall />} />
-          <Route path="/rpce/remote-pilot-medium" element={<RemotePilotMedium />} />
-          <Route path="/rpce/comprehensive-flight-small" element={<ComprehensiveFlightSmall />} />
-          <Route path="/rpce/comprehensive-flight-medium" element={<ComprehensiveFlightMedium />} />
-          <Route path="/rpce/drone-instructor" element={<DroneInstructor />} />
+          <Route path="/drone-pilot-training-small-category" element={<RemotePilotSmall />} />
+          <Route path="/drone-pilot-training-medium-category" element={<RemotePilotMedium />} />
+          <Route path="/drone-flight-training-small-category" element={<ComprehensiveFlightSmall />} />
+          <Route path="/drone-flight-training-medium-category" element={<ComprehensiveFlightMedium />} />
+          <Route path="/remote-pilot-instructor" element={<DroneInstructor />} />
           <Route path="/Aboutus" element={<Aboutus />} />
           
 

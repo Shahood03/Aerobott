@@ -76,7 +76,7 @@ const Hero = () => {
             className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-normal mb-4 sm:mb-6 md:mb-8 bg-clip-text text-gray-200 leading-tight tracking-wide px-2"
             style={{ fontFamily: "Raleway, sans-serif" }}
           >
-            Build your confidence with 20 hours of hands-on drone flying.
+            Hands-On Drone Flight Training — Small Category Rotorcraft (20-Hour Program)
           </h1>
           <p
             className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-6 sm:mb-8 md:mb-10 text-gray-200 max-w-sm sm:max-w-md md:max-w-lg lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl mx-auto font-normal leading-relaxed px-4 sm:px-2 lg:px-0"

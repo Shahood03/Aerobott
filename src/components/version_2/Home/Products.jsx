@@ -49,7 +49,7 @@ const ProductsSection = () => {
             altText="FLYT-1 autonomous drone with AI navigation"
             badge="AI-Powered"
             customHeight="h-[300px] sm:h-[400px] md:h-[450px] lg:h-[550px]"
-            onKnowMore={() => handleProductNavigation('/products/flyt-i')}
+            onKnowMore={() => handleProductNavigation('/products/flyt-i-drone')}
           />
 
           <ProductCard
@@ -59,7 +59,7 @@ const ProductsSection = () => {
             altText="Survey Master Pro professional mapping drone"
             badge="Professional"
             customHeight="h-[300px] sm:h-[400px] md:h-[450px] lg:h-[550px]"
-            onKnowMore={() => handleProductNavigation('/products/survey-master-pro')}
+            onKnowMore={() => handleProductNavigation('/products/survey-master-pro-drone')}
           />
 
           <ProductCard
@@ -69,7 +69,7 @@ const ProductsSection = () => {
             altText="Aero Agri agricultural drone for precision farming"
             badge="Agriculture"
             customHeight="h-[300px] sm:h-[400px] md:h-[450px] lg:h-[550px]"
-            onKnowMore={() => handleProductNavigation('/products/aero-agri')}
+            onKnowMore={() => handleProductNavigation('/products/aero-agri-drone')}
           />
         </div>
 

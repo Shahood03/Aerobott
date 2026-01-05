@@ -76,8 +76,18 @@ const Hero = () => {
             className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-normal mb-4 sm:mb-6 md:mb-8 bg-clip-text text-gray-200 leading-tight tracking-wide px-2"
             style={{ fontFamily: "Raleway, sans-serif" }}
           >
-            Lead. Train. Inspire the Next Generation of Drone Pilots
+            Remote Pilot Instructor Training Program
           </h1>
+
+          <p
+            className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl 
+            text-gray-200 opacity-90 mt-2 sm:mt-3 md:mt-4 mb-4 sm:mb-6 md:mb-8 
+            leading-relaxed tracking-wide px-2"
+            style={{ fontFamily: "Raleway, sans-serif" }}
+          >
+            Lead. Train. Inspire the Next Generation of Drone Pilots.
+          </p>
+
 
           {/* Responsive button container */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 justify-center items-center w-full max-w-sm sm:max-w-md lg:max-w-2xl mx-auto">

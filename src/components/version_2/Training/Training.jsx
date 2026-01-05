@@ -9,7 +9,7 @@ const courses = [
     duration: "5 to 8 Days",
     location: "Mumbai and Chandigarh",
     image: "/images/training/t14.avif",
-    path: "/rpce/remote-pilot-small"
+    path: "/drone-pilot-training-small-category"
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const courses = [
     duration: "5 to 8 Days",
     location: "Chandigarh",
     image: "/images/training/t16.avif",
-    path: "/rpce/remote-pilot-medium"
+    path: "/drone-pilot-training-medium-category"
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ const courses = [
     duration: "15 Days",
     location: "Mumbai and Chandigarh",
     image: "/images/training/t7.avif",
-    path: "/rpce/comprehensive-flight-small"
+    path: "/drone-flight-training-small-category"
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ const courses = [
     duration: "15 Days",
     location: "Chandigarh",
     image: "/images/course/c2 (1).avif",
-    path: "/rpce/comprehensive-flight-medium"
+    path: "/drone-flight-training-medium-category"
   },
   {
     id: 5,
@@ -41,7 +41,7 @@ const courses = [
     duration: "9 Days",
     location: "Mumbai",
     image: "/images/gallery/g1.avif",
-    path: "/rpce/drone-instructor"
+    path: "/remote-pilot-instructor"
   },
 ];
 
