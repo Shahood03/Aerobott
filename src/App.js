@@ -45,6 +45,8 @@ import MappingSurveying from "./components/version_2/IndustrialCourse/courses/Ma
 import BlogMain from "./components/version_2/blogs/BlogMain";
 import AiPowerDrone from "./components/version_2/blogs/components/blogs/AIPoweredDrone";
 import BuildCareer from "./components/version_2/blogs/components/blogs/BuildCareer";
+import DGCACertification from "./components/version_2/blogs/components/blogs/DGCACertification";
+import RemotePilotTraining from "./components/version_2/blogs/components/blogs/RemotePilotTraining";
 
 
 function ScrollToTop() {
@@ -76,6 +78,8 @@ function App() {
           <Route path="/blogs" element={<BlogMain />} />
           <Route path="/blogs/AI-powered-drones" element={<AiPowerDrone />} />
           <Route path="/blogs/build-a-career-drone-technology" element={<BuildCareer />} />
+          <Route path="/blogs/dgca-drone-certification" element={<DGCACertification />} />
+          <Route path="/blogs/remote-pilot-training" element={<RemotePilotTraining />} />
           <Route path="/products" element={<ProductMain />} />
           <Route path="/products/flyt-i-drone" element={<FlytMain />} />
           <Route path="/products/aero-agri-drone" element={<AeroAgriMain />} />

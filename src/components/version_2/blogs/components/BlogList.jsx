@@ -16,6 +16,20 @@ const blogData = [
     image: "/images/blogs/blog2.png",
     slug: "build-a-career-drone-technology"
   },
+  {
+    id: 3,
+    title: "DGCA Drone Certification for Commercial Flying in India: Complete Guide",
+    date: "December 18, 2025",
+    image: "/images/blogs/g4.jpg",
+    slug: "dgca-drone-certification"
+  },
+  {
+    id: 4,
+    title: "Remote Pilot Training: Your Gateway to a Career in Drones",
+    date: "December 24, 2025",
+    image: "/images/blogs/blog4.png",
+    slug: "remote-pilot-training"
+  },
 ];
 
 const BlogCards = () => {
