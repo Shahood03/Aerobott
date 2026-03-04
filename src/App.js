@@ -47,6 +47,7 @@ import AiPowerDrone from "./components/version_2/blogs/components/blogs/AIPowere
 import BuildCareer from "./components/version_2/blogs/components/blogs/BuildCareer";
 import DGCACertification from "./components/version_2/blogs/components/blogs/DGCACertification";
 import RemotePilotTraining from "./components/version_2/blogs/components/blogs/RemotePilotTraining";
+import BlogDetail from "./components/version_2/blogs/components/BlogDetail";
 
 
 function ScrollToTop() {
@@ -76,6 +77,8 @@ function App() {
           <Route path="/about-us" element={<AboutUsMain />} />       
           <Route path="/hire-pilot" element={<HirePilot />} />
           <Route path="/blogs" element={<BlogMain />} />
+          <Route path="/blogs/:slug" element={<BlogDetail />} />
+
           <Route path="/blogs/AI-powered-drones" element={<AiPowerDrone />} />
           <Route path="/blogs/build-a-career-drone-technology" element={<BuildCareer />} />
           <Route path="/blogs/dgca-drone-certification" element={<DGCACertification />} />
