@@ -68,7 +68,7 @@ const BlogList = () => {
                      hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
         >
           <img
-            src={getImageUrl(blog.feed_image)}
+            src={blog.feed_image?.full_url}
             alt={blog.title}
             className="w-full h-66 object-cover"
           />
