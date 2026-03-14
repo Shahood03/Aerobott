@@ -22,5 +22,9 @@ Built and deployed as a production full-stack application, the site handles real
 📬 Contact — Lead capture and inquiry form
 
 
-🛠️ Tech Stack
-LayerTechnologyFrontendReact.jsBackendFlask (Python)CMSWagtail CMS (blog management)DeploymentGCP Cloud Run (containerized)InfrastructureGoogle Cloud Platform
+🛠️ Tech Stack LayerTechnology 
+Frontend React.js 
+Backend Flask (Python)
+CMSWagtail CMS (blog management) 
+DeploymentGCP Cloud Run (containerized) 
+InfrastructureGoogle Cloud Platform
